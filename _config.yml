@@ -22,12 +22,12 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "ombhattpfp.jpg" # filename of avatar image placed in /images/, e.g. "500x500.png"
+  avatar           : "profile.png" # filename of avatar image placed in /images/, e.g. "500x500.png"
   name             : "Om Bhatt"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
   location         : "Earth"
-  employer         : "Red Brick University"
+  employer         : "Texas A&M University"
   uri              : # URL
   email            : "none@example.org" 
 
