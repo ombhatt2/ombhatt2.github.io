@@ -22,7 +22,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "ombhattpfp.jpeg" # filename of avatar image placed in /images/, e.g. "500x500.png"
+  avatar           : "ombhattpfp.png" # filename of avatar image placed in /images/, e.g. "500x500.png"
   name             : "Om Bhatt"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
