@@ -23,7 +23,7 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "ombhattpfp.jpg" # filename of avatar image placed in /images/, e.g. "500x500.png"
-  name             : "Your Sidebar Name"
+  name             : "Om Bhatt"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
   location         : "Earth"
