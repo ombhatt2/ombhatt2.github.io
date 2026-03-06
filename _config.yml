@@ -23,11 +23,11 @@ repository               : "https://github.com/ombhatt2/ombhatt2.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "Github Website Profile Picture.png"
   name             : "Om Bhatt"
   pronouns         : # example: "she/her"  
   bio              : "Sophomore Mechatronics Engineering @ TAMU'28"
-  location         : "Earth"
+  location         : "College Station, Texas"
   employer         : "Texas A&M University"
   uri              : # URL
   email            : "ombhatt2@gmail.com" 
