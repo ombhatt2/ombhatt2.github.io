@@ -3,7 +3,7 @@ title: "EcoTrack: Phototropic Solar Tracker"
 collection: portfolio
 permalink: /portfolio/ecotrack
 excerpt: 'Developed a passive solar tracking system using thermo-responsive polymers to optimize energy harvesting.'
-date: 2023-05-01
+date: 2022-09-01
 ---
 
 Developed **EcoTrack**, a phototropic solar tracker that utilizes thermo-responsive polymers to significantly increase energy harvesting efficiency. By mimicking natural plant movements, this project created a passive tracking system that aligns solar panels with the sun's position without the need for active electronic sensors or motors.
