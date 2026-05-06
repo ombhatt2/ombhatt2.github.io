@@ -6,6 +6,23 @@
   --text-default: #222222;
 }
 
+/* Map theme variables so the site styles pick up maroon/white values */
+:root {
+  --global-masthead-link-color: var(--aggie-white);
+  --global-masthead-link-color-hover: #ffdede;
+  --global-footer-bg-color: var(--aggie-maroon);
+  --global-bg-color: var(--aggie-white);
+  --global-text-color: var(--text-default);
+}
+
+/* Dark theme override (works with theme toggle that sets data-theme="dark") */
+html[data-theme="dark"] {
+  --global-bg-color: #0f1720; /* dark content background */
+  --global-text-color: #e8e8e8;
+  --global-masthead-link-color: #fff;
+  --global-footer-bg-color: #2b0000;
+}
+
 /* Page background: keep site content area white for readability */
 body {
   background-color: var(--aggie-white) !important;
@@ -13,24 +30,8 @@ body {
 }
 
 /* Masthead/header */
-.masthead {
-  background-color: var(--aggie-maroon) !important;
-}
-.masthead a,
-.masthead .masthead__menu-item a {
-  color: var(--aggie-white) !important;
-}
-
-/* Ensure menu items don't show white blocks */
-.masthead__inner-wrap, .masthead__menu, .masthead__menu ul, .masthead__menu-item {
-  background: transparent !important;
-}
-.masthead__menu-item { padding: 0.25rem 0.5rem; }
-.masthead__menu-item a { color: var(--aggie-white) !important; }
-.masthead { border-bottom: 0; }
-
-/* Theme toggle icon */
-#theme-toggle a, #theme-toggle a i { color: var(--aggie-white) !important; }
+/* Keep masthead maroon; link colors are controlled by theme variables above */
+.masthead { background-color: var(--aggie-maroon) !important; }
 
 /* Footer */
 .page__footer, .page__footer .page__footer-copyright {
