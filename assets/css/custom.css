@@ -6,9 +6,10 @@
   --text-default: #222222;
 }
 
-/* Page background */
+/* Page background: keep site content area white for readability */
 body {
-  background-color: var(--aggie-maroon) !important;
+  background-color: var(--aggie-white) !important;
+  color: var(--text-default) !important;
 }
 
 /* Masthead/header */
