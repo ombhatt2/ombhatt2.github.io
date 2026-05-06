@@ -29,6 +29,64 @@ html[data-theme="dark"] {
   --global-base-color: rgba(255,255,255,0.04);
 }
 
+/* Dark-mode readability overrides */
+html[data-theme="dark"] {
+  /* Ensure primary text is bright enough */
+  color: var(--content-text) !important;
+}
+
+html[data-theme="dark"] body,
+html[data-theme="dark"] .page,
+html[data-theme="dark"] .site-inner,
+html[data-theme="dark"] .page__content,
+html[data-theme="dark"] .content,
+html[data-theme="dark"] .archive-item,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .post-card {
+  background-color: var(--content-bg) !important;
+  color: var(--content-text) !important;
+}
+
+/* Headings and paragraphs */
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6,
+html[data-theme="dark"] p,
+html[data-theme="dark"] li {
+  color: var(--content-text) !important;
+}
+
+/* Links in dark mode - use a light, slightly warm tint for contrast */
+html[data-theme="dark"] a,
+html[data-theme="dark"] a:visited {
+  color: #ffdede !important;
+}
+html[data-theme="dark"] a:hover {
+  color: #ffffff !important;
+}
+
+/* Ensure masthead links and theme toggle are visible */
+html[data-theme="dark"] .masthead a,
+html[data-theme="dark"] .masthead .masthead__menu-item a,
+html[data-theme="dark"] .greedy-nav a,
+html[data-theme="dark"] .greedy-nav button {
+  color: var(--global-masthead-link-color) !important;
+}
+
+/* Card borders and accents */
+html[data-theme="dark"] .archive-item,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .post-card {
+  border-color: var(--global-border-color) !important;
+}
+
+/* Fix footer spacing/contrast in dark mode */
+html[data-theme="dark"] .page__footer { background-color: var(--global-footer-bg-color) !important; }
+
+
 /* Page background: follow theme variable so dark mode can override it */
 body {
   background-color: var(--global-bg-color) !important;
