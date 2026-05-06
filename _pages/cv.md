@@ -13,9 +13,9 @@ redirect_from:
   <a href="{{ base_path }}/files/Om_Bhatt_CV.pdf" class="btn btn--primary">Download CV as PDF</a>
 </div>
 
-Cedar Park, TX ⋄ ombhatt2@gmail.com ⋄ 979-290-2612
+Cedar Park, TX ⋄ [{{ site.data.cv.basics.email }}](mailto:{{ site.data.cv.basics.email }}) ⋄ {{ site.data.cv.basics.phone }}
 
-https://www.linkedin.com/in/ombhattofficial ⋄ https://github.com/ombhatt2
+{% for profile in site.data.cv.basics.profiles %}{% if profile.url %}[{{ profile.network }}]({{ profile.url }}){% else %}{{ profile.network }}{% endif %}{% if forloop.last == false %} ⋄ {% endif %}{% endfor %}
 
 Professional Summary
 ======
