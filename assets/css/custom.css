@@ -21,6 +21,17 @@ body {
   color: var(--aggie-white) !important;
 }
 
+/* Ensure menu items don't show white blocks */
+.masthead__inner-wrap, .masthead__menu, .masthead__menu ul, .masthead__menu-item {
+  background: transparent !important;
+}
+.masthead__menu-item { padding: 0.25rem 0.5rem; }
+.masthead__menu-item a { color: var(--aggie-white) !important; }
+.masthead { border-bottom: 0; }
+
+/* Theme toggle icon */
+#theme-toggle a, #theme-toggle a i { color: var(--aggie-white) !important; }
+
 /* Footer */
 .page__footer, .page__footer .page__footer-copyright {
   background-color: var(--aggie-maroon) !important;
