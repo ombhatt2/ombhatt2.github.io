@@ -25,6 +25,8 @@ html[data-theme="dark"] {
   --global-footer-bg-color: #2b0000;
   --content-bg: #0f1720; /* dark content panels */
   --content-text: #e8e8e8;
+  --global-border-color: rgba(255,255,255,0.06);
+  --global-base-color: rgba(255,255,255,0.04);
 }
 
 /* Page background: follow theme variable so dark mode can override it */
@@ -36,6 +38,12 @@ body {
 /* Masthead/header */
 .masthead { background-color: var(--global-footer-bg-color) !important; }
 .masthead a, .masthead .masthead__menu-item a { color: var(--global-masthead-link-color) !important; }
+
+/* Make the greedy-nav container transparent so links sit on the maroon bar */
+.greedy-nav { background: transparent !important; }
+.greedy-nav .visible-links, .greedy-nav .visible-links li { background: transparent !important; }
+.greedy-nav a { color: var(--global-masthead-link-color) !important; }
+.greedy-nav button { background: transparent !important; color: var(--global-masthead-link-color) !important; }
 
 /* Ensure masthead inner containers are transparent so link styles show correctly */
 .masthead__inner-wrap, .masthead__menu, .masthead__menu ul, .masthead__menu-item {
