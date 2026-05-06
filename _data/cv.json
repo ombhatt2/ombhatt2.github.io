@@ -1,152 +1,132 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
-    "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "name": "Om Bhatt",
+    "label": "Mechatronics Engineering Student",
+    "email": "ombhatt2@gmail.com",
+    "phone": "979-290-2612",
+    "website": "https://ombhatt2.github.io",
+    "summary": "Well-rounded student with strong academics and extracurricular experience. Passionate about robotics, particularly autonomous and intelligent systems. Seeking to expand engineering knowledge and experience to design, develop, and optimize mechatronic and robotic systems that advance automation and contribute to the betterment of society.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
+      "city": "Cedar Park",
       "countryCode": "US",
-      "region": ""
+      "region": "TX"
     },
     "profiles": [
       {
-        "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-      },
-      {
-        "network": "ORCID",
-        "username": "",
-        "url": "https://orcid.org/yourorcidurl"
-      },
-      {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "ombhatt2",
+        "url": "https://github.com/ombhatt2"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "ombhattofficial",
+        "url": "https://www.linkedin.com/in/ombhattofficial"
       }
     ]
   },
-  "work": [],
+  "work": [
+    {
+      "name": "T.U.R.T.L.E Robotics",
+      "position": "R&D Robotics Engineer - Software Subteam",
+      "url": "",
+      "startDate": "2025-09",
+      "endDate": "Present",
+      "summary": "Researched and implemented ROS 2 Humble, PX4, and MAVROS frameworks in simulation environments to support a UAV swarm platform designed to assist first responders with visual data, mapping, and minimal human input during disaster response missions.",
+      "highlights": []
+    },
+    {
+      "name": "TAMU Robomasters",
+      "position": "Hardware Team Member",
+      "url": "",
+      "startDate": "2025-09",
+      "endDate": "Present",
+      "summary": "Contributed to the Sentry Robot’s autonomous ground vehicle design using OnShape CAD and integrated NVIDIA Jetson Orin, LiDAR sensors, and cameras for real-time perception and decision-making.",
+      "highlights": []
+    },
+    {
+      "name": "Oden Institute - Center for Autonomy, UT Austin",
+      "position": "AEOP Summer Robotics Research Intern - LLMs for Safe Navigation REU",
+      "url": "",
+      "startDate": "2025-06",
+      "endDate": "2025-08",
+      "summary": "Architected a low-cost autonomous RC rally car research platform using ROS 2. Designed and soldered custom PCBs, integrated Raspberry Pi 5/Jetson Nano and motor controllers, and developed a robust C++/ROS 2 low-level controller for precise Ackerman steering and throttle control.",
+      "highlights": []
+    },
+    {
+      "name": "T.U.R.T.L.E Robotics",
+      "position": "Hatchling Team Member",
+      "url": "",
+      "startDate": "2025-01",
+      "endDate": "2025-09",
+      "summary": "Designed mechanical components in SolidWorks and programmed ESP32 and Arduino controllers to enable precise navigation and a multi-stage lift mechanism. Won 2nd place at the 2025 TURTLE Robotics Hatchling Competition.",
+      "highlights": []
+    },
+    {
+      "name": "Science Fair Club, Vista Ridge High School",
+      "position": "Student Researcher",
+      "url": "",
+      "startDate": "2022-09",
+      "endDate": "2024-03",
+      "summary": "Developed EcoTrack, a phototropic solar tracker using thermoresponsive polymers that eliminated electrical tracking components. Demonstrated 87% more net energy than a traditional dual-axis tracker and 119% more than a fixed panel system.",
+      "highlights": []
+    },
+    {
+      "name": "Mechatronics Vehicle Systems Lab, University of Waterloo",
+      "position": "Mechatronics Research Intern - WATonoBus Autonomous Shuttle",
+      "url": "",
+      "startDate": "2021-06",
+      "endDate": "2021-09",
+      "summary": "Designed and programmed an LED display module to communicate shuttle intent to other road users. Completed over 60 hours of development under Professor Amir Khajepour and received a scholarship for demonstrated excellence.",
+      "highlights": []
+    }
+  ],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
+      "institution": "Texas A&M University",
+      "area": "Mechatronics Engineering",
+      "studyType": "B.S.",
+      "startDate": "2024-08",
+      "endDate": "2028-05",
       "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
-      "courses": []
+      "courses": [
+        "Calculus I–III",
+        "Differential Equations",
+        "Electricity & Magnetism",
+        "Engineering Mechanics",
+        "Metallic Materials",
+        "Circuit Analysis",
+        "Analog Electronics",
+        "Digital Electronics",
+        "Embedded Systems Development in C"
+      ]
     }
   ],
-  "skills": [],
-  "languages": [],
-  "interests": [],
-  "references": [],
+  "skills": [
+    {
+      "name": "Hardware and Prototyping",
+      "keywords": ["ESP32", "Arduino", "Raspberry Pi", "STM32", "LiDAR", "Cameras", "Soldering", "PCB Design"]
+    },
+    {
+      "name": "Programming",
+      "keywords": ["Python", "C#", "C++", "ROS 2", "Linux", "Shell (Bash/Zsh)", "LaTeX"]
+    },
+    {
+      "name": "Simulation and CAD",
+      "keywords": ["SolidWorks", "Autodesk Inventor", "Onshape", "Bambu Studio", "Eagle", "Multisim", "MATLAB"]
+    }
+  ],
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "https://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "https://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "name": "Disaster Response Observation Network (DRON)",
+      "publisher": "TURTLE Robotics",
+      "releaseDate": "2025-11-21",
+      "website": "",
+      "summary": "Showcase poster presenting DRON, a UAV swarm platform for first responder support."
     }
   ],
-  "presentations": [
-    {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
-    }
-  ],
-  "teaching": [
-    {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
-    },
-    {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
-    }
-  ],
-  "portfolio": [
-    {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
-    }
-  ]
+  "presentations": [],
+  "teaching": [],
+  "portfolio": []
 }
