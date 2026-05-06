@@ -9,6 +9,10 @@ redirect_from:
 
 {% include base_path %}
 
+<div class="cv-download-links">
+  <a href="{{ base_path }}/files/Om_Bhatt_CV.pdf" class="btn btn--primary">Download CV as PDF</a>
+</div>
+
 Cedar Park, TX ⋄ ombhatt2@gmail.com ⋄ 979-290-2612
 
 https://www.linkedin.com/in/ombhattofficial ⋄ https://github.com/ombhatt2
