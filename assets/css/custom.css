@@ -1,0 +1,49 @@
+/* Custom Maroon & White theme (Texas A&M) */
+:root {
+  --aggie-maroon: #500000;
+  --aggie-maroon-dark: #3d0000;
+  --aggie-white: #ffffff;
+  --text-default: #222222;
+}
+
+/* Page background */
+body {
+  background-color: var(--aggie-maroon) !important;
+}
+
+/* Masthead/header */
+.masthead {
+  background-color: var(--aggie-maroon) !important;
+}
+.masthead a,
+.masthead .masthead__menu-item a {
+  color: var(--aggie-white) !important;
+}
+
+/* Footer */
+.page__footer, .page__footer .page__footer-copyright {
+  background-color: var(--aggie-maroon) !important;
+  color: var(--aggie-white) !important;
+}
+.page__footer a { color: var(--aggie-white) !important; }
+
+/* Keep main content readable on white cards */
+.page, .site, .site-inner, .page__content, .content, .page__inner-wrap {
+  background-color: var(--aggie-white) !important;
+  color: var(--text-default) !important;
+}
+
+/* Cards, panels and sidebars */
+.sidebar, .page__sidebar, .card, .archive-item, .post-card {
+  background-color: var(--aggie-white) !important;
+  color: var(--text-default) !important;
+}
+
+/* Links and accents */
+a, .masthead a:hover, .page a:hover { color: var(--aggie-maroon-dark) !important; }
+
+/* Ensure images and iframes blend with white content area */
+.page img, .page iframe { background: transparent; display:block; }
+
+/* Small tweak for footer spacing on maroon bg */
+.page__footer { padding-top: 18px; padding-bottom: 18px; }
