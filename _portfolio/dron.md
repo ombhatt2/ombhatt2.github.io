@@ -25,4 +25,4 @@ DRON is a proof-of-concept initiative at [TURTLE Robotics](https://www.turtlerob
   </figcaption>
 </figure>
 
-*Recommended citation: I. Wilhite, A. Briggs, C. Ambroziak, R. Kato, D. Wheaton, O. Bhatt, A. Talal, J. Shouba, C. Xu, O. Thomas, S. Ahn, "Disaster Response Observation Network (DRON)", TURTLE Robotics, Nov 21st, 2025.*
+*Recommended citation: I. Wilhite, C. Ambroziak, A. Briggs, R. Kato, O. Bhatt, L. Breedlove, V. So, R. Shah, M. Shi, J. Shouba, O. Thomas, C. Weatherspoon, D. Wheaton, "Disaster Response Observation Network (DRON)", TURTLE Robotics, Spring 2026.*
