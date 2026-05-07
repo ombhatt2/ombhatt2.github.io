@@ -1,0 +1,147 @@
+/* Custom Maroon & White theme (Texas A&M) */
+:root {
+  --aggie-maroon: #500000;
+  --aggie-maroon-dark: #3d0000;
+  --aggie-white: #ffffff;
+  --text-default: #222222;
+
+  /* Site-level variables (used by the theme and our overrides) */
+  --global-bg-color: var(--aggie-white); /* page background */
+  --global-text-color: var(--text-default);
+  --global-masthead-link-color: var(--aggie-white);
+  --global-masthead-link-color-hover: #ffdede;
+  --global-footer-bg-color: var(--aggie-maroon);
+
+  /* Content panel background (cards, main content) */
+  --content-bg: var(--aggie-white);
+  --content-text: var(--text-default);
+}
+
+/* Dark theme override (works with theme toggle that sets data-theme="dark") */
+html[data-theme="dark"] {
+  --global-bg-color: #0b0f12; /* dark page background */
+  --global-text-color: #e8e8e8;
+  --global-masthead-link-color: #ffffff;
+  --global-footer-bg-color: #2b0000;
+  --content-bg: #0f1720; /* dark content panels */
+  --content-text: #e8e8e8;
+  --global-border-color: rgba(255,255,255,0.06);
+  --global-base-color: rgba(255,255,255,0.04);
+}
+
+/* Dark-mode readability overrides */
+html[data-theme="dark"] {
+  /* Ensure primary text is bright enough */
+  color: var(--content-text) !important;
+}
+
+html[data-theme="dark"] body,
+html[data-theme="dark"] .page,
+html[data-theme="dark"] .site-inner,
+html[data-theme="dark"] .page__content,
+html[data-theme="dark"] .content,
+html[data-theme="dark"] .archive-item,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .post-card {
+  background-color: var(--content-bg) !important;
+  color: var(--content-text) !important;
+}
+
+/* Headings and paragraphs */
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6,
+html[data-theme="dark"] p,
+html[data-theme="dark"] li {
+  color: var(--content-text) !important;
+}
+
+/* Links in dark mode - use a light, slightly warm tint for contrast */
+html[data-theme="dark"] a,
+html[data-theme="dark"] a:visited {
+  color: #ffdede !important;
+}
+html[data-theme="dark"] a:hover {
+  color: #ffffff !important;
+}
+
+/* Ensure masthead links and theme toggle are visible */
+html[data-theme="dark"] .masthead a,
+html[data-theme="dark"] .masthead .masthead__menu-item a,
+html[data-theme="dark"] .greedy-nav a,
+html[data-theme="dark"] .greedy-nav button {
+  color: var(--global-masthead-link-color) !important;
+}
+
+/* Card borders and accents */
+html[data-theme="dark"] .archive-item,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .post-card {
+  border-color: var(--global-border-color) !important;
+}
+
+/* Fix footer spacing/contrast in dark mode */
+html[data-theme="dark"] .page__footer { background-color: var(--global-footer-bg-color) !important; }
+
+
+/* Page background: follow theme variable so dark mode can override it */
+body {
+  background-color: var(--global-bg-color) !important;
+  color: var(--global-text-color) !important;
+}
+
+/* Masthead/header */
+.masthead { background-color: var(--global-footer-bg-color) !important; }
+.masthead a, .masthead .masthead__menu-item a { color: var(--global-masthead-link-color) !important; }
+
+/* Make the greedy-nav container transparent so links sit on the maroon bar */
+.greedy-nav { background: transparent !important; }
+.greedy-nav .visible-links, .greedy-nav .visible-links li { background: transparent !important; }
+.greedy-nav a { color: var(--global-masthead-link-color) !important; }
+.greedy-nav button { background: transparent !important; color: var(--global-masthead-link-color) !important; }
+
+/* Ensure masthead inner containers are transparent so link styles show correctly */
+.masthead__inner-wrap, .masthead__menu, .masthead__menu ul, .masthead__menu-item {
+  background: transparent !important;
+}
+.masthead__menu-item { padding: 0.25rem 0.5rem; }
+.masthead__menu-item a { color: var(--global-masthead-link-color) !important; }
+.masthead { border-bottom: 0; }
+
+/* Theme toggle icon */
+#theme-toggle a, #theme-toggle a i { color: var(--global-masthead-link-color) !important; }
+
+/* Footer */
+.page__footer, .page__footer .page__footer-copyright {
+  background-color: var(--global-footer-bg-color) !important;
+  color: var(--aggie-white) !important;
+}
+.page__footer a { color: var(--aggie-white) !important; }
+
+/* Keep main content readable on panels that use content bg variable */
+.page, .site, .site-inner, .page__content, .content, .page__inner-wrap {
+  background-color: var(--content-bg) !important;
+  color: var(--content-text) !important;
+}
+
+/* Cards, panels and sidebars */
+.sidebar, .page__sidebar, .card, .archive-item, .post-card {
+  background-color: var(--content-bg) !important;
+  color: var(--content-text) !important;
+}
+
+/* Links and accents */
+a, .masthead a:hover, .page a:hover { color: var(--aggie-maroon-dark) !important; }
+
+/* Ensure images and iframes blend with content area */
+.page img, .page iframe { background: transparent; display:block; }
+
+/* Small tweak for footer spacing on maroon bg */
+.page__footer { padding-top: 18px; padding-bottom: 18px; }
+
+/* Ensure footer sits flush at bottom and no stray white band appears */
+html, body { height: 100%; }
+body > .page__footer { position: relative; z-index: 2; }
