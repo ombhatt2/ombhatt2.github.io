@@ -18,11 +18,22 @@ DRON is a proof-of-concept initiative at [TURTLE Robotics](https://www.turtlerob
 * Supported UAV swarm platform development for real-time visual data, mapping, and first-responder assistance.
 * Focused on reducing human exposure during disaster response missions.
 
-<figure style="border: 1px solid #e0e0e0; padding: 0; margin-top: 30px; margin-bottom: 30px;">
-  <img src="/images/DRON-Poster-Spring-2026.png" alt="DRON Poster" style="width:100%; display:block; margin:0;">
-  <figcaption style="background-color: #f2f3f5; padding: 12px; text-align: center; font-style: italic; font-size: 0.85em; color: #555; border-top: 1px solid #e0e0e0;">
-    DRON Spring 2026 Poster Presentation
-  </figcaption>
-</figure>
+<div style="display: flex; justify-content: center; gap: 15px; margin-top: 30px; margin-bottom: 20px;">
+  <button onclick="document.getElementById('poster-view').style.display='block'; document.getElementById('linkedin-view').style.display='none';" style="padding: 10px 20px; background-color: #500000; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.2s;">View Poster</button>
+  <button onclick="document.getElementById('poster-view').style.display='none'; document.getElementById('linkedin-view').style.display='block';" style="padding: 10px 20px; background-color: #0077b5; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.2s;">View LinkedIn Post</button>
+</div>
+
+<div id="poster-view" style="display: block;">
+  <figure style="border: 1px solid #e0e0e0; padding: 0; margin: 0 0 30px 0;">
+    <img src="/images/DRON-Poster-Spring-2026.png" alt="DRON Poster" style="width:100%; display:block; margin:0;">
+    <figcaption style="background-color: #f2f3f5; padding: 12px; text-align: center; font-style: italic; font-size: 0.85em; color: #555; border-top: 1px solid #e0e0e0;">
+      DRON Spring 2026 Poster Presentation
+    </figcaption>
+  </figure>
+</div>
+
+<div id="linkedin-view" style="display: none; text-align: center; margin-bottom: 30px;">
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7451105549468733441?collapsed=1" height="628" width="504" frameborder="0" allowfullscreen="" title="Embedded post" style="max-width: 100%; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"></iframe>
+</div>
 
 *Recommended citation: I. Wilhite, C. Ambroziak, A. Briggs, R. Kato, O. Bhatt, L. Breedlove, V. So, R. Shah, M. Shi, J. Shouba, O. Thomas, C. Weatherspoon, D. Wheaton, "Disaster Response Observation Network (DRON)", TURTLE Robotics, Spring 2026.*
