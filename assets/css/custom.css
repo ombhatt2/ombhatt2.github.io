@@ -153,10 +153,3 @@ body > .page__footer { position: relative; z-index: 2; }
     padding-left: 2px !important;
     width: 1.3em !important; /* Slightly widens the container so nothing gets cut off */
 }
-
-/* Force portfolio thumbnails to fit without cropping */
-.archive__item-teaser img {
-    object-fit: contain !important;
-    max-height: 180px !important; /* Keeps the grid rows a uniform height */
-    width: 100% !important;
-}
