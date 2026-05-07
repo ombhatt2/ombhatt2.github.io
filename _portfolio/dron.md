@@ -6,12 +6,11 @@ excerpt: 'Researched and implemented ROS 2 Humble, PX4, and MAVROS frameworks in
 date: 2025-09-01
 header:
   teaser: /images/DRON-Poster-Spring-2026.png
-
-Video: [Flight Test Video](/files/Flight Test Video.mp4)
-
 ---
 
-Posters: [Spring 2026](/files/DRON_SC_26.pptx.pdf)
+**Video:** [Flight Test Video](/files/Flight%20Test%20Video.mp4)
+
+**Posters:** [Spring 2026](/files/DRON_SC_26.pptx.pdf)
 
 DRON is a proof-of-concept initiative at [TURTLE Robotics](https://www.turtlerobotics.org/projects/dron) that aims to leverage unmanned aerial vehicles (UAVs) to gather intelligence during structural fires. Collaborating with the software subteam, I research and implement **ROS 2 Humble, PX4, and MAVROS** frameworks within simulation environments to support a UAV swarm platform designed to assist first responders with real-time visual data and autonomous mapping.
 
@@ -26,4 +25,4 @@ DRON is a proof-of-concept initiative at [TURTLE Robotics](https://www.turtlerob
   </figcaption>
 </figure>
 
-Recommended citation: I. Wilhite, A. Briggs, C. Ambroziak, R. Kato, D. Wheaton, O. Bhatt, A. Talal, J. Shouba, C. Xu, O. Thomas, S. Ahn, "Disaster Response Observation Network (DRON)", TURTLE Robotics, Nov 21st, 2025.
+*Recommended citation: I. Wilhite, A. Briggs, C. Ambroziak, R. Kato, D. Wheaton, O. Bhatt, A. Talal, J. Shouba, C. Xu, O. Thomas, S. Ahn, "Disaster Response Observation Network (DRON)", TURTLE Robotics, Nov 21st, 2025.*
