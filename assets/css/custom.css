@@ -145,3 +145,11 @@ a, .masthead a:hover, .page a:hover { color: var(--aggie-maroon-dark) !important
 /* Ensure footer sits flush at bottom and no stray white band appears */
 html, body { height: 100%; }
 body > .page__footer { position: relative; z-index: 2; }
+
+/* Fix for clipped sidebar icons */
+.author__urls i.fa-fw, 
+.author__urls i.fas, 
+.author__urls i.fab {
+    padding-left: 2px !important;
+    width: 1.3em !important; /* Slightly widens the container so nothing gets cut off */
+}
