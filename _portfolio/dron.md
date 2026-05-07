@@ -32,8 +32,8 @@ DRON is a proof-of-concept initiative at [TURTLE Robotics](https://www.turtlerob
   </figure>
 </div>
 
-<div id="linkedin-view" style="display: none; text-align: center; margin-bottom: 30px;">
-  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7451105549468733441?collapsed=1" height="628" width="504" frameborder="0" allowfullscreen="" title="Embedded post" style="max-width: 100%; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"></iframe>
+<div id="linkedin-view" style="display: none; margin-bottom: 30px;">
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7451105549468733441" height="850" width="100%" frameborder="0" allowfullscreen="" title="Embedded post" style="display: block; margin: 0 auto; max-width: 700px; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"></iframe>
 </div>
 
 *Recommended citation: I. Wilhite, C. Ambroziak, A. Briggs, R. Kato, O. Bhatt, L. Breedlove, V. So, R. Shah, M. Shi, J. Shouba, O. Thomas, C. Weatherspoon, D. Wheaton, "Disaster Response Observation Network (DRON)", TURTLE Robotics, Spring 2026.*
