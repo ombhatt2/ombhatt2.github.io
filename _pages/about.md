@@ -26,7 +26,7 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
     {% assign matches = site.portfolio | where: "url", p %}
     {% if matches and matches.size > 0 %}
       {% assign item = matches[0] %}
-      <div class="hover-card" style="flex:1 1 220px;max-width:320px;border:1px solid #e6e6e6;padding:10px;box-shadow:0 1px 0 rgba(0,0,0,0.02);">box-shadow:0 1px 0 rgba(0,0,0,0.02);">
+      <div class="hover-card" style="flex:1 1 220px;max-width:320px;border:1px solid #e6e6e6;padding:10px;box-shadow:0 1px 0 rgba(0,0,0,0.02);">
         <a href="{{ item.url }}" style="text-decoration:none;color:inherit;">
           {% if item.header and item.header.teaser %}
             <img src="{{ item.header.teaser }}" alt="{{ item.title }}" style="width:100%;height:160px;object-fit:cover;border-radius:4px;">
