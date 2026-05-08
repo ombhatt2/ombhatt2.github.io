@@ -5,7 +5,7 @@ permalink: /portfolio/robomasters
 excerpt: "Designing robust structural components using OnShape CAD for the fully autonomous, computer-vision-driven Sentry Robot. Integrated the NVIDIA Jetson Orin, LIDAR sensors, and cameras into the system for real-time perception and decision-making."
 date: 2025-09-01
 header:
-  teaser: "/images/Sentry Robot.jpg"
+  teaser: "/images/Sentry_Robot.jpg"
 ---
 
 * Designing robust structural components using OnShape CAD for the fully autonomous, computer-vision-driven Sentry Robot.
