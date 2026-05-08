@@ -20,7 +20,7 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
 
 ## Featured Projects
 
-{% assign featured_paths = "/portfolio/2024-01-01-dron,/portfolio/aeop-research,/portfolio/hatchling,/portfolio/ecotrack,/portfolio/watonobus" | split: "," %}
+{% assign featured_paths = "/portfolio/2024-01-01-dron,/portfolio/robomasters,/portfolio/aeop-research,/portfolio/hatchling,/portfolio/ecotrack,/portfolio/watonobus" | split: "," %}
 <div style="display:flex;flex-wrap:wrap;gap:20px;margin-top:16px;">
   {% for p in featured_paths %}
     {% assign matches = site.portfolio | where: "url", p %}
