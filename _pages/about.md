@@ -26,7 +26,7 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
     {% assign matches = site.portfolio | where: "url", p %}
     {% if matches and matches.size > 0 %}
       {% assign item = matches[0] %}
-      <div style="flex:1 1 220px;max-width:320px;border:1px solid #e6e6e6;padding:10px;box-shadow:0 1px 0 rgba(0,0,0,0.02);">
+      <div class="hover-card" style="flex:1 1 220px;max-width:320px;border:1px solid #e6e6e6;padding:10px;box-shadow:0 1px 0 rgba(0,0,0,0.02);">box-shadow:0 1px 0 rgba(0,0,0,0.02);">
         <a href="{{ item.url }}" style="text-decoration:none;color:inherit;">
           {% if item.header and item.header.teaser %}
             <img src="{{ item.header.teaser }}" alt="{{ item.title }}" style="width:100%;height:160px;object-fit:cover;border-radius:4px;">
@@ -40,3 +40,33 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
     {% endif %}
   {% endfor %}
 </div>
+
+<style>
+  /* 1. Levitating Project Cards */
+  .hover-card {
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    border-radius: 8px !important;
+    background-color: #ffffff; /* Keeps the card solid when it lifts */
+  }
+  .hover-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.1) !important;
+  }
+
+  /* 2. Interactive Profile Picture */
+  .author__avatar img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+  }
+  .author__avatar img:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 0 20px rgba(128, 0, 0, 0.4) !important; /* Subtle maroon glow */
+  }
+
+  /* 3. Tech Gradient Highlight */
+  .tech-text {
+    background: linear-gradient(90deg, #800000, #ff4d4d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+</style>
