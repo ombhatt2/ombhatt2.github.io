@@ -8,7 +8,7 @@ header:
   teaser: "/images/UT Austin Summer 2026 Internship Photo Collage.jpg"
 ---
 
-Presentation Slides: [Presentation Slides](/files/Autonomous Systems Group REU 2025 - Final Presentation - Autonomous RC Rally Car for Jump and Drift Racing - Om Bhatt.pdf)
+Presentation Slides: [Presentation Slides](/files/Autonomous Systems Group REU 2025 - Final Presentation - Autonomous RC Rally Car for Jump and Drift Racing - Om Bhatt.pdf) | Project Abstract: [Project Abstract](/files/AEOP Booklet Abstract - Om Bhatt_ Autonomous RC Rally Car for Jump and Drift Racing .pdf)
 
 Served as an **AEOP Summer Robotics Research Intern** at the **Center for Autonomy at UT Austin**, participating in the **AEOP LLMs for Safe Navigation REU** under the guidance of Dr. Ufuk Topcu, Dr. Christian Ellis, and PhD Student Rwik Rana.
 
