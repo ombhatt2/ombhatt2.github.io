@@ -3,7 +3,7 @@ title: "Disaster Response and Observation Network (DRON)"
 collection: portfolio
 permalink: /portfolio/2024-01-01-dron
 excerpt: 'Researched and implemented ROS 2 Humble, PX4, and MAVROS frameworks in simulation environments to support a UAV swarm platform for first responders. Focused on real-time visual data, autonomous mapping, and reducing human exposure during disaster response missions.'
-date: 2025-09-01
+date: 2025-09-02
 header:
   teaser: /images/DRON-Poster-Spring-2026.png
 ---

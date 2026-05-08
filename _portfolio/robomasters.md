@@ -3,7 +3,7 @@ title: "TAMU Robomasters: Autonomous Sentry Robot"
 collection: portfolio
 permalink: /portfolio/robomasters
 excerpt: 'Developing a fully autonomous ground robot that moves and shoots at enemy robots using computer vision. Utilizing OnShape CAD software for robust design and integrating the NVIDIA Jetson Orin, LiDAR sensors, and cameras for real-time perception and decision-making.'
-date: 2025-09-02
+date: 2025-09-01
 header:
   teaser: "/images/Sentry_Robot.jpg"
 ---
