@@ -9,11 +9,11 @@ header:
 ---
 
 ### Technical Contributions
-* [cite_start]Engineered and developed "EcoTrack", a novel phototropic solar tracker inspired by nature, which uses thermo-responsive polymers to follow a light source[cite: 42]. [cite_start]This design eliminates the need for electrical components in the tracking mechanism, creating a low-cost and low-maintenance solution for developing nations[cite: 43].
-* [cite_start]Validated the system through experimentation, demonstrating that EcoTrack harnessed 87 percent more net energy than a traditional dual-axis tracker and 119 percent more than a fixed panel system under identical conditions[cite: 44].
-* [cite_start]Achieved first place across Austin region at Austin Regional Science Fair and advanced to TXSEF State Fair[cite: 45].
-* [cite_start]Awarded a university tuition scholarship from Jacobs Engineering ($2000) and RICOH Sustainable Development Award[cite: 45].
-* [cite_start]Elected to lead the role of an officer to help mentor other students on their projects and showcase our school's achievements to attract potential sponsors[cite: 46].
+* Engineered and developed "EcoTrack", a novel phototropic solar tracker inspired by nature, which uses thermo-responsive polymers to follow a light source. This design eliminates the need for electrical components in the tracking mechanism, creating a low-cost and low-maintenance solution for developing nations.
+* Validated the system through experimentation, demonstrating that EcoTrack harnessed 87 percent more net energy than a traditional dual-axis tracker and 119 percent more than a fixed panel system under identical conditions.
+* Achieved first place across Austin region at Austin Regional Science Fair and advanced to TXSEF State Fair.
+* Awarded a university tuition scholarship from Jacobs Engineering ($2000) and RICOH Sustainable Development Award.
+* Elected to lead the role of an officer to help mentor other students on their projects and showcase our school's achievements to attract potential sponsors.
 
 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:1px solid #e0e0e0;margin-top: 30px;">
   <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/6gvm0HSgW2U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
