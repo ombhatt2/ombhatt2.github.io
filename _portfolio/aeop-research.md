@@ -31,7 +31,7 @@ Served as an **AEOP Summer Robotics Research Intern** at the **Center for Autono
   </figcaption>
 </figure>
 
-### Project Gallery
+### Internship Gallery
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; margin-bottom: 40px;">
   <figure style="border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; margin: 0;">
