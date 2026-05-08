@@ -2,7 +2,7 @@
 title: "REU Project: Autonomous RC Rally Car for Jump and Drift Racing"
 collection: portfolio
 permalink: /portfolio/aeop-research
-excerpt: 'Architected a low-cost 1/16 scale autonomous RC rally car research platform using ROS 2. Designed and soldered custom PCBs to integrate Raspberry Pi 5/Jetson Nano, motor controllers, and power systems. Programmed a low-level controller in C++/ROS 2 for Ackerman steering and throttle control.'
+excerpt: 'Architected a low-cost, 1/16 scale autonomous RC car using ROS2 to create a modular research platform for complex drift and jump navigation studies. Executed the complete electromechanical assembly and programmed a robust C++/ROS2 low-level controller.'
 date: 2025-06-01
 header:
   teaser: "/images/UT Austin Summer 2026 Internship Photo Collage.jpg"
@@ -10,12 +10,12 @@ header:
 
 Presentation Slides: [Presentation Slides](/files/Autonomous Systems Group REU 2025 - Final Presentation - Autonomous RC Rally Car for Jump and Drift Racing - Om Bhatt.pdf)
 
-Interned at the **Center for Autonomy** as part of the **AEOP LLMs for Safe Navigation REU** under the guidance of Dr. Ufuk Topcu, Dr. Christian Ellis, and PhD Student Rwik Rana. This project was co-sponsored by DEVCOM ARL’s Army Research Office (ARO) in partnership with the Army’s Educational Outreach Program (AEOP).
+Served as an **AEOP Summer Robotics Research Intern** at the **Center for Autonomy at UT Austin**, participating in the **AEOP LLMs for Safe Navigation REU** under the guidance of Dr. Ufuk Topcu, Dr. Christian Ellis, and PhD Student Rwik Rana.
 
-* Architected a low-cost 1/16 scale autonomous RC car using **ROS 2** to create a modular research platform for complex drift and jump navigation studies.
-* Designed and soldered custom PCBs to successfully power and integrate all components, including a **Raspberry Pi 5/Jetson Nano** and motor controllers.
-* Programmed a robust low-level controller in a **C++/ROS 2** software stack to achieve precise **Ackerman steering** and throttle control.
-* Established teleoperation capabilities and validated **SLAM** and control algorithms in the **F1Tenth simulator**.
+* Architected a low-cost, 1/16 scale autonomous RC car using **ROS2** to create a modular research platform for complex drift and jump navigation studies.
+* Executed the complete electromechanical assembly by designing and soldering custom circuit boards to successfully power and integrate all components, including a **Raspberry Pi 5/Jetson Nano** and motor controllers.
+* Programmed a robust low-level controller in a **C++/ROS2** software stack to achieve precise **Ackerman steering** and throttle control for the vehicle.
+* Successfully established full teleoperation capabilities and utilized the **F1Tenth simulator** to validate **SLAM** and control algorithms, preparing the platform for fully autonomous operation.
 
 <details style="margin-top: 25px; margin-bottom: 35px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; background-color: #fcfcfc; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
   <summary style="font-weight: bold; cursor: pointer; color: #0077b5;">🔗 LinkedIn Post</summary>
