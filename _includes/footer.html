@@ -1,24 +1,23 @@
 {% include base_path %}
 
-{% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
 <div class="page__footer-follow">
   <ul class="social-icons">
-    {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
-    {% endif %}
     {% if site.author.github %}
-      <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="https://github.com/{{ site.author.github }}" target="_blank"><i class="fab fa-fw fa-github" aria-hidden="true"></i></a></li>
     {% endif %}
-    {% if site.author.bitbucket %}
-      <li><a href="https://bitbucket.org/{{ site.author.bitbucket }}"><i class="fab fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
+    {% if site.author.linkedin %}
+      <li><a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i></a></li>
     {% endif %}
-    {% if site.atom_feed.hide != true %}
-    <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
-    {% endif %}
+    
+    <li><a href="#site-nav" title="Back to Top"><i class="fa fa-fw fa-arrow-up" aria-hidden="true"></i></a></li>
   </ul>
 </div>
-{% endif %}
 
 <div class="page__footer-copyright">
-  &copy; 2026 Om Bhatt
+  <div style="margin-bottom: 10px; opacity: 0.8;">
+    <strong>Om Bhatt</strong> | Mechatronics Engineering @ TAMU
+  </div>
+  <div style="font-size: 0.85em; opacity: 0.6;">
+    &copy; {{ "now" | date: "%Y" }} • Built with passion and Jekyll
+  </div>
 </div>
