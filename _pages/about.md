@@ -26,14 +26,14 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
     {% assign matches = site.portfolio | where: "url", p %}
     {% if matches and matches.size > 0 %}
       {% assign item = matches[0] %}
-      <div class="hover-card" style="flex:1 1 220px;max-width:320px;border:1px solid #e6e6e6;padding:10px;box-shadow:0 1px 0 rgba(0,0,0,0.02);">
+      <div class="hover-card" style="flex:1 1 220px;max-width:320px;border:1px solid rgba(128,128,128,0.3);padding:10px;box-shadow:0 1px 0 rgba(0,0,0,0.02);">
         <a href="{{ item.url }}" style="text-decoration:none;color:inherit;">
           {% if item.header and item.header.teaser %}
             <img src="{{ item.header.teaser }}" alt="{{ item.title }}" style="width:100%;height:160px;object-fit:cover;border-radius:4px;">
           {% endif %}
           <h3 style="margin:10px 0 0 0;font-size:1.05rem;">{{ item.title }}</h3>
           {% if item.excerpt %}
-            <p style="margin:6px 0 0 0;color:#555;font-size:0.95rem;">{{ item.excerpt | strip_html | truncate:120 }}</p>
+            <p style="margin:6px 0 0;opacity:0.8;font-size:0.95rem;">{{ item.excerpt | strip_html | truncate:120 }}</p>
           {% endif %}
         </a>
       </div>
@@ -46,7 +46,6 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
   .hover-card {
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
     border-radius: 8px !important;
-    background-color: #ffffff; /* Keeps the card solid when it lifts */
   }
   .hover-card:hover {
     transform: translateY(-8px) !important;
