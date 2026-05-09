@@ -69,12 +69,32 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
     font-weight: bold;
   }
 
-/* 4. Fix Dark Mode Background Corners */
-  .page, .initial-content, #main, .page__inner-wrap {
-    background-color: transparent !important;
-  }
-  html, body {
-    min-height: 100vh; /* Ensures the background stretches all the way down */
-  }
+/* 4. Universal Dark Mode Background Fix */
+body, 
+#main, 
+.masthead, 
+.page__footer, 
+.initial-content, 
+.page, 
+.page__inner-wrap,
+#main > div {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* This targets the main wrapper often used in Minimal Mistakes themes */
+.greedy-nav, .sidebar {
+  background-color: transparent !important;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 </style>
 
