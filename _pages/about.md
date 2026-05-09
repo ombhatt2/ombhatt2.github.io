@@ -7,22 +7,20 @@ redirect_from:
   - /about.html
 ---
 
-<h2 style="margin-top: 0; font-size: 1.8em;"><span id="typed-text" class="tech-text"></span></h2>
-
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
 <script>
-  var typed = new Typed('#typed-text', {
-    strings: [
-      'A Robotics Engineer.', 
-      'A Robotics Researcher.'
-    ],
-    typeSpeed: 50,      // Speed of typing
-    backSpeed: 30,      // Speed of backspacing
-    backDelay: 1500,    // How long it pauses before deleting
-    loop: true,         // Keeps it repeating forever
-    showCursor: true,   // Shows the blinking cursor
-    cursorChar: '|'     // The character for the cursor
+  document.addEventListener("DOMContentLoaded", function() {
+    var typed = new Typed('#typed-text', {
+      strings: [
+        'A Robotics Engineer.', 
+        'A Robotics Researcher.'
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 1500,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|'
+    });
   });
 </script>
 
