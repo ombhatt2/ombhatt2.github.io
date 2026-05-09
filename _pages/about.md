@@ -13,7 +13,8 @@ redirect_from:
 
 <script>
   function initTyped() {
-    if (typeof Typed !== 'undefined') {
+    // Check if the library is loaded and the element exists
+    if (typeof Typed !== 'undefined' && document.getElementById('typed-text')) {
       new Typed('#typed-text', {
         strings: [
           'A Robotics Engineer.', 
@@ -27,13 +28,17 @@ redirect_from:
         cursorChar: '|'
       });
     } else {
-      // If the library isn't ready yet, try again in 100ms
+      // If not ready, wait 100ms and try again
       setTimeout(initTyped, 100);
     }
   }
 
-  // Start the check
-  document.addEventListener("DOMContentLoaded", initTyped);
+  // Run when the page is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTyped);
+  } else {
+    initTyped();
+  }
 </script>
 
 Welcome to my academic portfolio! I am a well-rounded student with strong academics and extracurricular experience. 
