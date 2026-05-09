@@ -69,32 +69,28 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
     font-weight: bold;
   }
 
-/* 4. Universal Dark Mode Background Fix */
+/* 4. Solid Background Force-Fix */
 body, 
-#main, 
+html, 
 .masthead, 
 .page__footer, 
 .initial-content, 
+#main, 
 .page, 
 .page__inner-wrap,
 #main > div {
-  background-color: transparent !important;
-  background: transparent !important;
+  background-color: #1d2129 !important; /* This is the common dark navy color */
 }
 
-/* This targets the main wrapper often used in Minimal Mistakes themes */
-.greedy-nav, .sidebar {
-  background-color: transparent !important;
-}
-
-html {
-  height: 100%;
-}
-
+/* This targets the side areas explicitly */
 body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background: #1d2129 !important;
+}
+
+/* Ensures the project cards stay visible but blend in */
+.hover-card {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(5px);
 }
 </style>
 
