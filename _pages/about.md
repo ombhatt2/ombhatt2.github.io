@@ -7,21 +7,33 @@ redirect_from:
   - /about.html
 ---
 
+<h2 style="margin-top: 0; font-size: 1.8em;"><span id="typed-text" class="tech-text"></span></h2>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var typed = new Typed('#typed-text', {
-      strings: [
-        'A Robotics Engineer.', 
-        'A Robotics Researcher.'
-      ],
-      typeSpeed: 50,
-      backSpeed: 30,
-      backDelay: 1500,
-      loop: true,
-      showCursor: true,
-      cursorChar: '|'
-    });
-  });
+  function initTyped() {
+    if (typeof Typed !== 'undefined') {
+      new Typed('#typed-text', {
+        strings: [
+          'A Robotics Engineer.', 
+          'A Robotics Researcher.'
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 1500,
+        loop: true,
+        showCursor: true,
+        cursorChar: '|'
+      });
+    } else {
+      // If the library isn't ready yet, try again in 100ms
+      setTimeout(initTyped, 100);
+    }
+  }
+
+  // Start the check
+  document.addEventListener("DOMContentLoaded", initTyped);
 </script>
 
 Welcome to my academic portfolio! I am a well-rounded student with strong academics and extracurricular experience. 
