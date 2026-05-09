@@ -1,24 +1,23 @@
 ---
 title: "ESET 350: Infrared Light Barrier"
-excerpt: "Assembled and tested a Velleman infrared light barrier system consisting of dedicated transmitter and receiver circuits."
+excerpt: "Constructed and analyzed a MK120 infrared alarm system utilizing a 4.8 kHz modulated IR beam to act as a reliable tripwire security system."
+date: 2026-05-10
 header:
   teaser: /images/7.jpg
 sidebar:
   - title: "Course"
     text: "ESET 350"
   - title: "Skills"
-    text: "Soldering, PCB Assembly, Through-Hole Components, Circuit Testing"
+    text: "PCB Assembly, Waveform Analysis, Astable Multivibrators, Phototransistors, Circuit Troubleshooting"
   - title: "Team Members"
     text: "Om Bhatt, Anirudh Subramaniam"
 ---
 
-As part of my ESET 350 coursework, I assembled and tested an infrared light barrier system. 
+For our ESET 350 final project, we constructed and analyzed the MK120 Infrared Alarm System. This system is designed to establish an invisible, continuous optical link between a dedicated transmitter board and a receiver circuit, acting as a reliable tripwire security system. 
 
-The project involved constructing two separate PCBs using through-hole soldering techniques:
-* **IR Transmitter:** Emits a continuous, focused infrared beam.
-* **IR Receiver:** Detects the beam and triggers an onboard buzzer and LED alert when the line of sight is broken or interrupted.
+To operate effectively without false triggering from ambient sunlight or room lighting, the transmitter modulates an infrared (IR) light beam at a specific high frequency of roughly 4.8 kHz using an astable multivibrator circuit. The receiver utilizes a phototransistor to constantly monitor for this exact frequency. As long as the receiver detects the pulsed IR light, the system remains in a passive state. However, when an object breaks the line of sight, the system immediately emits a loud audible alert and visual warning.
 
-This hands-on project reinforced practical skills in precise PCB assembly, component identification (including resistors, capacitors, transistors, and ICs), and functional circuit validation.
+Beyond physical through-hole PCB assembly, this project involved extensive circuit analysis and validation. We captured detailed DC bench measurements and oscilloscope waveforms to analyze the performance of the astable multivibrator, LED driver transistors, and phototransistor outputs under various conditions.
 
 ### Project Report
 
