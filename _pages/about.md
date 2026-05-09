@@ -46,6 +46,7 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
   .hover-card {
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
     border-radius: 8px !important;
+    background-color: #ffffff; /* Keeps the card solid when it lifts */
   }
   .hover-card:hover {
     transform: translateY(-8px) !important;
@@ -69,4 +70,3 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
     font-weight: bold;
   }
 </style>
-
