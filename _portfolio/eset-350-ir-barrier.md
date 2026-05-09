@@ -27,7 +27,7 @@ This hands-on project reinforced practical skills in precise PCB assembly, compo
 </div>
 
 <iframe src="/files/eset-350-project-report.pdf" width="100%" height="600px" style="border: 1px solid rgba(128,128,128,0.3); border-radius: 8px; margin-bottom: 40px;">
-  This browser does not support PDFs. Please download the PDF to view it: <a href="/files/eset-350-project-report.pdf">Download PDF</a>.
+  This browser does not support PDFs. Please download the PDF to view it: <a href="/files/ESET 350 Project Report.pdf">Download PDF</a>.
 </iframe>
 
 ### Project Demonstrations
