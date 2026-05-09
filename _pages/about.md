@@ -44,9 +44,9 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
 <style>
   /* 1. Levitating Project Cards */
   .hover-card {
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.3s ease !important;
     border-radius: 8px !important;
-    /* Removed white background to allow dark mode compatibility */
+    background-color: transparent; /* Adapt seamlessly to light mode */
   }
   .hover-card:hover {
     transform: translateY(-8px) !important;
@@ -70,14 +70,10 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
     font-weight: bold;
   }
 
-  /* 4. Fix Black Sidebars and Unified Background */
-  /* This forces the background to be consistent across the whole screen */
-  body, .page, .initial-content, #main, .page__inner-wrap {
-    background: #1d2129 !important; /* Standard theme navy color */
-  }
-
-  /* Ensure cards stay visible in dark mode with a subtle glass effect */
-  .hover-card {
+  /* 4. Dark Theme Card Fixes */
+  /* Applies the subtle glass effect ONLY when dark mode is active */
+  html[data-theme="dark"] .hover-card, 
+  body.dark-theme .hover-card { 
     background-color: rgba(255, 255, 255, 0.05) !important;
     backdrop-filter: blur(5px);
   }
