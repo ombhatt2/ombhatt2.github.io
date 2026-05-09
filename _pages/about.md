@@ -7,8 +7,8 @@ redirect_from:
   - /about.html
 ---
 
-<h2 style="margin-top: 0; font-size: 1.8em; min-height: 1.2em; color: #333;">
-  A Robotics <span id="typed-text" class="tech-text"></span>
+<h2 style="margin-top: 0; font-size: 1.8em; min-height: 1.2em;">
+  <span id="typed-text" class="tech-text"></span>
 </h2>
 
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -18,12 +18,12 @@ redirect_from:
     if (typeof Typed !== 'undefined') {
       new Typed('#typed-text', {
         strings: [
-          'Engineer.', 
-          'Researcher.'
+          'A Robotics Engineer.', 
+          'A Robotics Researcher.'
         ],
-        typeSpeed: 60,
-        backSpeed: 40,
-        backDelay: 2000,
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 1500,
         loop: true,
         showCursor: true,
         cursorChar: '|'
