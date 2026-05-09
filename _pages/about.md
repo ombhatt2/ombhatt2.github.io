@@ -70,9 +70,9 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
 </div>
 
 <div style="text-align: center; margin-top: 100px; margin-bottom: 50px; padding: 0 20px;">
-  <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px;">Get In Touch</h2>
+  <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px;">Let's Get In Touch</h2>
   <p style="font-size: 1.15rem; opacity: 0.8; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-    I'm always open to discussing new projects, creative ideas, or opportunities. Feel free to reach out.
+    I'm always open to discussing new projects, creative ideas, or opportunities — whether it's research, robotics, or anything in between. Feel free to reach out.
   </p>
 </div>
 
