@@ -7,14 +7,15 @@ redirect_from:
   - /about.html
 ---
 
-<h2 style="margin-top: 0; font-size: 1.8em;"><span id="typed-text" class="tech-text"></span></h2>
-
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<h2 style="margin-top: 0; font-size: 1.8em; min-height: 1.2em;">
+  <span id="typed-text" class="tech-text"></span>
+</h2>
 
 <script>
-  function initTyped() {
-    // Check if the library is loaded and the element exists
-    if (typeof Typed !== 'undefined' && document.getElementById('typed-text')) {
+  (function() {
+    var script = document.createElement('script');
+    script.src = "https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js";
+    script.onload = function() {
       new Typed('#typed-text', {
         strings: [
           'A Robotics Engineer.', 
@@ -27,18 +28,9 @@ redirect_from:
         showCursor: true,
         cursorChar: '|'
       });
-    } else {
-      // If not ready, wait 100ms and try again
-      setTimeout(initTyped, 100);
-    }
-  }
-
-  // Run when the page is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initTyped);
-  } else {
-    initTyped();
-  }
+    };
+    document.head.appendChild(script);
+  })();
 </script>
 
 Welcome to my academic portfolio! I am a well-rounded student with strong academics and extracurricular experience. 
