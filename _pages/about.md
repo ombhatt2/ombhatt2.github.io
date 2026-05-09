@@ -11,11 +11,11 @@ redirect_from:
   <span id="typed-text" class="tech-text"></span>
 </h2>
 
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
 <script>
-  (function() {
-    var script = document.createElement('script');
-    script.src = "https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js";
-    script.onload = function() {
+  function startTyping() {
+    if (typeof Typed !== 'undefined') {
       new Typed('#typed-text', {
         strings: [
           'A Robotics Engineer.', 
@@ -28,9 +28,11 @@ redirect_from:
         showCursor: true,
         cursorChar: '|'
       });
-    };
-    document.head.appendChild(script);
-  })();
+    } else {
+      setTimeout(startTyping, 100);
+    }
+  }
+  startTyping();
 </script>
 
 Welcome to my academic portfolio! I am a well-rounded student with strong academics and extracurricular experience. 
