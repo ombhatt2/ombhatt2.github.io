@@ -1,6 +1,11 @@
 {% include base_path %}
 
 <style>
+  /* Added smooth scrolling for the back-to-top arrow */
+  html {
+    scroll-behavior: smooth;
+  }
+
   /* 1. Center the main footer container */
   .page__footer {
     text-align: center !important;
@@ -23,7 +28,7 @@
   }
 
   .page__footer-follow .social-icons i {
-    font-size: 1.5rem !important; /* Makes icons slightly more prominent like the reference */
+    font-size: 1.5rem !important; 
     color: white !important;
     transition: opacity 0.2s ease;
   }
@@ -50,7 +55,7 @@
       <li><a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i></a></li>
     {% endif %}
     
-    <li><a href="#site-nav" title="Back to Top"><i class="fa fa-fw fa-arrow-up" aria-hidden="true"></i></a></li>
+    <li><a href="#" title="Back to Top"><i class="fa fa-fw fa-arrow-up" aria-hidden="true"></i></a></li>
   </ul>
 </div>
 
