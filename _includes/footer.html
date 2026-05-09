@@ -48,9 +48,14 @@
 
 <div class="page__footer-follow">
   <ul class="social-icons">
+    {% if site.author.email %}
+      <li><a href="mailto:{{ site.author.email }}"><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></a></li>
+    {% endif %}
+
     {% if site.author.github %}
       <li><a href="https://github.com/{{ site.author.github }}" target="_blank"><i class="fab fa-fw fa-github" aria-hidden="true"></i></a></li>
     {% endif %}
+
     {% if site.author.linkedin %}
       <li><a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i></a></li>
     {% endif %}
