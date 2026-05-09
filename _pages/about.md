@@ -68,4 +68,13 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
     -webkit-text-fill-color: transparent;
     font-weight: bold;
   }
+
+/* 4. Fix Dark Mode Background Corners */
+  .page, .initial-content, #main, .page__inner-wrap {
+    background-color: transparent !important;
+  }
+  html, body {
+    min-height: 100vh; /* Ensures the background stretches all the way down */
+  }
 </style>
+
