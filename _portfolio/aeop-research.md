@@ -10,7 +10,7 @@ header:
 
 Presentation Slides: [Presentation Slides](/files/Autonomous Systems Group REU 2025 - Final Presentation - Autonomous RC Rally Car for Jump and Drift Racing - Om Bhatt.pdf) | Project Abstract: [Project Abstract](/files/AEOP Booklet Abstract - Om Bhatt_ Autonomous RC Rally Car for Jump and Drift Racing .pdf)
 
-Served as an **AEOP Summer Robotics Research Intern** at the **Center for Autonomy at UT Austin**, participating in the **AEOP LLMs for Safe Navigation REU** under the guidance of Dr. Ufuk Topcu, Dr. Christian Ellis, and PhD Student Rwik Rana.
+Served as an **AEOP Summer Robotics Research Intern** at the **Center for Autonomy at UT Austin**, participating in the **AEOP LLMs for Safe Navigation REU** under the guidance of [Dr. Ufuk Topcu](https://www.ae.utexas.edu/people/faculty/faculty-directory/topcu), [Dr. Christian Ellis](https://oden.utexas.edu/people/directory/Christian-Ellis/), and PhD Student [Rwik Rana](https://rwik2000.com/).
 
 * Architected a low-cost, 1/16 scale autonomous RC car using **ROS2** to create a modular research platform for complex drift and jump navigation studies.
 * Executed the complete electromechanical assembly by designing and soldering custom circuit boards to successfully power and integrate all components, including a **Raspberry Pi 5/Jetson Nano** and motor controllers.
