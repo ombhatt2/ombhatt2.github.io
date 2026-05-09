@@ -8,7 +8,12 @@ header:
   teaser: /images/WATonoBus.jpg
 ---
 
-As a Research Intern at the **University of Waterloo’s Mechatronics Vehicle Systems Lab**, I designed, fabricated, and programmed an LED display module for the **WATonoBus**, an autonomous shuttle. The module serves as a communication interface to inform pedestrians and other road users of the shuttle’s autonomous intentions, helping improve safety.
+As a Mechatronics Research Intern at the University of Waterloo's Mechatronics Vehicle Systems Lab:
+
+* Worked under the guidance of [Professor Amir Khajepour](https://uwaterloo.ca/mechanical-mechatronics-engineering/profile/akhajepo) on MVS Lab's autonomous shuttle called WATonoBus
+* Designed, fabricated, and programmed an LED display module that helped inform non-ego agents about the shuttle's intentions
+* Awarded a scholarship from MVS Lab for demonstrated excellence
+* Completed over 60+ hours of development
 
 <figure style="border: 1px solid #e0e0e0; padding: 0; margin-top: 30px; margin-bottom: 30px;">
   <img src="/images/WATonoBus.jpg" alt="WATonoBus LED Display" style="width:100%; display:block; margin:0;">
