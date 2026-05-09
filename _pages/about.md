@@ -46,7 +46,7 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
   .hover-card {
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
     border-radius: 8px !important;
-    background-color: #ffffff; /* Keeps the card solid when it lifts */
+    /* Removed white background to allow dark mode compatibility */
   }
   .hover-card:hover {
     transform: translateY(-8px) !important;
@@ -59,7 +59,7 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
   }
   .author__avatar img:hover {
     transform: scale(1.05) !important;
-    box-shadow: 0 0 20px rgba(128, 0, 0, 0.4) !important; /* Subtle maroon glow */
+    box-shadow: 0 0 20px rgba(128, 0, 0, 0.4) !important;
   }
 
   /* 3. Tech Gradient Highlight */
@@ -68,5 +68,17 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
+  }
+
+  /* 4. Fix Black Sidebars and Unified Background */
+  /* This forces the background to be consistent across the whole screen */
+  body, .page, .initial-content, #main, .page__inner-wrap {
+    background: #1d2129 !important; /* Standard theme navy color */
+  }
+
+  /* Ensure cards stay visible in dark mode with a subtle glass effect */
+  .hover-card {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(5px);
   }
 </style>
