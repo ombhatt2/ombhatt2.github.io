@@ -68,29 +68,5 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
     -webkit-text-fill-color: transparent;
     font-weight: bold;
   }
-
-/* 4. Solid Background Force-Fix */
-body, 
-html, 
-.masthead, 
-.page__footer, 
-.initial-content, 
-#main, 
-.page, 
-.page__inner-wrap,
-#main > div {
-  background-color: #1d2129 !important; /* This is the common dark navy color */
-}
-
-/* This targets the side areas explicitly */
-body {
-  background: #1d2129 !important;
-}
-
-/* Ensures the project cards stay visible but blend in */
-.hover-card {
-  background-color: rgba(255, 255, 255, 0.05) !important;
-  backdrop-filter: blur(5px);
-}
 </style>
 
