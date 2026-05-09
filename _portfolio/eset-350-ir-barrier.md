@@ -23,7 +23,7 @@ This hands-on project reinforced practical skills in precise PCB assembly, compo
 ### Project Report
 
 <div style="margin-bottom: 20px;">
-  <a href="/files/eset-350-project-report.pdf" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #800000; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">📄 Open Full Project Report in New Tab</a>
+  <a href="/files/ESET 350 Project Report.pdf" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #800000; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">📄 Open Full Project Report in New Tab</a>
 </div>
 
 <iframe src="/files/eset-350-project-report.pdf" width="100%" height="600px" style="border: 1px solid rgba(128,128,128,0.3); border-radius: 8px; margin-bottom: 40px;">
