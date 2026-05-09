@@ -1,5 +1,46 @@
 {% include base_path %}
 
+<style>
+  /* 1. Center the main footer container */
+  .page__footer {
+    text-align: center !important;
+    padding: 3rem 0 !important;
+    background-color: #800000; /* Keeps your signature TAMU maroon */
+  }
+
+  /* 2. Center and space out the social icons */
+  .page__footer-follow .social-icons {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 30px !important;
+    list-style: none !important;
+    margin: 0 0 1.5rem 0 !important;
+    padding: 0 !important;
+  }
+
+  .page__footer-follow .social-icons li {
+    margin: 0 !important;
+  }
+
+  .page__footer-follow .social-icons i {
+    font-size: 1.5rem !important; /* Makes icons slightly more prominent like the reference */
+    color: white !important;
+    transition: opacity 0.2s ease;
+  }
+
+  .page__footer-follow .social-icons i:hover {
+    opacity: 0.7;
+  }
+
+  /* 3. Stack and center the text lines */
+  .page__footer-copyright {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    color: white !important;
+  }
+</style>
+
 <div class="page__footer-follow">
   <ul class="social-icons">
     {% if site.author.github %}
@@ -14,10 +55,10 @@
 </div>
 
 <div class="page__footer-copyright">
-  <div style="margin-bottom: 10px; opacity: 0.8;">
-    <strong>Om Bhatt</strong> | Mechatronics Engineering @ TAMU
+  <div style="margin-bottom: 8px; opacity: 0.9; font-weight: 600; font-size: 1.1rem;">
+    Om Bhatt | Mechatronics Engineering @ TAMU
   </div>
-  <div style="font-size: 0.85em; opacity: 0.6;">
+  <div style="font-size: 0.85em; opacity: 0.7;">
     &copy; {{ "now" | date: "%Y" }} • Built with passion and Jekyll
   </div>
 </div>
