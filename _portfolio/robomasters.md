@@ -35,3 +35,12 @@ Sentry is a fully autonomous ground robot. It can traverse the field, shoot at e
     Detailed View of the Sentry Robot CAD Model
   </figcaption>
 </figure>
+
+### The Team
+<div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin: 1.5rem 0 3rem 0;">
+  <img src="/images/team-photo-1.jpg" alt="RoboMasters Team Member" style="flex: 1 1 30%; min-width: 250px; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+  
+  <img src="/images/team-photo-2.jpg" alt="RoboMasters Team Member" style="flex: 1 1 30%; min-width: 250px; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+  
+  <img src="/images/team-photo-3.jpg" alt="RoboMasters Team Member" style="flex: 1 1 30%; min-width: 250px; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+</div>
