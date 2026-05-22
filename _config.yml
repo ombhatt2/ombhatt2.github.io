@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Om's Homepage"
+title                    : "Om Bhatt"
 title_separator          : "-"
 name                     : &name "Om Bhatt"
 description              : &description "Om Bhatt's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
@@ -27,7 +27,7 @@ author:
   name             : "Om Bhatt"
   pronouns         : # example: "she/her"  
   bio              : "Sophomore Mechatronics Engineering @ TAMU'28"
-  location         : "Cedar Park, Texas"
+  location         : "College Station, Texas"
   employer         : "Texas A&M University"
   uri              : # URL
   email            : "ombhatt2@gmail.com" 

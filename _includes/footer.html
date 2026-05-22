@@ -1,24 +1,74 @@
 {% include base_path %}
 
-{% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
+<style>
+  /* Added smooth scrolling for the back-to-top arrow */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* 1. Center the main footer container */
+  .page__footer {
+    text-align: center !important;
+    padding: 3rem 0 !important;
+    background-color: #800000; /* Keeps your signature TAMU maroon */
+  }
+
+  /* 2. Center and space out the social icons */
+  .page__footer-follow .social-icons {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 30px !important;
+    list-style: none !important;
+    margin: 0 0 1.5rem 0 !important;
+    padding: 0 !important;
+  }
+
+  .page__footer-follow .social-icons li {
+    margin: 0 !important;
+  }
+
+  .page__footer-follow .social-icons i {
+    font-size: 1.5rem !important; 
+    color: white !important;
+    transition: opacity 0.2s ease;
+  }
+
+  .page__footer-follow .social-icons i:hover {
+    opacity: 0.7;
+  }
+
+  /* 3. Stack and center the text lines */
+  .page__footer-copyright {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    color: white !important;
+  }
+</style>
+
 <div class="page__footer-follow">
   <ul class="social-icons">
-    {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
+    {% if site.author.email %}
+      <li><a href="mailto:{{ site.author.email }}"><i class="fa fa-fw fa-envelope" aria-hidden="true"></i></a></li>
     {% endif %}
+
     {% if site.author.github %}
-      <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="https://github.com/{{ site.author.github }}" target="_blank"><i class="fab fa-fw fa-github" aria-hidden="true"></i></a></li>
     {% endif %}
-    {% if site.author.bitbucket %}
-      <li><a href="https://bitbucket.org/{{ site.author.bitbucket }}"><i class="fab fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
+
+    {% if site.author.linkedin %}
+      <li><a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i></a></li>
     {% endif %}
-    {% if site.atom_feed.hide != true %}
-    <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
-    {% endif %}
+    
+    <li><a href="#" title="Back to Top"><i class="fa fa-fw fa-arrow-up" aria-hidden="true"></i></a></li>
   </ul>
 </div>
-{% endif %}
 
 <div class="page__footer-copyright">
-  &copy; 2026 Om Bhatt
+  <div style="margin-bottom: 8px; opacity: 0.9; font-weight: 600; font-size: 1.1rem;">
+    Om Bhatt | Mechatronics Engineering @ TAMU
+  </div>
+  <div style="font-size: 0.85em; opacity: 0.7;">
+    &copy; {{ "now" | date: "%Y" }} • Built with passion and Jekyll
+  </div>
 </div>
