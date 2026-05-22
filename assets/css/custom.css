@@ -19,7 +19,7 @@
 
 /* Dark theme override (works with theme toggle that sets data-theme="dark") */
 html[data-theme="dark"] {
-  --global-bg-color: #0b0f12; /* dark page background */
+  --global-bg-color: #0f1720; /* dark page background */
   --global-text-color: #e8e8e8;
   --global-masthead-link-color: #ffffff;
   --global-footer-bg-color: #2b0000;
@@ -35,11 +35,10 @@ html[data-theme="dark"] {
   color: var(--content-text) !important;
 }
 
-html[data-theme="dark"] body,
-html[data-theme="dark"] .page,
-html[data-theme="dark"] .site-inner,
-html[data-theme="dark"] .page__content,
-html[data-theme="dark"] .content,
+html[data-theme="dark"] body {
+  background-color: var(--global-bg-color) !important;
+}
+
 html[data-theme="dark"] .archive-item,
 html[data-theme="dark"] .card,
 html[data-theme="dark"] .post-card {
@@ -121,9 +120,9 @@ body {
 }
 .page__footer a { color: var(--aggie-white) !important; }
 
-/* Keep main content readable on panels that use content bg variable */
+/* Keep main content readable but allow global background to span full width */
 .page, .site, .site-inner, .page__content, .content, .page__inner-wrap {
-  background-color: var(--content-bg) !important;
+  background-color: transparent !important;
   color: var(--content-text) !important;
 }
 
