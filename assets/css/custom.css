@@ -152,3 +152,21 @@ body > .page__footer { position: relative; z-index: 2; }
     padding-left: 2px !important;
     width: 1.3em !important; /* Slightly widens the container so nothing gets cut off */
 }
+
+/* Progress Bar Container */
+.progress-container {
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  position: fixed; /* Keeps it locked to the top of the screen */
+  top: 0;
+  left: 0;
+  z-index: 9999; /* Ensures it stays above all other content/menus */
+}
+
+/* The actual moving bar */
+.progress-bar {
+  height: 4px;
+  background: var(--aggie-maroon); /* Uses your custom Texas A&M maroon! */
+  width: 0%; 
+}
