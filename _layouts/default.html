@@ -28,6 +28,8 @@ layout: compress
         pointer-events: none;
         opacity: 0;
         transition: opacity 0.2s ease-in-out;
+        font-size: 0; /* Hides the anti-compressor space */
+        color: transparent;
       }
 
       #cursor-dot {
@@ -140,23 +142,23 @@ layout: compress
   </head>
 
   <body>
-    <div id="cursor-dot"></div>
-    <div id="cursor-outline"></div>
+    <div id="cursor-dot">&nbsp;</div>
+    <div id="cursor-outline">&nbsp;</div>
 
     <div id="boot-loader">
       <div class="loader-core">
-        <div class="spin-ring outer"></div>
-        <div class="spin-ring inner"></div>
+        <div class="spin-ring outer">&nbsp;</div>
+        <div class="spin-ring inner">&nbsp;</div>
         <div class="load-percent" id="load-percent">0%</div>
         <div class="load-label">CALIBRATING SENSORS...</div>
       </div>
-      <div id="terminal-text"></div>
+      <div id="terminal-text">&nbsp;</div>
     </div>
 
     <div id="particles-js"></div>
 
     <div class="progress-container">
-      <div class="progress-bar" id="myBar"></div>
+      <div class="progress-bar" id="myBar">&nbsp;</div>
     </div>
 
     {% include browser-upgrade.html %}
@@ -178,7 +180,8 @@ layout: compress
         var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         var scrolled = (winScroll / height) * 100;
-        document.getElementById("myBar").style.width = scrolled + "%";
+        var myBar = document.getElementById("myBar");
+        if(myBar) myBar.style.width = scrolled + "%";
       };
     </script>
 
@@ -193,42 +196,47 @@ layout: compress
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-      particlesJS("particles-js", {
-        "particles": {
-          "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
-          "color": { "value": "#a8a8a8" }, 
-          "shape": { "type": "circle" },
-          "opacity": { "value": 0.5, "random": false },
-          "size": { "value": 3, "random": true },
-          "line_linked": { "enable": true, "distance": 150, "color": "#a8a8a8", "opacity": 0.4, "width": 1 },
-          "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
-        },
-        "interactivity": {
-          "detect_on": "canvas",
-          "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
-          "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } }, "push": { "particles_nb": 4 } }
-        },
-        "retina_detect": true
-      });
+      if(document.getElementById("particles-js")) {
+        particlesJS("particles-js", {
+          "particles": {
+            "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+            "color": { "value": "#a8a8a8" }, 
+            "shape": { "type": "circle" },
+            "opacity": { "value": 0.5, "random": false },
+            "size": { "value": 3, "random": true },
+            "line_linked": { "enable": true, "distance": 150, "color": "#a8a8a8", "opacity": 0.4, "width": 1 },
+            "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+            "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } }, "push": { "particles_nb": 4 } }
+          },
+          "retina_detect": true
+        });
+      }
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         var targets = document.querySelectorAll('p, h1, h2, h3, ul, .archive__item, .skill-cloud, .reveal-target, .hover-card');
-        targets.forEach(function(el) {
-          el.setAttribute('data-aos', 'fade-up');
-        });
+        targets.forEach(function(el) { el.setAttribute('data-aos', 'fade-up'); });
         AOS.init({ duration: 800, easing: 'ease-out', once: false, offset: 40 });
       });
     </script>
 
     <script>
-      const dot = document.getElementById("cursor-dot");
-      const outline = document.getElementById("cursor-outline");
+      let dot = document.getElementById("cursor-dot");
+      let outline = document.getElementById("cursor-outline");
+
+      // Failsafe: Rebuild if HTML compressor deleted them
+      if (!dot) { dot = document.createElement("div"); dot.id = "cursor-dot"; document.body.appendChild(dot); }
+      if (!outline) { outline = document.createElement("div"); outline.id = "cursor-outline"; document.body.appendChild(outline); }
+
       let isCursorActive = false;
-      let mouseX = 0, mouseY = 0;
-      let outlineX = 0, outlineY = 0;
+      let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+      let outlineX = mouseX, outlineY = mouseY;
 
       window.addEventListener("mousemove", function (e) {
         if (!isCursorActive) {
@@ -246,8 +254,10 @@ layout: compress
       function animateOutline() {
         outlineX += (mouseX - outlineX) * 0.2;
         outlineY += (mouseY - outlineY) * 0.2; 
-        outline.style.left = `${outlineX}px`;
-        outline.style.top = `${outlineY}px`;
+        if(outline) {
+          outline.style.left = `${outlineX}px`;
+          outline.style.top = `${outlineY}px`;
+        }
         requestAnimationFrame(animateOutline);
       }
       animateOutline();
@@ -255,35 +265,41 @@ layout: compress
       const interactables = document.querySelectorAll("a, button, .hover-card, .skill-badge, input, textarea");
       interactables.forEach(el => {
         el.addEventListener("mouseenter", () => {
-          outline.style.width = "50px";
-          outline.style.height = "50px";
-          outline.style.backgroundColor = "rgba(128, 0, 0, 0.1)";
-          outline.style.border = "2px solid #ff4d4d";
+          if(outline) {
+            outline.style.width = "50px";
+            outline.style.height = "50px";
+            outline.style.backgroundColor = "rgba(128, 0, 0, 0.1)";
+            outline.style.border = "2px solid #ff4d4d";
+          }
         });
         el.addEventListener("mouseleave", () => {
-          outline.style.width = "32px";
-          outline.style.height = "32px";
-          outline.style.backgroundColor = "transparent";
-          outline.style.border = "2px solid rgba(128, 0, 0, 0.6)";
+          if(outline) {
+            outline.style.width = "32px";
+            outline.style.height = "32px";
+            outline.style.backgroundColor = "transparent";
+            outline.style.border = "2px solid rgba(128, 0, 0, 0.6)";
+          }
         });
       });
     </script>
 
     <script>
       (function() {
-        const bootLoader = document.getElementById('boot-loader');
-        const terminalText = document.getElementById('terminal-text');
-        const percentText = document.getElementById('load-percent');
+        let bootLoader = document.getElementById('boot-loader');
+        let terminalText = document.getElementById('terminal-text');
+        let percentText = document.getElementById('load-percent');
+
+        // Failsafe: Rebuild terminal if HTML compressor deleted it
+        if (bootLoader && !terminalText) {
+          terminalText = document.createElement("div");
+          terminalText.id = "terminal-text";
+          bootLoader.appendChild(terminalText);
+        }
 
         if (!bootLoader || !terminalText || !percentText) return;
 
-        // Safely check memory without crashing Incognito mode
         let hasBooted = false;
-        try {
-          hasBooted = sessionStorage.getItem('systemBooted');
-        } catch (e) {
-          console.warn("Browser privacy blocked memory. Booting anyway.");
-        }
+        try { hasBooted = sessionStorage.getItem('systemBooted'); } catch (e) {}
 
         if (!hasBooted) {
           const bootSequence = [
@@ -301,7 +317,6 @@ layout: compress
             "[MAIN] ACCESS GRANTED."
           ];
 
-          // 1. Rapid Telemetry Stream
           let delay = 0;
           bootSequence.forEach((line) => {
             delay += Math.random() * 80 + 30; 
@@ -316,7 +331,6 @@ layout: compress
             }, delay);
           });
 
-          // 2. Guaranteed Counter Loop
           let currentPercent = 0;
           const counterInterval = setInterval(() => {
             currentPercent += 1.25; 
