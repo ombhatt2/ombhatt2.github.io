@@ -243,3 +243,39 @@ html[data-theme="dark"] .page__inner-wrap {
   z-index: 10 !important;
 }
 
+/* ========================================================
+   MODERN RESUME BUTTON (HOMEPAGE)
+   ======================================================== */
+
+.modern-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, var(--aggie-maroon), var(--aggie-maroon-dark)) !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 700;
+  font-size: 1.15rem;
+  border-radius: 50px; /* Creates the modern "pill" shape */
+  box-shadow: 0 4px 15px rgba(80, 0, 0, 0.4) !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  border: 2px solid transparent;
+}
+
+/* The 3D Lift & Glow Effect on Hover */
+.modern-resume-btn:hover {
+  transform: translateY(-4px) !important; /* Lifts the button up */
+  box-shadow: 0 10px 25px rgba(80, 0, 0, 0.6) !important; /* Expands the shadow */
+  background: linear-gradient(135deg, var(--aggie-maroon-dark), var(--aggie-maroon)) !important;
+}
+
+/* Animate the little arrow icon */
+.modern-resume-btn i {
+  transition: transform 0.3s ease !important;
+}
+
+.modern-resume-btn:hover i {
+  transform: translateX(6px) !important; /* Pushes the arrow to the right */
+}
+

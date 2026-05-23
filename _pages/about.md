@@ -39,6 +39,12 @@ Welcome to my academic portfolio! I am a well-rounded student with strong academ
 
 I am passionate about robotics, particularly autonomous and intelligent systems. Currently, I am seeking to expand my engineering knowledge and experience to design, develop, and optimize mechatronic and robotic systems that advance automation and contribute to the betterment of society.
 
+<div style="margin-top: 2rem; margin-bottom: 3rem;">
+  <a href="/files/Om_Bhatt_Resume.pdf" class="modern-resume-btn" target="_blank">
+    View My Resume <i class="fas fa-arrow-right"></i>
+  </a>
+</div>
+
 ## Education
 **Texas A&M University** (2024-2028)
 * B.S. Mechatronics Engineering
