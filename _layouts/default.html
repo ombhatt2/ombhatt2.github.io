@@ -57,7 +57,7 @@ layout: compress
     <script>
       particlesJS("particles-js", {
         "particles": {
-          "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+          "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
           "color": { "value": "#a8a8a8" }, 
           "shape": { "type": "circle" },
           "opacity": { "value": 0.5, "random": false },
@@ -66,30 +66,29 @@ layout: compress
             "enable": true,
             "distance": 150,
             "color": "#a8a8a8",
-            "opacity": 0.5,
+            "opacity": 0.4,
             "width": 1
           },
           "move": {
             "enable": true,
-            "speed": 2.5,
+            "speed": 2,
             "direction": "none",
-            "random": true,
+            "random": false,
             "straight": false,
             "out_mode": "out",
             "bounce": false,
           }
         },
         "interactivity": {
-          "detect_on": "window", /* Tracks your mouse anywhere on the screen */
+          "detect_on": "canvas",
           "events": {
-            "onhover": { "enable": true, "mode": ["grab", "repulse"] }, /* Adds magnetic scattering */
+            "onhover": { "enable": true, "mode": "grab" },
             "onclick": { "enable": true, "mode": "push" },
             "resize": true
           },
           "modes": {
-            "grab": { "distance": 180, "line_linked": { "opacity": 0.8 } },
-            "repulse": { "distance": 100, "duration": 0.4 }, /* Controls the forcefield size */
-            "push": { "particles_nb": 5 }
+            "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
+            "push": { "particles_nb": 4 }
           }
         },
         "retina_detect": true
@@ -105,6 +104,7 @@ layout: compress
         offset: 100 /* Starts animation when element is 100px from the bottom of the screen */
       });
     </script>
+    
     
   </body>
 </html>
