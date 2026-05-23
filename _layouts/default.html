@@ -9,6 +9,8 @@ layout: compress
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   </head>
 
   <body>
@@ -95,30 +97,23 @@ layout: compress
       });
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-        if (typeof ScrollReveal !== 'undefined') {
-          /* Initialize ScrollReveal */
-          const sr = ScrollReveal({
-            distance: '40px',     /* Distance elements move */
-            duration: 800,        /* How long the animation takes (ms) */
-            easing: 'ease-out',   /* Smooth easing */
-            origin: 'bottom',     /* Elements slide up from the bottom */
-            reset: true,          /* Animations trigger every time you scroll */
-            viewFactor: 0.15      /* Triggers when 15% of the element is visible */
-          });
+        /* Auto-inject AOS attributes so you don't have to edit about.md manually */
+        var targets = document.querySelectorAll('p, h1, h2, h3, ul, .archive__item, .skill-cloud, .reveal-target, .hover-card');
+        
+        targets.forEach(function(el) {
+          el.setAttribute('data-aos', 'fade-up');
+        });
 
-          /* Target the elements you want to animate */
-          sr.reveal('p', { interval: 100 });
-          sr.reveal('h1, h2, h3', { delay: 100 });
-          
-          /* Custom classes from about.md */
-          sr.reveal('ul, .archive__item, .skill-cloud, .reveal-target', { interval: 150 });
-          sr.reveal('.hover-card', { interval: 100 });
-        } else {
-          console.error("ScrollReveal failed to load.");
-        }
+        /* Initialize AOS */
+        AOS.init({
+          duration: 800,       /* Animation length */
+          easing: 'ease-out',  /* Smooth sliding */
+          once: false,         /* Re-animates when scrolling back up */
+          offset: 40           /* Triggers slightly earlier than default */
+        });
       });
     </script>
     
