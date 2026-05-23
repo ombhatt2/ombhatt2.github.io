@@ -322,25 +322,24 @@ html[data-theme="dark"] .skill-badge {
 }
 
 /* ========================================================
-   SIDEBAR PARTICLE & MOUSE FIX
+   SIDEBAR PARTICLE & MOUSE FIX (V2)
    ======================================================== */
 
-/* 1. Strip the solid background off the left sidebar */
+/* 1. Strip the background */
 .sidebar, 
-.page__sidebar, 
-.author__urls-wrapper {
+.page__sidebar {
   background-color: transparent !important;
-  background: none !important;
   border: none !important;
   box-shadow: none !important;
 }
 
-/* 2. Let the mouse 'fall through' the empty space of the sidebar to interact with particles */
-.sidebar {
+/* 2. Turn the giant sticky column into a ghost so the mouse falls through it */
+.sidebar,
+.sidebar.sticky {
   pointer-events: none !important;
 }
 
-/* 3. Re-enable clicking and hovering for the actual links and profile picture inside the sidebar */
-.sidebar * {
+/* 3. Re-enable clicking and hovering ONLY for your actual profile card */
+.author__profile {
   pointer-events: auto !important;
 }
