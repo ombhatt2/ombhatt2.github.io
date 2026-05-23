@@ -320,3 +320,27 @@ html[data-theme="dark"] .skill-badge {
   background-color: var(--aggie-maroon) !important;
   color: #ffffff !important;
 }
+
+/* ========================================================
+   SIDEBAR PARTICLE & MOUSE FIX
+   ======================================================== */
+
+/* 1. Strip the solid background off the left sidebar */
+.sidebar, 
+.page__sidebar, 
+.author__urls-wrapper {
+  background-color: transparent !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 2. Let the mouse 'fall through' the empty space of the sidebar to interact with particles */
+.sidebar {
+  pointer-events: none !important;
+}
+
+/* 3. Re-enable clicking and hovering for the actual links and profile picture inside the sidebar */
+.sidebar * {
+  pointer-events: auto !important;
+}
