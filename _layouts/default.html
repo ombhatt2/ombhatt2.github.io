@@ -95,16 +95,90 @@ layout: compress
       });
     </script>
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <style>
+      /* Hide default cursor on desktop */
+      @media (min-width: 769px) {
+        body, a, button, .hover-card, .skill-badge {
+          cursor: none !important;
+        }
+      }
+
+      /* Base styles for the cursor components */
+      .cursor-dot,
+      .cursor-outline {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        z-index: 9999;
+        pointer-events: none; /* Lets you click through it */
+      }
+
+      /* The solid inner dot */
+      .cursor-dot {
+        width: 6px;
+        height: 6px;
+        background-color: #ff4d4d;
+      }
+
+      /* The trailing outer ring */
+      .cursor-outline {
+        width: 30px;
+        height: 30px;
+        border: 2px solid rgba(128, 0, 0, 0.6);
+        transition: width 0.2s ease-out, height 0.2s ease-out, background-color 0.2s ease-out;
+      }
+
+      /* Disable custom cursor entirely on mobile touch screens */
+      @media (max-width: 768px) {
+        .cursor-dot, .cursor-outline {
+          display: none !important;
+        }
+      }
+    </style>
+
     <script>
-      AOS.init({
-        duration: 800, /* Animation lasts 0.8 seconds */
-        once: true, /* Animations only happen once when scrolling down */
-        offset: 100 /* Starts animation when element is 100px from the bottom of the screen */
+      const cursorDot = document.querySelector("[data-cursor-dot]");
+      const cursorOutline = document.querySelector("[data-cursor-outline]");
+
+      window.addEventListener("mousemove", function (e) {
+        const posX = e.clientX;
+        const posY = e.clientY;
+
+        // The dot follows instantly
+        cursorDot.style.left = `${posX}px`;
+        cursorDot.style.top = `${posY}px`;
+
+        // The outline trails with a smooth animation delay
+        cursorOutline.animate({
+          left: `${posX}px`,
+          top: `${posY}px`
+        }, { duration: 400, fill: "forwards" });
+      });
+
+      // Add the expanding hover effect to all clickable elements
+      const interactables = document.querySelectorAll("a, button, .hover-card, .skill-badge, input, textarea");
+      
+      interactables.forEach(el => {
+        el.addEventListener("mouseenter", () => {
+          cursorOutline.style.width = "50px";
+          cursorOutline.style.height = "50px";
+          cursorOutline.style.backgroundColor = "rgba(128, 0, 0, 0.1)";
+          cursorOutline.style.border = "2px solid #ff4d4d";
+        });
+        
+        el.addEventListener("mouseleave", () => {
+          cursorOutline.style.width = "30px";
+          cursorOutline.style.height = "30px";
+          cursorOutline.style.backgroundColor = "transparent";
+          cursorOutline.style.border = "2px solid rgba(128, 0, 0, 0.6)";
+        });
       });
     </script>
-    
     
   </body>
 </html>
