@@ -9,20 +9,6 @@ layout: compress
   <head>
     {% include head.html %}
     {% include head/custom.html %}
-    
-    <style>
-      .scroll-reveal {
-        opacity: 0;
-        transform: translateY(40px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        will-change: opacity, transform;
-      }
-      
-      .scroll-reveal.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    </style>
   </head>
 
   <body>
@@ -109,35 +95,23 @@ layout: compress
       });
     </script>
 
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-        // 1. Target the elements you want to animate as you scroll
-        // This targets paragraphs, headings, lists, and custom items like your skills/projects
-        const elementsToReveal = document.querySelectorAll('p, h2, h3, ul, .archive__item');
-        
-        // 2. Apply the starting hidden class to them
-        elementsToReveal.forEach(el => {
-          el.classList.add('scroll-reveal');
+        // Initialize ScrollReveal
+        const sr = ScrollReveal({
+          distance: '40px',     // Distance elements move
+          duration: 800,        // How long the animation takes (ms)
+          easing: 'ease-out',   // Smooth easing
+          origin: 'bottom',     // Elements slide up from the bottom
+          viewFactor: 0.15      // Triggers when 15% of the element is visible
         });
 
-        // 3. Set up the Intersection Observer
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              // Optional: Stop observing once revealed so it doesn't animate again when scrolling up
-              observer.unobserve(entry.target); 
-            }
-          });
-        }, {
-          threshold: 0.1, // Trigger when 10% of the element is in view
-          rootMargin: "0px 0px -50px 0px" // Trigger slightly before it completely enters the bottom
-        });
-
-        // 4. Start observing the elements
-        elementsToReveal.forEach(el => {
-          observer.observe(el);
-        });
+        // Target the elements you want to animate
+        // The 'interval: 100' makes lists and paragraphs stagger in one after another
+        sr.reveal('p', { interval: 100 });
+        sr.reveal('h2, h3', { delay: 100 });
+        sr.reveal('ul, .archive__item', { interval: 150 });
       });
     </script>
     
