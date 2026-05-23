@@ -39,7 +39,7 @@ Welcome to my academic portfolio! I am a well-rounded student with strong academ
 
 I am passionate about robotics, particularly autonomous and intelligent systems. Currently, I am seeking to expand my engineering knowledge and experience to design, develop, and optimize mechatronic and robotic systems that advance automation and contribute to the betterment of society.
 
-<div style="margin-top: 2rem; margin-bottom: 3rem;">
+<div style="margin-top: 2rem; margin-bottom: 3rem;" data-aos="fade-up">
   <a href="/files/Om_Bhatt_Resume.pdf" class="modern-resume-btn" target="_blank">
     View My Resume <i class="fas fa-arrow-right"></i>
   </a>
@@ -52,10 +52,10 @@ I am passionate about robotics, particularly autonomous and intelligent systems.
 
 Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
 
-<h2 style="margin-top: 2em; margin-bottom: 1em;">Technical Skills</h2>
+<h2 style="margin-top: 2em; margin-bottom: 1em;" data-aos="fade-up">Technical Skills</h2>
 
-<h3 style="font-size: 1.1rem; margin-bottom: 0.8rem; color: #800000;">Programming</h3>
-<div class="skill-cloud">
+<h3 style="font-size: 1.1rem; margin-bottom: 0.8rem; color: #800000;" data-aos="fade-up">Programming</h3>
+<div class="skill-cloud" data-aos="fade-up" data-aos-delay="100">
   <div class="skill-badge"><i class="fas fa-code"></i> C/C++</div>
   <div class="skill-badge"><i class="fab fa-python"></i> Python</div>
   <div class="skill-badge"><i class="fas fa-robot"></i> ROS2</div>
@@ -64,8 +64,8 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
   <div class="skill-badge"><i class="fas fa-subscript"></i> LaTeX</div>
 </div>
 
-<h3 style="font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.8rem; color: #800000;">Hardware & Prototyping</h3>
-<div class="skill-cloud">
+<h3 style="font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.8rem; color: #800000;" data-aos="fade-up">Hardware & Prototyping</h3>
+<div class="skill-cloud" data-aos="fade-up" data-aos-delay="100">
   <div class="skill-badge"><i class="fas fa-microchip"></i> ESP32 & STM32</div>
   <div class="skill-badge"><i class="fas fa-satellite-dish"></i> Arduino & RPi</div>
   <div class="skill-badge"><i class="fas fa-eye"></i> LiDARs & Cameras</div>
@@ -73,8 +73,8 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
   <div class="skill-badge"><i class="fas fa-network-wired"></i> PCB Design</div>
 </div>
 
-<h3 style="font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.8rem; color: #800000;">Simulation & CAD</h3>
-<div class="skill-cloud">
+<h3 style="font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.8rem; color: #800000;" data-aos="fade-up">Simulation & CAD</h3>
+<div class="skill-cloud" data-aos="fade-up" data-aos-delay="100">
   <div class="skill-badge"><i class="fas fa-cube"></i> SolidWorks</div>
   <div class="skill-badge"><i class="fas fa-drafting-compass"></i> Onshape & Inventor</div>
   <div class="skill-badge"><i class="fas fa-print"></i> Bambu Studio</div>
@@ -85,7 +85,7 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
 ## Featured Projects
 
 {% assign featured_paths = "/portfolio/2024-01-01-dron,/portfolio/robomasters,/portfolio/aeop-research,/portfolio/hatchling,/portfolio/ecotrack,/portfolio/watonobus" | split: "," %}
-<div style="display:flex;flex-wrap:wrap;gap:20px;margin-top:16px;">
+<div style="display:flex;flex-wrap:wrap;gap:20px;margin-top:16px;" data-aos="fade-up" data-aos-delay="100">
   {% for p in featured_paths %}
     {% assign matches = site.portfolio | where: "url", p %}
     {% if matches and matches.size > 0 %}
@@ -105,7 +105,7 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
   {% endfor %}
 </div>
 
-<div style="text-align: center; margin-top: 100px; margin-bottom: 50px; padding: 0 20px;">
+<div style="text-align: center; margin-top: 100px; margin-bottom: 50px; padding: 0 20px;" data-aos="fade-up">
   <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px;">Get In Touch</h2>
   <p style="font-size: 1.15rem; opacity: 0.8; max-width: 600px; margin: 0 auto; line-height: 1.6;">
     I'm always open to discussing new projects, creative ideas, or opportunities — whether it's research, robotics, or anything in between. Feel free to reach out.
