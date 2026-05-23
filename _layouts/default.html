@@ -9,9 +9,49 @@ layout: compress
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+    
+    <style>
+      /* --- Custom Cursor CSS --- */
+      body.custom-cursor-active, 
+      body.custom-cursor-active * {
+        cursor: none !important;
+      }
+
+      #cursor-dot, #cursor-outline {
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        z-index: 999999;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+      }
+
+      #cursor-dot {
+        width: 8px;
+        height: 8px;
+        background-color: #ff4d4d;
+      }
+
+      #cursor-outline {
+        width: 32px;
+        height: 32px;
+        border: 2px solid rgba(128, 0, 0, 0.6);
+        transition: width 0.2s, height 0.2s, background-color 0.2s;
+      }
+
+      @media (max-width: 768px) {
+        #cursor-dot, #cursor-outline { display: none !important; }
+        body.custom-cursor-active, body.custom-cursor-active * { cursor: auto !important; }
+      }
+    </style>
   </head>
 
   <body>
+    <div id="cursor-dot"></div>
+    <div id="cursor-outline"></div>
+
     <div id="particles-js"></div>
 
     <div class="progress-container">
@@ -45,10 +85,7 @@ layout: compress
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         VanillaTilt.init(document.querySelectorAll(".archive__item"), {
-          max: 10,
-          speed: 400,
-          glare: true,
-          "max-glare": 0.3
+          max: 10, speed: 400, glare: true, "max-glare": 0.3
         });
       });
     </script>
@@ -62,139 +99,62 @@ layout: compress
           "shape": { "type": "circle" },
           "opacity": { "value": 0.5, "random": false },
           "size": { "value": 3, "random": true },
-          "line_linked": {
-            "enable": true,
-            "distance": 150,
-            "color": "#a8a8a8",
-            "opacity": 0.4,
-            "width": 1
-          },
-          "move": {
-            "enable": true,
-            "speed": 2,
-            "direction": "none",
-            "random": false,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-          }
+          "line_linked": { "enable": true, "distance": 150, "color": "#a8a8a8", "opacity": 0.4, "width": 1 },
+          "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
         },
         "interactivity": {
           "detect_on": "canvas",
-          "events": {
-            "onhover": { "enable": true, "mode": "grab" },
-            "onclick": { "enable": true, "mode": "push" },
-            "resize": true
-          },
-          "modes": {
-            "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
-            "push": { "particles_nb": 4 }
-          }
+          "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+          "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } }, "push": { "particles_nb": 4 } }
         },
         "retina_detect": true
       });
     </script>
 
-    <div class="cursor-dot" data-cursor-dot></div>
-    <div class="cursor-outline" data-cursor-outline></div>
-
-    <style>
-      /* We only hide the normal cursor if the JavaScript successfully activates */
-      body.custom-cursor-active, 
-      body.custom-cursor-active a, 
-      body.custom-cursor-active button, 
-      body.custom-cursor-active .hover-card, 
-      body.custom-cursor-active .skill-badge {
-        cursor: none !important;
-      }
-
-      /* Base styles for the cursor components */
-      .cursor-dot,
-      .cursor-outline {
-        position: fixed;
-        top: 0;
-        left: 0;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        z-index: 9999;
-        pointer-events: none; /* Lets you click through it */
-        opacity: 0; /* Starts completely hidden so it doesn't get stuck in the corner */
-      }
-
-      /* The solid inner dot */
-      .cursor-dot {
-        width: 6px;
-        height: 6px;
-        background-color: #ff4d4d;
-        transition: opacity 0.2s ease-in-out;
-      }
-
-      /* The trailing outer ring */
-      .cursor-outline {
-        width: 30px;
-        height: 30px;
-        border: 2px solid rgba(128, 0, 0, 0.6);
-        transition: width 0.2s ease-out, height 0.2s ease-out, background-color 0.2s ease-out, opacity 0.2s ease-in-out;
-      }
-
-      /* Disable custom cursor entirely on mobile touch screens */
-      @media (max-width: 768px) {
-        .cursor-dot, .cursor-outline {
-          display: none !important;
-        }
-        body.custom-cursor-active {
-          cursor: auto !important; /* Forces normal touch behavior */
-        }
-      }
-    </style>
-
     <script>
-      const cursorDot = document.querySelector("[data-cursor-dot]");
-      const cursorOutline = document.querySelector("[data-cursor-outline]");
-      let isCursorActive = false;
+      const dot = document.getElementById("cursor-dot");
+      const outline = document.getElementById("cursor-outline");
+      let isActive = false;
+      let mouseX = 0, mouseY = 0;
+      let outlineX = 0, outlineY = 0;
 
       window.addEventListener("mousemove", function (e) {
-        // Only activate the custom cursor once the user actually moves the mouse
-        if (!isCursorActive) {
+        if (!isActive) {
           document.body.classList.add("custom-cursor-active");
-          cursorDot.style.opacity = "1";
-          cursorOutline.style.opacity = "1";
-          isCursorActive = true;
+          dot.style.opacity = "1";
+          outline.style.opacity = "1";
+          isActive = true;
         }
-
-        const posX = e.clientX;
-        const posY = e.clientY;
-
-        // The dot follows instantly
-        cursorDot.style.left = `${posX}px`;
-        cursorDot.style.top = `${posY}px`;
-
-        // The outline trails with a smooth animation delay
-        cursorOutline.animate({
-          left: `${posX}px`,
-          top: `${posY}px`
-        }, { duration: 400, fill: "forwards" });
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        dot.style.left = `${mouseX}px`;
+        dot.style.top = `${mouseY}px`;
       });
 
-      // Add the expanding hover effect to all clickable elements
+      function animateOutline() {
+        outlineX += (mouseX - outlineX) * 0.2;
+        outlineY += (mouseY - mouseY) * 0.2; // Fixed potential typo
+        outline.style.left = `${outlineX}px`;
+        outline.style.top = `${outlineY}px`;
+        requestAnimationFrame(animateOutline);
+      }
+      animateOutline();
+
       const interactables = document.querySelectorAll("a, button, .hover-card, .skill-badge, input, textarea");
-      
       interactables.forEach(el => {
         el.addEventListener("mouseenter", () => {
-          cursorOutline.style.width = "50px";
-          cursorOutline.style.height = "50px";
-          cursorOutline.style.backgroundColor = "rgba(128, 0, 0, 0.1)";
-          cursorOutline.style.border = "2px solid #ff4d4d";
+          outline.style.width = "50px";
+          outline.style.height = "50px";
+          outline.style.backgroundColor = "rgba(128, 0, 0, 0.1)";
+          outline.style.border = "2px solid #ff4d4d";
         });
-        
         el.addEventListener("mouseleave", () => {
-          cursorOutline.style.width = "30px";
-          cursorOutline.style.height = "30px";
-          cursorOutline.style.backgroundColor = "transparent";
-          cursorOutline.style.border = "2px solid rgba(128, 0, 0, 0.6)";
+          outline.style.width = "32px";
+          outline.style.height = "32px";
+          outline.style.backgroundColor = "transparent";
+          outline.style.border = "2px solid rgba(128, 0, 0, 0.6)";
         });
       });
     </script>
-    
   </body>
 </html>
