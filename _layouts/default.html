@@ -270,64 +270,83 @@ layout: compress
     </script>
 
     <script>
-      const bootLoader = document.getElementById('boot-loader');
-      const terminalText = document.getElementById('terminal-text');
-      const percentText = document.getElementById('load-percent');
+      document.addEventListener("DOMContentLoaded", function() {
+        const bootLoader = document.getElementById('boot-loader');
+        const terminalText = document.getElementById('terminal-text');
+        const percentText = document.getElementById('load-percent');
 
-      if (!sessionStorage.getItem('systemBooted')) {
-        
-        const bootSequence = [
-          "[KERNEL] OM_OS v2.0.26 (x86_64) booting...",
-          "[SYS] Memory Test: 64000K Passed",
-          "[SYS] Mounting Root File System...",
-          "[ROS2] Starting Daemon...",
-          "[ROS2] Initializing /teleop_twist_keyboard node",
-          "[ROS2] Starting /sentry_robot_controller",
-          "[COMMS] Establishing DRON Uplink...",
-          "[HW] Calibrating LiDAR Sensors...",
-          "[HW] Activating Inverse Kinematics Module...",
-          "[SEC] Establishing Secure Connection...",
-          "[SEC] Handshake Confirmed.",
-          "[MAIN] ACCESS GRANTED."
-        ];
+        // Safety check to ensure elements exist
+        if (!bootLoader || !terminalText || !percentText) return;
 
-        // 1. Telemetry Log Stream
-        let delay = 0;
-        bootSequence.forEach((line) => {
-          delay += Math.random() * 80 + 30; 
-          setTimeout(() => {
-            const p = document.createElement('div');
-            p.className = 'log-line';
-            p.textContent = line;
-            terminalText.appendChild(p);
-            if(terminalText.childElementCount > 6) terminalText.removeChild(terminalText.firstChild);
-          }, delay);
-        });
+        // Safely check memory without crashing in strict Incognito modes
+        let hasBooted = false;
+        try {
+          hasBooted = sessionStorage.getItem('systemBooted');
+        } catch (e) {
+          console.log("Memory access restricted by browser. Proceeding with boot.");
+        }
 
-        // 2. Central Percentage Counter
-        let currentPercent = 0;
-        const totalDuration = 1200; 
-        const intervalTime = 15;
-        const increment = 100 / (totalDuration / intervalTime);
+        if (!hasBooted) {
+          const bootSequence = [
+            "[KERNEL] OM_OS v2.0.26 (x86_64) booting...",
+            "[SYS] Memory Test: 64000K Passed",
+            "[SYS] Mounting Root File System...",
+            "[ROS2] Starting Daemon...",
+            "[ROS2] Initializing /teleop_twist_keyboard node",
+            "[ROS2] Starting /sentry_robot_controller",
+            "[COMMS] Establishing DRON Uplink...",
+            "[HW] Calibrating LiDAR Sensors...",
+            "[HW] Activating Inverse Kinematics Module...",
+            "[SEC] Establishing Secure Connection...",
+            "[SEC] Handshake Confirmed.",
+            "[MAIN] ACCESS GRANTED."
+          ];
 
-        const counterInterval = setInterval(() => {
-          currentPercent += increment;
-          if (currentPercent >= 100) {
-            currentPercent = 100;
-            clearInterval(counterInterval);
-            
+          // 1. Rapid Telemetry Stream
+          let delay = 0;
+          bootSequence.forEach((line) => {
+            delay += Math.random() * 80 + 30; 
             setTimeout(() => {
-              bootLoader.classList.add('hidden'); 
-              setTimeout(() => bootLoader.style.display = 'none', 500); 
-              sessionStorage.setItem('systemBooted', 'true'); 
-            }, 300);
-          }
-          percentText.textContent = Math.floor(currentPercent) + '%';
-        }, intervalTime);
+              const p = document.createElement('div');
+              p.className = 'log-line';
+              p.textContent = line;
+              terminalText.appendChild(p);
+              // Keeps the terminal from overflowing
+              if (terminalText.childElementCount > 6) terminalText.removeChild(terminalText.firstChild);
+            }, delay);
+          });
 
-      } else {
-        bootLoader.style.display = 'none';
-      }
+          // 2. High-Performance Smooth Counter
+          let startTime = null;
+          const totalDuration = 1200; // 1.2 seconds
+
+          function updateLoader(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const progress = timestamp - startTime;
+            let currentPercent = (progress / totalDuration) * 100;
+
+            if (currentPercent >= 100) {
+              percentText.textContent = '100%';
+              
+              setTimeout(() => {
+                bootLoader.classList.add('hidden'); 
+                setTimeout(() => bootLoader.style.display = 'none', 500); 
+                
+                // Safely save memory
+                try { sessionStorage.setItem('systemBooted', 'true'); } catch (e) {}
+              }, 300);
+            } else {
+              percentText.textContent = Math.floor(currentPercent) + '%';
+              requestAnimationFrame(updateLoader); // Loops flawlessly at 60fps
+            }
+          }
+          
+          requestAnimationFrame(updateLoader);
+
+        } else {
+          bootLoader.style.display = 'none';
+        }
+      });
     </script>
     
   </body>
