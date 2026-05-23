@@ -164,9 +164,9 @@ body > .page__footer { position: relative; z-index: 2; }
   z-index: 9999; /* Ensures it stays above all other content/menus */
 }
 
-/* The actual moving bar */
 .progress-bar {
   height: 4px;
-  background: var(--aggie-maroon); /* Uses your custom Texas A&M maroon! */
+  background: #a8a8a8; /* A nice contrasting silver/grey */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a tiny shadow so it pops */
   width: 0%; 
 }
