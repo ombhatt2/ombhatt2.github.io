@@ -28,7 +28,7 @@ layout: compress
         pointer-events: none;
         opacity: 0;
         transition: opacity 0.2s ease-in-out;
-        font-size: 0; /* Hides the anti-compressor space */
+        font-size: 0; 
         color: transparent;
       }
 
@@ -230,7 +230,7 @@ layout: compress
       let dot = document.getElementById("cursor-dot");
       let outline = document.getElementById("cursor-outline");
 
-      // Failsafe: Rebuild if HTML compressor deleted them
+      /* Failsafe: Rebuild if HTML compressor deleted them */
       if (!dot) { dot = document.createElement("div"); dot.id = "cursor-dot"; document.body.appendChild(dot); }
       if (!outline) { outline = document.createElement("div"); outline.id = "cursor-outline"; document.body.appendChild(outline); }
 
@@ -289,7 +289,7 @@ layout: compress
         let terminalText = document.getElementById('terminal-text');
         let percentText = document.getElementById('load-percent');
 
-        // Failsafe: Rebuild terminal if HTML compressor deleted it
+        /* Failsafe: Rebuild terminal if HTML compressor deleted it */
         if (bootLoader && !terminalText) {
           terminalText = document.createElement("div");
           terminalText.id = "terminal-text";
@@ -317,6 +317,7 @@ layout: compress
             "[MAIN] ACCESS GRANTED."
           ];
 
+          /* 1. Rapid Telemetry Stream */
           let delay = 0;
           bootSequence.forEach((line) => {
             delay += Math.random() * 80 + 30; 
@@ -331,6 +332,7 @@ layout: compress
             }, delay);
           });
 
+          /* 2. Guaranteed Counter Loop */
           let currentPercent = 0;
           const counterInterval = setInterval(() => {
             currentPercent += 1.25; 
