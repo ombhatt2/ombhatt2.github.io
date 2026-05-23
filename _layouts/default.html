@@ -99,11 +99,13 @@ layout: compress
     <div class="cursor-outline" data-cursor-outline></div>
 
     <style>
-      /* Hide default cursor on desktop */
-      @media (min-width: 769px) {
-        body, a, button, .hover-card, .skill-badge {
-          cursor: none !important;
-        }
+      /* We only hide the normal cursor if the JavaScript successfully activates */
+      body.custom-cursor-active, 
+      body.custom-cursor-active a, 
+      body.custom-cursor-active button, 
+      body.custom-cursor-active .hover-card, 
+      body.custom-cursor-active .skill-badge {
+        cursor: none !important;
       }
 
       /* Base styles for the cursor components */
@@ -116,6 +118,7 @@ layout: compress
         border-radius: 50%;
         z-index: 9999;
         pointer-events: none; /* Lets you click through it */
+        opacity: 0; /* Starts completely hidden so it doesn't get stuck in the corner */
       }
 
       /* The solid inner dot */
@@ -123,6 +126,7 @@ layout: compress
         width: 6px;
         height: 6px;
         background-color: #ff4d4d;
+        transition: opacity 0.2s ease-in-out;
       }
 
       /* The trailing outer ring */
@@ -130,7 +134,7 @@ layout: compress
         width: 30px;
         height: 30px;
         border: 2px solid rgba(128, 0, 0, 0.6);
-        transition: width 0.2s ease-out, height 0.2s ease-out, background-color 0.2s ease-out;
+        transition: width 0.2s ease-out, height 0.2s ease-out, background-color 0.2s ease-out, opacity 0.2s ease-in-out;
       }
 
       /* Disable custom cursor entirely on mobile touch screens */
@@ -138,14 +142,26 @@ layout: compress
         .cursor-dot, .cursor-outline {
           display: none !important;
         }
+        body.custom-cursor-active {
+          cursor: auto !important; /* Forces normal touch behavior */
+        }
       }
     </style>
 
     <script>
       const cursorDot = document.querySelector("[data-cursor-dot]");
       const cursorOutline = document.querySelector("[data-cursor-outline]");
+      let isCursorActive = false;
 
       window.addEventListener("mousemove", function (e) {
+        // Only activate the custom cursor once the user actually moves the mouse
+        if (!isCursorActive) {
+          document.body.classList.add("custom-cursor-active");
+          cursorDot.style.opacity = "1";
+          cursorOutline.style.opacity = "1";
+          isCursorActive = true;
+        }
+
         const posX = e.clientX;
         const posY = e.clientY;
 
