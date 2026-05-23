@@ -48,24 +48,22 @@ layout: compress
         body.custom-cursor-active, body.custom-cursor-active * { cursor: auto !important; }
       }
 
-      /* --- Boot Loader CSS --- */
+      /* --- Modern HUD Boot Loader CSS --- */
       #boot-loader {
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: #0d0d0d;
+        background-color: #080808; 
         z-index: 99999999; 
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: 3rem 2rem;
+        align-items: center;
+        justify-content: center;
         font-family: 'Courier New', Courier, monospace;
         color: #ff4d4d; 
-        font-size: 15px;
         overflow: hidden;
-        transition: opacity 0.6s ease-in-out;
+        transition: opacity 0.5s cubic-bezier(0.8, 0, 0.2, 1);
       }
 
       #boot-loader.hidden {
@@ -73,25 +71,71 @@ layout: compress
         pointer-events: none;
       }
 
-      .log-line {
-        margin-bottom: 6px;
-        text-shadow: 0 0 8px rgba(255, 77, 77, 0.4); 
+      /* Central HUD Interface */
+      .loader-core {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 200px;
       }
 
-      .cursor-blink {
-        display: inline-block;
-        width: 10px;
-        height: 16px;
-        background-color: #ff4d4d;
-        animation: blink 1s step-end infinite;
-        vertical-align: text-bottom;
-        margin-left: 6px;
+      .spin-ring {
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid transparent;
       }
 
-      @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
+      .spin-ring.outer {
+        width: 180px;
+        height: 180px;
+        border-top: 2px solid #ff4d4d;
+        border-right: 2px solid rgba(255, 77, 77, 0.2);
+        animation: spin 1.5s linear infinite;
       }
+
+      .spin-ring.inner {
+        width: 140px;
+        height: 140px;
+        border-bottom: 2px dashed #ff4d4d;
+        border-left: 2px dashed rgba(255, 77, 77, 0.3);
+        animation: spin-reverse 2s linear infinite;
+      }
+
+      .load-percent {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-shadow: 0 0 15px rgba(255, 77, 77, 0.5);
+      }
+
+      .load-label {
+        position: absolute;
+        bottom: -30px;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        opacity: 0.7;
+        animation: pulse 1s infinite alternate;
+        white-space: nowrap;
+      }
+
+      /* Telemetry Log in the Corner */
+      #terminal-text {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        font-size: 12px;
+        line-height: 1.4;
+        opacity: 0.6; 
+        text-align: left;
+      }
+
+      .log-line { margin-bottom: 2px; }
+
+      @keyframes spin { 100% { transform: rotate(360deg); } }
+      @keyframes spin-reverse { 100% { transform: rotate(-360deg); } }
+      @keyframes pulse { 0% { opacity: 0.3; } 100% { opacity: 0.9; } }
     </style>
   </head>
 
@@ -100,6 +144,12 @@ layout: compress
     <div id="cursor-outline"></div>
 
     <div id="boot-loader">
+      <div class="loader-core">
+        <div class="spin-ring outer"></div>
+        <div class="spin-ring inner"></div>
+        <div class="load-percent" id="load-percent">0%</div>
+        <div class="load-label">CALIBRATING SENSORS...</div>
+      </div>
       <div id="terminal-text"></div>
     </div>
 
@@ -222,45 +272,59 @@ layout: compress
     <script>
       const bootLoader = document.getElementById('boot-loader');
       const terminalText = document.getElementById('terminal-text');
+      const percentText = document.getElementById('load-percent');
 
       if (!sessionStorage.getItem('systemBooted')) {
+        
         const bootSequence = [
-          "OM_OS v2.0.26 (x86_64) booting...",
-          "[ OK ] CPU Core 0: Initialized",
-          "[ OK ] Memory Test: 64000K Passed",
-          "[ OK ] Mounting Root File System...",
-          "Starting ROS 2 Daemon...",
-          "[ OK ] Initializing /teleop_twist_keyboard node",
-          "[ OK ] Starting /sentry_robot_controller",
-          "[ OK ] Establishing DRON Uplink...",
-          "Loading Mechatronics Subsystems...",
-          "Establishing Secure Connection...",
-          "ACCESS GRANTED.",
-          "Welcome to Om Bhatt's Academic Portfolio."
+          "[KERNEL] OM_OS v2.0.26 (x86_64) booting...",
+          "[SYS] Memory Test: 64000K Passed",
+          "[SYS] Mounting Root File System...",
+          "[ROS2] Starting Daemon...",
+          "[ROS2] Initializing /teleop_twist_keyboard node",
+          "[ROS2] Starting /sentry_robot_controller",
+          "[COMMS] Establishing DRON Uplink...",
+          "[HW] Calibrating LiDAR Sensors...",
+          "[HW] Activating Inverse Kinematics Module...",
+          "[SEC] Establishing Secure Connection...",
+          "[SEC] Handshake Confirmed.",
+          "[MAIN] ACCESS GRANTED."
         ];
 
+        // 1. Telemetry Log Stream
         let delay = 0;
-        bootSequence.forEach((line, index) => {
-          delay += Math.random() * 150 + 80; 
+        bootSequence.forEach((line) => {
+          delay += Math.random() * 80 + 30; 
           setTimeout(() => {
             const p = document.createElement('div');
             p.className = 'log-line';
             p.textContent = line;
             terminalText.appendChild(p);
-            
-            if (index === bootSequence.length - 1) {
-              const cursor = document.createElement('span');
-              cursor.className = 'cursor-blink';
-              p.appendChild(cursor);
-              
-              setTimeout(() => {
-                bootLoader.classList.add('hidden'); 
-                setTimeout(() => bootLoader.style.display = 'none', 600); 
-                sessionStorage.setItem('systemBooted', 'true'); 
-              }, 1400); 
-            }
+            if(terminalText.childElementCount > 6) terminalText.removeChild(terminalText.firstChild);
           }, delay);
         });
+
+        // 2. Central Percentage Counter
+        let currentPercent = 0;
+        const totalDuration = 1200; 
+        const intervalTime = 15;
+        const increment = 100 / (totalDuration / intervalTime);
+
+        const counterInterval = setInterval(() => {
+          currentPercent += increment;
+          if (currentPercent >= 100) {
+            currentPercent = 100;
+            clearInterval(counterInterval);
+            
+            setTimeout(() => {
+              bootLoader.classList.add('hidden'); 
+              setTimeout(() => bootLoader.style.display = 'none', 500); 
+              sessionStorage.setItem('systemBooted', 'true'); 
+            }, 300);
+          }
+          percentText.textContent = Math.floor(currentPercent) + '%';
+        }, intervalTime);
+
       } else {
         bootLoader.style.display = 'none';
       }
