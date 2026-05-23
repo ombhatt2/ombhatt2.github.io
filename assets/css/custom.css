@@ -320,28 +320,3 @@ html[data-theme="dark"] .skill-badge {
   background-color: var(--aggie-maroon) !important;
   color: #ffffff !important;
 }
-
-/* ========================================================
-   SIDEBAR PARTICLE & MOUSE FIX (FINAL)
-   ======================================================== */
-
-/* 1. Make the giant invisible sidebar column a complete ghost */
-.sidebar, 
-.page__sidebar, 
-.sidebar.sticky,
-.author__profile {
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  pointer-events: none !important;
-}
-
-/* 2. Re-enable the mouse ONLY for your actual image, text, and links */
-.author__avatar img,
-.author__content,
-.author__urls-wrapper a,
-.author__urls-wrapper li {
-  pointer-events: auto !important;
-  position: relative !important;
-  z-index: 10 !important; /* Forces them to stay above the particles */
-}
