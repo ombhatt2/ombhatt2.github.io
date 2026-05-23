@@ -9,49 +9,9 @@ layout: compress
   <head>
     {% include head.html %}
     {% include head/custom.html %}
-    
-    <style>
-      /* --- Custom Cursor CSS --- */
-      body.custom-cursor-active, 
-      body.custom-cursor-active * {
-        cursor: none !important;
-      }
-
-      #cursor-dot, #cursor-outline {
-        position: fixed;
-        top: 0;
-        left: 0;
-        border-radius: 50%;
-        z-index: 999999;
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity 0.2s ease-in-out;
-      }
-
-      #cursor-dot {
-        width: 8px;
-        height: 8px;
-        background-color: #ff4d4d;
-      }
-
-      #cursor-outline {
-        width: 32px;
-        height: 32px;
-        border: 2px solid rgba(128, 0, 0, 0.6);
-        transition: width 0.2s, height 0.2s, background-color 0.2s;
-      }
-
-      @media (max-width: 768px) {
-        #cursor-dot, #cursor-outline { display: none !important; }
-        body.custom-cursor-active, body.custom-cursor-active * { cursor: auto !important; }
-      }
-    </style>
   </head>
 
   <body>
-    <div id="cursor-dot"></div>
-    <div id="cursor-outline"></div>
-
     <div id="particles-js"></div>
 
     <div class="progress-container">
@@ -85,7 +45,10 @@ layout: compress
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         VanillaTilt.init(document.querySelectorAll(".archive__item"), {
-          max: 10, speed: 400, glare: true, "max-glare": 0.3
+          max: 10,
+          speed: 400,
+          glare: true,
+          "max-glare": 0.3
         });
       });
     </script>
@@ -99,62 +62,39 @@ layout: compress
           "shape": { "type": "circle" },
           "opacity": { "value": 0.5, "random": false },
           "size": { "value": 3, "random": true },
-          "line_linked": { "enable": true, "distance": 150, "color": "#a8a8a8", "opacity": 0.4, "width": 1 },
-          "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#a8a8a8",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+          }
         },
         "interactivity": {
           "detect_on": "canvas",
-          "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
-          "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } }, "push": { "particles_nb": 4 } }
+          "events": {
+            "onhover": { "enable": true, "mode": "grab" },
+            "onclick": { "enable": true, "mode": "push" },
+            "resize": true
+          },
+          "modes": {
+            "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
+            "push": { "particles_nb": 4 }
+          }
         },
         "retina_detect": true
       });
     </script>
-
-    <script>
-      const dot = document.getElementById("cursor-dot");
-      const outline = document.getElementById("cursor-outline");
-      let isActive = false;
-      let mouseX = 0, mouseY = 0;
-      let outlineX = 0, outlineY = 0;
-
-      window.addEventListener("mousemove", function (e) {
-        if (!isActive) {
-          document.body.classList.add("custom-cursor-active");
-          dot.style.opacity = "1";
-          outline.style.opacity = "1";
-          isActive = true;
-        }
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        dot.style.left = `${mouseX}px`;
-        dot.style.top = `${mouseY}px`;
-      });
-
-      function animateOutline() {
-        outlineX += (mouseX - outlineX) * 0.2;
-        outlineY += (mouseY - mouseY) * 0.2; // Fixed potential typo
-        outline.style.left = `${outlineX}px`;
-        outline.style.top = `${outlineY}px`;
-        requestAnimationFrame(animateOutline);
-      }
-      animateOutline();
-
-      const interactables = document.querySelectorAll("a, button, .hover-card, .skill-badge, input, textarea");
-      interactables.forEach(el => {
-        el.addEventListener("mouseenter", () => {
-          outline.style.width = "50px";
-          outline.style.height = "50px";
-          outline.style.backgroundColor = "rgba(128, 0, 0, 0.1)";
-          outline.style.border = "2px solid #ff4d4d";
-        });
-        el.addEventListener("mouseleave", () => {
-          outline.style.width = "32px";
-          outline.style.height = "32px";
-          outline.style.backgroundColor = "transparent";
-          outline.style.border = "2px solid rgba(128, 0, 0, 0.6)";
-        });
-      });
-    </script>
+    
+    
   </body>
 </html>
