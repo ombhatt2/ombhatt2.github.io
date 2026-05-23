@@ -229,9 +229,17 @@ html[data-theme="dark"] .page__inner-wrap {
   background: none !important;
 }
 
-/* 3. Keep Header and Footer solid so they stay readable */
-.masthead, .page__footer {
+/* 3. Fix the Header (Masthead) Alignment and Sticky Behavior */
+.masthead {
+  background-color: var(--global-footer-bg-color) !important;
+  z-index: 999 !important; /* Keep it above particles */
+  border-top: none !important; /* Eliminates the white gap at the very top */
+}
+
+/* Ensure the footer stays solid and at the bottom */
+.page__footer {
   background-color: var(--global-footer-bg-color) !important;
   position: relative !important;
   z-index: 10 !important;
 }
+
