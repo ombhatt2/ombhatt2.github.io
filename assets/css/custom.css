@@ -141,8 +141,8 @@ a, .masthead a:hover, .page a:hover { color: var(--aggie-maroon-dark) !important
 /* Small tweak for footer spacing on maroon bg */
 .page__footer { padding-top: 18px; padding-bottom: 18px; }
 
-/* Ensure footer sits flush at bottom and no stray white band appears */
-html, body { height: 100%; }
+/* Ensure footer sits flush at bottom and no stray white band appears. FIX: min-height 100vh instead of height 100% */
+html, body { min-height: 100vh; }
 body > .page__footer { position: relative; z-index: 2; }
 
 /* Fix for clipped sidebar icons */
@@ -177,7 +177,7 @@ body > .page__footer { position: relative; z-index: 2; }
   box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important; /* Makes it look 3D */
   border-radius: 8px !important;
   padding: 15px !important;
-  transition: box-shadow 0.3s ease !important; /* Smooth shadow, no transform conflict */
+  transition: box-shadow 0.3s ease; /* Smooth shadow, no transform conflict */
   transform-style: preserve-3d !important;
   backface-visibility: hidden !important; 
   will-change: transform !important; /* Tells browser to expect movement */
@@ -259,7 +259,7 @@ html[data-theme="dark"] .page__inner-wrap {
   font-size: 1.15rem;
   border-radius: 50px; /* Creates the modern "pill" shape */
   box-shadow: 0 4px 15px rgba(80, 0, 0, 0.4) !important;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   border: 2px solid transparent;
 }
 
@@ -272,7 +272,7 @@ html[data-theme="dark"] .page__inner-wrap {
 
 /* Animate the little arrow icon */
 .modern-resume-btn i {
-  transition: transform 0.3s ease !important;
+  transition: transform 0.3s ease;
 }
 
 .modern-resume-btn:hover i {
@@ -301,7 +301,7 @@ html[data-theme="dark"] .page__inner-wrap {
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: default; /* Keeps it from looking like a broken link */
 }
 

@@ -115,7 +115,7 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
 <style>
   /* 1. Levitating Project Cards */
   .hover-card {
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.3s ease !important;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.3s ease;
     border-radius: 8px !important;
     background-color: transparent; /* Adapt seamlessly to light mode */
   }
@@ -126,7 +126,7 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
 
   /* 2. Interactive Profile Picture */
   .author__avatar img {
-    transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
   .author__avatar img:hover {
     transform: scale(1.05) !important;
