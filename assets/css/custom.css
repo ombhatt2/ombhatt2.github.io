@@ -171,16 +171,19 @@ body > .page__footer { position: relative; z-index: 2; }
   width: 0%; 
 }
 
-/* Add depth to the cards so the 3D tilt is visible */
+/* Break cards out of flat mode and add depth */
 .archive__item {
-  background-color: var(--content-bg);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Adds a shadow */
-  border-radius: 8px; /* Rounds the corners slightly */
-  padding: 10px;
-  transform-style: preserve-3d; /* Tells the browser to render it in 3D */
+  background-color: var(--content-bg) !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important; /* Makes it look 3D */
+  border-radius: 8px !important;
+  padding: 15px !important;
+  transition: box-shadow 0.3s ease !important; /* Smooth shadow, no transform conflict */
+  transform-style: preserve-3d !important;
+  backface-visibility: hidden !important; 
+  will-change: transform !important; /* Tells browser to expect movement */
 }
 
-/* Make the image pop out when tilted */
-.archive__item img {
-  transform: translateZ(20px); 
+/* Make the image float above the card when tilted */
+.archive__item-teaser {
+  transform: translateZ(30px) !important;
 }
