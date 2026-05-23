@@ -4,7 +4,7 @@ This repository contains the source code for my personal academic and profession
 
 The site features a custom-built, simulated hardware bootloader, dynamic UI micro-interactions, and a responsive design tailored for tech and research.
 
-🌐 **Live Site:** [Insert Your GitHub Pages URL Here]
+🌐 **Live Site:** [https://ombhatt2.github.io/]
 
 ---
 
