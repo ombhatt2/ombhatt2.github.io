@@ -9,6 +9,22 @@ layout: compress
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+    
+    <style>
+      body {
+        animation: fadeInAnimation ease 1.2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+      }
+      @keyframes fadeInAnimation {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -94,7 +110,6 @@ layout: compress
         "retina_detect": true
       });
     </script>
-    
     
   </body>
 </html>
