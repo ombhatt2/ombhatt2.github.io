@@ -99,20 +99,21 @@ layout: compress
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         if (typeof ScrollReveal !== 'undefined') {
-          // Initialize ScrollReveal
+          /* Initialize ScrollReveal */
           const sr = ScrollReveal({
-            distance: '40px',     // Distance elements move
-            duration: 800,        // How long the animation takes (ms)
-            easing: 'ease-out',   // Smooth easing
-            origin: 'bottom',     // Elements slide up from the bottom
-            reset: true,          // Animations trigger every time you scroll up/down
-            viewFactor: 0.15      // Triggers when 15% of the element is visible
+            distance: '40px',     /* Distance elements move */
+            duration: 800,        /* How long the animation takes (ms) */
+            easing: 'ease-out',   /* Smooth easing */
+            origin: 'bottom',     /* Elements slide up from the bottom */
+            reset: true,          /* Animations trigger every time you scroll */
+            viewFactor: 0.15      /* Triggers when 15% of the element is visible */
           });
 
-          // Target the elements you want to animate
+          /* Target the elements you want to animate */
           sr.reveal('p', { interval: 100 });
           sr.reveal('h1, h2, h3', { delay: 100 });
-          // Added your custom classes from about.md here:
+          
+          /* Custom classes from about.md */
           sr.reveal('ul, .archive__item, .skill-cloud, .reveal-target', { interval: 150 });
           sr.reveal('.hover-card', { interval: 100 });
         } else {
