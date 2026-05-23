@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "Publications & Research"
-permalink: /publications/
+title: "Engineering Blog"
+permalink: /blog/
 author_profile: true
 ---
 
@@ -9,7 +9,7 @@ author_profile: true
     
     <p style="font-family: monospace; color: #ff4d4d; letter-spacing: 2px; font-size: 0.9em; margin-bottom: -10px;">[ MODULE: OFFLINE ]</p>
     <h1 style="font-size: 3em; margin-bottom: 15px; font-weight: 700;">Coming Soon</h1>
-    <p style="opacity: 0.7; font-size: 1.1em; max-width: 500px; margin: 0 auto;">I am currently compiling my latest research papers, technical reports, and academic posters. Stay tuned for data uploads.</p>
+    <p style="opacity: 0.7; font-size: 1.1em; max-width: 500px; margin: 0 auto;">Build logs, hardware deep-dives, and robotics tutorials are currently in the works. Check back soon!</p>
     
     <div style="width: 12px; height: 12px; background-color: #ff4d4d; border-radius: 50%; margin: 40px auto 10px auto; animation: radar-pulse 2s infinite;"></div>
 </div>
