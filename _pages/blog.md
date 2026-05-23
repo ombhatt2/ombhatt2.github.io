@@ -15,6 +15,11 @@ author_profile: true
 </div>
 
 <style>
+
+#main {
+    min-height: calc(100vh - 250px);
+}
+
 @keyframes radar-pulse {
     0% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.7); }
     70% { box-shadow: 0 0 0 20px rgba(255, 77, 77, 0); }
