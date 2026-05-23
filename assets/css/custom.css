@@ -170,3 +170,17 @@ body > .page__footer { position: relative; z-index: 2; }
   box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a tiny shadow so it pops */
   width: 0%; 
 }
+
+/* Add depth to the cards so the 3D tilt is visible */
+.archive__item {
+  background-color: var(--content-bg);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Adds a shadow */
+  border-radius: 8px; /* Rounds the corners slightly */
+  padding: 10px;
+  transform-style: preserve-3d; /* Tells the browser to render it in 3D */
+}
+
+/* Make the image pop out when tilted */
+.archive__item img {
+  transform: translateZ(20px); 
+}
