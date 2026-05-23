@@ -33,15 +33,15 @@ layout: compress
       }
 
       #cursor-dot {
-        width: 8px;
-        height: 8px;
-        background-color: #ff4d4d;
+        width: 6px;
+        height: 6px;
+        background-color: #800000; /* Subtle Maroon */
       }
 
       #cursor-outline {
         width: 32px;
         height: 32px;
-        border: 2px solid rgba(128, 0, 0, 0.6);
+        border: 1px solid rgba(128, 0, 0, 0.4);
         transition: width 0.2s, height 0.2s, background-color 0.2s;
       }
 
@@ -57,15 +57,15 @@ layout: compress
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: #080808; 
+        background-color: #121212; /* Sleek, professional dark gray */
         z-index: 99999999; 
         display: flex;
         align-items: center;
         justify-content: center;
-        font-family: 'Courier New', Courier, monospace;
-        color: #ff4d4d; 
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: #ffffff; 
         overflow: hidden;
-        transition: opacity 0.5s cubic-bezier(0.8, 0, 0.2, 1);
+        transition: opacity 0.6s cubic-bezier(0.8, 0, 0.2, 1);
       }
 
       #boot-loader.hidden {
@@ -80,56 +80,60 @@ layout: compress
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 200px;
-        height: 200px;
+        width: 220px;
+        height: 220px;
       }
 
       .spin-ring {
         position: absolute;
         border-radius: 50%;
-        border: 2px solid transparent;
+        border: 1px solid transparent; /* Thinner, precise lines */
       }
 
       .spin-ring.outer {
-        width: 180px;
-        height: 180px;
-        border-top: 2px solid #ff4d4d;
-        border-right: 2px solid rgba(255, 77, 77, 0.2);
-        animation: spin 1.5s linear infinite;
+        width: 200px;
+        height: 200px;
+        border-top: 1px solid #800000; /* Academic Maroon Accent */
+        border-right: 1px solid rgba(128, 0, 0, 0.1);
+        animation: spin 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
       }
 
       .spin-ring.inner {
-        width: 140px;
-        height: 140px;
-        border-bottom: 2px dashed #ff4d4d;
-        border-left: 2px dashed rgba(255, 77, 77, 0.3);
-        animation: spin-reverse 2s linear infinite;
+        width: 160px;
+        height: 160px;
+        border-bottom: 1px solid #ffffff; /* Clean white */
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        animation: spin-reverse 3s linear infinite;
       }
 
       .load-percent {
-        font-size: 2.5rem;
-        font-weight: bold;
-        text-shadow: 0 0 15px rgba(255, 77, 77, 0.5);
+        font-size: 3rem;
+        font-weight: 300; /* Lighter font weight looks more premium */
+        letter-spacing: 2px;
+        font-variant-numeric: tabular-nums;
       }
 
       .load-label {
         position: absolute;
-        bottom: -30px;
-        font-size: 0.85rem;
-        letter-spacing: 2px;
-        opacity: 0.7;
-        animation: pulse 1s infinite alternate;
+        bottom: -40px;
+        font-size: 0.75rem;
+        letter-spacing: 4px;
+        font-weight: 600;
+        color: #888888;
+        text-transform: uppercase;
+        animation: pulse 1.5s infinite alternate;
         white-space: nowrap;
       }
 
       /* Telemetry Log in the Corner */
       #terminal-text {
         position: absolute;
-        bottom: 20px;
-        left: 20px;
-        font-size: 12px;
-        line-height: 1.4;
-        opacity: 0.6; 
+        bottom: 30px;
+        left: 30px;
+        font-family: 'Courier New', Courier, monospace; /* Keep logs techy */
+        font-size: 11px;
+        line-height: 1.6;
+        color: #666666; /* Subdued gray, not alarming */
         text-align: left;
       }
 
@@ -137,7 +141,7 @@ layout: compress
 
       @keyframes spin { 100% { transform: rotate(360deg); } }
       @keyframes spin-reverse { 100% { transform: rotate(-360deg); } }
-      @keyframes pulse { 0% { opacity: 0.3; } 100% { opacity: 0.9; } }
+      @keyframes pulse { 0% { opacity: 0.4; } 100% { opacity: 1; } }
     </style>
   </head>
 
@@ -150,7 +154,7 @@ layout: compress
         <div class="spin-ring outer">&nbsp;</div>
         <div class="spin-ring inner">&nbsp;</div>
         <div class="load-percent" id="load-percent">0%</div>
-        <div class="load-label">CALIBRATING SENSORS...</div>
+        <div class="load-label">SYSTEM CALIBRATION</div>
       </div>
       <div id="terminal-text">&nbsp;</div>
     </div>
@@ -230,7 +234,6 @@ layout: compress
       let dot = document.getElementById("cursor-dot");
       let outline = document.getElementById("cursor-outline");
 
-      /* Failsafe: Rebuild if HTML compressor deleted them */
       if (!dot) { dot = document.createElement("div"); dot.id = "cursor-dot"; document.body.appendChild(dot); }
       if (!outline) { outline = document.createElement("div"); outline.id = "cursor-outline"; document.body.appendChild(outline); }
 
@@ -266,10 +269,10 @@ layout: compress
       interactables.forEach(el => {
         el.addEventListener("mouseenter", () => {
           if(outline) {
-            outline.style.width = "50px";
-            outline.style.height = "50px";
-            outline.style.backgroundColor = "rgba(128, 0, 0, 0.1)";
-            outline.style.border = "2px solid #ff4d4d";
+            outline.style.width = "45px";
+            outline.style.height = "45px";
+            outline.style.backgroundColor = "rgba(128, 0, 0, 0.05)";
+            outline.style.border = "1px solid #800000";
           }
         });
         el.addEventListener("mouseleave", () => {
@@ -277,7 +280,7 @@ layout: compress
             outline.style.width = "32px";
             outline.style.height = "32px";
             outline.style.backgroundColor = "transparent";
-            outline.style.border = "2px solid rgba(128, 0, 0, 0.6)";
+            outline.style.border = "1px solid rgba(128, 0, 0, 0.4)";
           }
         });
       });
@@ -289,7 +292,6 @@ layout: compress
         let terminalText = document.getElementById('terminal-text');
         let percentText = document.getElementById('load-percent');
 
-        /* Failsafe: Rebuild terminal if HTML compressor deleted it */
         if (bootLoader && !terminalText) {
           terminalText = document.createElement("div");
           terminalText.id = "terminal-text";
@@ -303,30 +305,27 @@ layout: compress
 
         if (!hasBooted) {
           const bootSequence = [
-            "[KERNEL] OM_OS v2.0.26 (x86_64) booting...",
-            "[SYS] Memory Test: 64000K Passed",
-            "[SYS] Mounting Root File System...",
-            "[ROS2] Starting Daemon...",
-            "[ROS2] Initializing /teleop_twist_keyboard node",
-            "[ROS2] Starting /sentry_robot_controller",
-            "[COMMS] Establishing DRON Uplink...",
-            "[HW] Calibrating LiDAR Sensors...",
-            "[HW] Activating Inverse Kinematics Module...",
-            "[SEC] Establishing Secure Connection...",
-            "[SEC] Handshake Confirmed.",
-            "[MAIN] ACCESS GRANTED."
+            "Initializing workspace environment...",
+            "Loading core dependencies [OK]",
+            "Mounting portfolio components...",
+            "Fetching structural data for autonomous systems...",
+            "Initializing embedded hardware schemas...",
+            "Resolving ROS2 node pathways...",
+            "Calibrating visual assets [OK]",
+            "Establishing secure portfolio uplink...",
+            "Finalizing layout rendering..."
           ];
 
           /* 1. Rapid Telemetry Stream */
           let delay = 0;
           bootSequence.forEach((line) => {
-            delay += Math.random() * 80 + 30; 
+            delay += Math.random() * 120 + 40; 
             setTimeout(() => {
               const p = document.createElement('div');
               p.className = 'log-line';
               p.textContent = line;
               terminalText.appendChild(p);
-              if (terminalText.childNodes.length > 6) {
+              if (terminalText.childNodes.length > 5) {
                 terminalText.removeChild(terminalText.firstChild);
               }
             }, delay);
@@ -335,7 +334,7 @@ layout: compress
           /* 2. Guaranteed Counter Loop */
           let currentPercent = 0;
           const counterInterval = setInterval(() => {
-            currentPercent += 1.25; 
+            currentPercent += 1.15; 
             
             if (currentPercent >= 100) {
               currentPercent = 100;
@@ -346,7 +345,7 @@ layout: compress
                 bootLoader.style.opacity = '0'; 
                 setTimeout(() => bootLoader.style.display = 'none', 600); 
                 try { sessionStorage.setItem('systemBooted', 'true'); } catch (e) {}
-              }, 300);
+              }, 400);
             } else {
               percentText.textContent = Math.floor(currentPercent) + '%';
             }
