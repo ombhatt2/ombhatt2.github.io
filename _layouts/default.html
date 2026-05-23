@@ -95,23 +95,29 @@ layout: compress
       });
     </script>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-        // Initialize ScrollReveal
-        const sr = ScrollReveal({
-          distance: '40px',     // Distance elements move
-          duration: 800,        // How long the animation takes (ms)
-          easing: 'ease-out',   // Smooth easing
-          origin: 'bottom',     // Elements slide up from the bottom
-          viewFactor: 0.15      // Triggers when 15% of the element is visible
-        });
+        if (typeof ScrollReveal !== 'undefined') {
+          // Initialize ScrollReveal
+          const sr = ScrollReveal({
+            distance: '40px',     // Distance elements move
+            duration: 800,        // How long the animation takes (ms)
+            easing: 'ease-out',   // Smooth easing
+            origin: 'bottom',     // Elements slide up from the bottom
+            reset: true,          // Animations trigger every time you scroll up/down
+            viewFactor: 0.15      // Triggers when 15% of the element is visible
+          });
 
-        // Target the elements you want to animate
-        // The 'interval: 100' makes lists and paragraphs stagger in one after another
-        sr.reveal('p', { interval: 100 });
-        sr.reveal('h2, h3', { delay: 100 });
-        sr.reveal('ul, .archive__item', { interval: 150 });
+          // Target the elements you want to animate
+          sr.reveal('p', { interval: 100 });
+          sr.reveal('h1, h2, h3', { delay: 100 });
+          // Added your custom classes from about.md here:
+          sr.reveal('ul, .archive__item, .skill-cloud, .reveal-target', { interval: 150 });
+          sr.reveal('.hover-card', { interval: 100 });
+        } else {
+          console.error("ScrollReveal failed to load.");
+        }
       });
     </script>
     
