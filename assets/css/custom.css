@@ -320,3 +320,17 @@ html[data-theme="dark"] .skill-badge {
   background-color: var(--aggie-maroon) !important;
   color: #ffffff !important;
 }
+
+/* ========================================================
+   SIDEBAR TRANSPARENCY FIX
+   ======================================================== */
+
+.sidebar, 
+.page__sidebar, 
+.sidebar.sticky,
+.author__profile {
+  background-color: transparent !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
