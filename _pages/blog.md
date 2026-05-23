@@ -17,7 +17,7 @@ author_profile: true
 <style>
 
 #main {
-    min-height: calc(100vh - 250px);
+    min-height: calc(100vh - 120px); 
 }
 
 @keyframes radar-pulse {
