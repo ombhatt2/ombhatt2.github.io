@@ -24,7 +24,7 @@ layout: compress
         top: 0;
         left: 0;
         border-radius: 50%;
-        z-index: 999999999; /* Highest possible layer so it shows over the boot screen */
+        z-index: 999999999; 
         pointer-events: none;
         opacity: 0;
         transition: opacity 0.2s ease-in-out;
@@ -270,20 +270,19 @@ layout: compress
     </script>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+      (function() {
         const bootLoader = document.getElementById('boot-loader');
         const terminalText = document.getElementById('terminal-text');
         const percentText = document.getElementById('load-percent');
 
-        // Safety check to ensure elements exist
         if (!bootLoader || !terminalText || !percentText) return;
 
-        // Safely check memory without crashing in strict Incognito modes
+        // Safely check memory without crashing Incognito mode
         let hasBooted = false;
         try {
           hasBooted = sessionStorage.getItem('systemBooted');
         } catch (e) {
-          console.log("Memory access restricted by browser. Proceeding with boot.");
+          console.warn("Browser privacy blocked memory. Booting anyway.");
         }
 
         if (!hasBooted) {
@@ -311,42 +310,36 @@ layout: compress
               p.className = 'log-line';
               p.textContent = line;
               terminalText.appendChild(p);
-              // Keeps the terminal from overflowing
-              if (terminalText.childElementCount > 6) terminalText.removeChild(terminalText.firstChild);
+              if (terminalText.childNodes.length > 6) {
+                terminalText.removeChild(terminalText.firstChild);
+              }
             }, delay);
           });
 
-          // 2. High-Performance Smooth Counter
-          let startTime = null;
-          const totalDuration = 1200; // 1.2 seconds
-
-          function updateLoader(timestamp) {
-            if (!startTime) startTime = timestamp;
-            const progress = timestamp - startTime;
-            let currentPercent = (progress / totalDuration) * 100;
-
+          // 2. Guaranteed Counter Loop
+          let currentPercent = 0;
+          const counterInterval = setInterval(() => {
+            currentPercent += 1.25; 
+            
             if (currentPercent >= 100) {
+              currentPercent = 100;
+              clearInterval(counterInterval);
               percentText.textContent = '100%';
               
               setTimeout(() => {
-                bootLoader.classList.add('hidden'); 
-                setTimeout(() => bootLoader.style.display = 'none', 500); 
-                
-                // Safely save memory
+                bootLoader.style.opacity = '0'; 
+                setTimeout(() => bootLoader.style.display = 'none', 600); 
                 try { sessionStorage.setItem('systemBooted', 'true'); } catch (e) {}
               }, 300);
             } else {
               percentText.textContent = Math.floor(currentPercent) + '%';
-              requestAnimationFrame(updateLoader); // Loops flawlessly at 60fps
             }
-          }
-          
-          requestAnimationFrame(updateLoader);
+          }, 15); 
 
         } else {
           bootLoader.style.display = 'none';
         }
-      });
+      })();
     </script>
     
   </body>
