@@ -52,6 +52,36 @@ I am passionate about robotics, particularly autonomous and intelligent systems.
 
 Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
 
+<h2 style="margin-top: 2em; margin-bottom: 1em;">Technical Skills</h2>
+
+<h3 style="font-size: 1.1rem; margin-bottom: 0.8rem; color: #800000;">Programming</h3>
+<div class="skill-cloud">
+  <div class="skill-badge"><i class="fas fa-code"></i> C/C++</div>
+  <div class="skill-badge"><i class="fab fa-python"></i> Python</div>
+  <div class="skill-badge"><i class="fas fa-robot"></i> ROS2</div>
+  <div class="skill-badge"><i class="fab fa-linux"></i> Linux</div>
+  <div class="skill-badge"><i class="fas fa-terminal"></i> Shell (Bash/Zsh)</div>
+  <div class="skill-badge"><i class="fas fa-subscript"></i> LaTeX</div>
+</div>
+
+<h3 style="font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.8rem; color: #800000;">Hardware & Prototyping</h3>
+<div class="skill-cloud">
+  <div class="skill-badge"><i class="fas fa-microchip"></i> ESP32 & STM32</div>
+  <div class="skill-badge"><i class="fas fa-satellite-dish"></i> Arduino & RPi</div>
+  <div class="skill-badge"><i class="fas fa-eye"></i> LiDARs & Cameras</div>
+  <div class="skill-badge"><i class="fas fa-bolt"></i> Soldering</div>
+  <div class="skill-badge"><i class="fas fa-network-wired"></i> PCB Design</div>
+</div>
+
+<h3 style="font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.8rem; color: #800000;">Simulation & CAD</h3>
+<div class="skill-cloud">
+  <div class="skill-badge"><i class="fas fa-cube"></i> SolidWorks</div>
+  <div class="skill-badge"><i class="fas fa-drafting-compass"></i> Onshape & Inventor</div>
+  <div class="skill-badge"><i class="fas fa-print"></i> Bambu Studio</div>
+  <div class="skill-badge"><i class="fas fa-microchip"></i> Eagle & Multisim</div>
+  <div class="skill-badge"><i class="fas fa-laptop-code"></i> MATLAB</div>
+</div>
+
 ## Featured Projects
 
 {% assign featured_paths = "/portfolio/2024-01-01-dron,/portfolio/robomasters,/portfolio/aeop-research,/portfolio/hatchling,/portfolio/ecotrack,/portfolio/watonobus" | split: "," %}

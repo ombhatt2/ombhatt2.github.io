@@ -279,3 +279,44 @@ html[data-theme="dark"] .page__inner-wrap {
   transform: translateX(6px) !important; /* Pushes the arrow to the right */
 }
 
+/* ========================================================
+   MODERN SKILL BADGES
+   ======================================================== */
+
+.skill-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.skill-badge {
+  background-color: rgba(80, 0, 0, 0.05);
+  border: 1px solid rgba(80, 0, 0, 0.2);
+  color: var(--text-default);
+  padding: 8px 18px;
+  border-radius: 30px; /* Pill shape */
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  cursor: default; /* Keeps it from looking like a broken link */
+}
+
+/* Adjust colors for Dark Mode */
+html[data-theme="dark"] .skill-badge {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--content-text);
+}
+
+/* 3D Hover Effect */
+.skill-badge:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 15px rgba(80, 0, 0, 0.2) !important;
+  border-color: var(--aggie-maroon) !important;
+  background-color: var(--aggie-maroon) !important;
+  color: #ffffff !important;
+}
