@@ -45,10 +45,61 @@ I am passionate about robotics, particularly autonomous and intelligent systems.
   </a>
 </div>
 
-## Education
-**Texas A&M University** (2024-2028)
-* B.S. Mechatronics Engineering
-* Minor: Embedded Systems
+<h2 style="margin-top: 40px;">Education</h2>
+
+<div data-aos="fade-up" class="glass-card">
+    <div class="card-header">
+        <h3 class="role">B.S. Mechatronics Engineering</h3>
+        <span class="date">2024 - 2028</span>
+    </div>
+    <h4 class="company">Texas A&M University | Minor: Embedded Systems</h4>
+    
+    <div class="coursework-tags">
+        <span class="course-tag">Autonomous Systems</span>
+        <span class="course-tag">Embedded Microcontrollers</span>
+        <span class="course-tag">Control Theory</span>
+        <span class="course-tag">Kinematics</span>
+        <span class="course-tag">Circuit Analysis</span>
+    </div>
+</div>
+
+<h2 style="margin-top: 50px;">Relevant Experience</h2>
+
+<div data-aos="fade-up" class="glass-card">
+    <div class="card-header">
+        <h3 class="role">R&D Robotics Engineer</h3>
+        <span class="date">Sep 2025 - Present</span>
+    </div>
+    <h4 class="company">T.U.R.T.L.E Robotics, Texas A&M</h4>
+    <p class="description">Collaborating to research and implement ROS 2 Humble, PX4, and MAVROS frameworks in simulation environments for a UAV swarm platform designed to assist first responders.</p>
+</div>
+
+<div data-aos="fade-up" class="glass-card" data-aos-delay="100">
+    <div class="card-header">
+        <h3 class="role">Hardware Team Member</h3>
+        <span class="date">Sep 2025 - Present</span>
+    </div>
+    <h4 class="company">TAMU Robomasters</h4>
+    <p class="description">Designing robust structural components using OnShape CAD and integrating NVIDIA Jetson Orin, LiDAR, and cameras for a fully autonomous Sentry Robot.</p>
+</div>
+
+<div data-aos="fade-up" class="glass-card" data-aos-delay="200">
+    <div class="card-header">
+        <h3 class="role">Summer Robotics Research Intern</h3>
+        <span class="date">Jun 2025 - Aug 2025</span>
+    </div>
+    <h4 class="company">Center for Autonomy, UT Austin (AEOP)</h4>
+    <p class="description">Architected a 1/16 scale autonomous RC car using a C++/ROS2 software stack, achieving precise Ackerman steering and validating SLAM algorithms for complex drift and jump navigation.</p>
+</div>
+
+<div data-aos="fade-up" class="glass-card" data-aos-delay="300">
+    <div class="card-header">
+        <h3 class="role">Mechatronics Research Intern</h3>
+        <span class="date">Jun 2021 - Sep 2021</span>
+    </div>
+    <h4 class="company">Mechatronics Vehicle Systems Lab, Univ. of Waterloo</h4>
+    <p class="description">Designed, fabricated, and programmed an LED display module for the WATonoBus autonomous shuttle to communicate vehicle intentions to non-ego agents.</p>
+</div>
 
 Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
 
@@ -141,11 +192,99 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
     font-weight: bold;
   }
 
-  /* 4. Dark Theme Card Fixes */
-  /* Applies the subtle glass effect ONLY when dark mode is active */
-  html[data-theme="dark"] .hover-card, 
-  body.dark-theme .hover-card { 
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    backdrop-filter: blur(5px);
+  /* Experience & Education Glass Cards */
+  .glass-card {
+      background: rgba(128, 128, 128, 0.05);
+      border: 1px solid rgba(128, 128, 128, 0.15);
+      border-left: 4px solid #800000;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .glass-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(128, 0, 0, 0.15);
+      border-left: 4px solid #ff4d4d; 
+  }
+
+  .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+  }
+
+  .card-header h3 {
+      margin: 0;
+      font-size: 1.4em;
+      font-weight: 700;
+  }
+
+  .card-header .date {
+      font-family: monospace;
+      color: #ff4d4d;
+      font-size: 0.9em;
+      letter-spacing: 1px;
+  }
+
+  .company {
+      margin: 0 0 15px 0;
+      font-size: 1.1em;
+      opacity: 0.8;
+      font-weight: 500;
+  }
+
+  .description {
+      margin: 0;
+      line-height: 1.6;
+      font-size: 0.95em;
+  }
+
+  .coursework-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+  }
+
+  .course-tag {
+      background: rgba(128, 0, 0, 0.08);
+      border: 1px solid rgba(128, 0, 0, 0.3);
+      color: #b30000;
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-size: 0.8em;
+      font-family: monospace;
+      transition: background 0.2s ease;
+  }
+  
+  .course-tag:hover {
+      background: rgba(128, 0, 0, 0.15);
+  }
+
+  /* Dark Theme Overrides */
+  html[data-theme="dark"] .glass-card, 
+  body.dark-theme .glass-card {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #800000;
+  }
+  
+  html[data-theme="dark"] .course-tag, 
+  body.dark-theme .course-tag {
+      color: #ff9999;
+  }
+
+  @media (max-width: 768px) {
+      .card-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 5px;
+      }
   }
 </style>
