@@ -55,11 +55,11 @@ I am passionate about robotics, particularly autonomous and intelligent systems.
     <h4 class="company">Texas A&M University | Minor: Embedded Systems</h4>
     
     <div class="coursework-tags">
-        <span class="course-tag">Autonomous Systems</span>
-        <span class="course-tag">Embedded Microcontrollers</span>
-        <span class="course-tag">Control Theory</span>
-        <span class="course-tag">Kinematics</span>
+        <span class="course-tag">Embedded Systems in C</span>
+        <span class="course-tag">Analog & Digital Electronics</span>
         <span class="course-tag">Circuit Analysis</span>
+        <span class="course-tag">Engineering Mechanics</span>
+        <span class="course-tag">Calculus I-III & DiffEq</span>
     </div>
 </div>
 
@@ -83,13 +83,22 @@ I am passionate about robotics, particularly autonomous and intelligent systems.
     <p class="description">Designing robust structural components using OnShape CAD and integrating NVIDIA Jetson Orin, LiDAR, and cameras for a fully autonomous Sentry Robot.</p>
 </div>
 
-<div data-aos="fade-up" class="glass-card" data-aos-delay="200">
+<div data-aos="fade-up" class="glass-card" data-aos-delay="150">
     <div class="card-header">
         <h3 class="role">Summer Robotics Research Intern</h3>
         <span class="date">Jun 2025 - Aug 2025</span>
     </div>
     <h4 class="company">Center for Autonomy, UT Austin (AEOP)</h4>
     <p class="description">Architected a 1/16 scale autonomous RC car using a C++/ROS2 software stack, achieving precise Ackerman steering and validating SLAM algorithms for complex drift and jump navigation.</p>
+</div>
+
+<div data-aos="fade-up" class="glass-card" data-aos-delay="200">
+    <div class="card-header">
+        <h3 class="role">Hatchling Team Member</h3>
+        <span class="date">Jan 2025 - Sep 2025</span>
+    </div>
+    <h4 class="company">T.U.R.T.L.E Robotics, Texas A&M</h4>
+    <p class="description">Designed mechanical components including a forklift-style lift in SolidWorks, and programmed an ESP32/Arduino stack for vehicle navigation. Won 2nd Place out of 30+ teams at the 2025 Hatchling Competition.</p>
 </div>
 
 <div data-aos="fade-up" class="glass-card" data-aos-delay="300">
@@ -101,7 +110,27 @@ I am passionate about robotics, particularly autonomous and intelligent systems.
     <p class="description">Designed, fabricated, and programmed an LED display module for the WATonoBus autonomous shuttle to communicate vehicle intentions to non-ego agents.</p>
 </div>
 
-Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
+<h2 style="margin-top: 50px;">Leadership & Involvement</h2>
+
+<div data-aos="fade-up" class="glass-card">
+    <div class="card-header">
+        <h3 class="role">Design Review Officer</h3>
+        <span class="date">Jan 2026 - Present</span>
+    </div>
+    <h4 class="company">T.U.R.T.L.E Robotics</h4>
+    <p class="description">Providing specialized technical input during design reviews and managing Q/A channels to ensure robust project progression and strict engineering standards.</p>
+</div>
+
+<div data-aos="fade-up" class="glass-card" data-aos-delay="100">
+    <div class="card-header">
+        <h3 class="role">Science and Engineering Fair Judge</h3>
+        <span class="date">Mar 2025 - Present</span>
+    </div>
+    <h4 class="company">Texas Science and Engineering Fair (TXSEF)</h4>
+    <p class="description">Evaluating 20+ student research projects annually in the Energy: Sustainable Materials and Robotics categories, mentoring the next generation of engineers.</p>
+</div>
+
+<p style="margin-top: 30px; font-size: 1.1em;">Feel free to explore my full <a href="/portfolio/">Portfolio</a>, <a href="/leadership/">Leadership Experience</a>, and <a href="/cv/">CV</a>.</p>
 
 <h2 style="margin-top: 2em; margin-bottom: 1em;">Technical Skills</h2>
 
@@ -168,7 +197,7 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
   .hover-card {
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.3s ease;
     border-radius: 8px !important;
-    background-color: transparent; /* Adapt seamlessly to light mode */
+    background-color: transparent; 
   }
   .hover-card:hover {
     transform: translateY(-8px) !important;
@@ -192,7 +221,7 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
     font-weight: bold;
   }
 
-  /* Experience & Education Glass Cards */
+  /* 4. Experience & Education Glass Cards */
   .glass-card {
       background: rgba(128, 128, 128, 0.05);
       border: 1px solid rgba(128, 128, 128, 0.15);
@@ -265,7 +294,13 @@ Feel free to explore my [Portfolio](/portfolio/) and [CV](/cv/).
       background: rgba(128, 0, 0, 0.15);
   }
 
-  /* Dark Theme Overrides */
+  /* 5. Dark Theme Overrides */
+  html[data-theme="dark"] .hover-card, 
+  body.dark-theme .hover-card { 
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(5px);
+  }
+  
   html[data-theme="dark"] .glass-card, 
   body.dark-theme .glass-card {
       background: rgba(255, 255, 255, 0.02);
