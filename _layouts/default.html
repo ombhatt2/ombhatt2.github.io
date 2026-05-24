@@ -265,7 +265,9 @@ layout: compress
       document.addEventListener("DOMContentLoaded", function() {
         var targets = document.querySelectorAll('p, h1, h2, h3, ul, .archive__item, .skill-cloud, .reveal-target, .hover-card');
         targets.forEach(function(el) { el.setAttribute('data-aos', 'fade-up'); });
-        AOS.init({ duration: 800, easing: 'ease-out', once: false, offset: 40 });
+        
+        /* Set once: true so it only animates the very first time */
+        AOS.init({ duration: 800, easing: 'ease-out', once: true, offset: 40 });
       });
     </script>
 
