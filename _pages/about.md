@@ -45,97 +45,103 @@ redirect_from:
 
 <h2 style="margin-top: 40px;">Education</h2>
 
-<div data-aos="fade-up" class="glass-card">
-    <div class="card-header">
-        <h3 class="role">B.S. Mechatronics Engineering</h3>
-        <span class="date">2024 - 2028</span>
-    </div>
-    <h4 class="company">Texas A&M University | Minor: Embedded Systems</h4>
-    
-    <div class="coursework-tags">
-        <span class="course-tag">Embedded Systems in C</span>
-        <span class="course-tag">Analog & Digital Electronics</span>
-        <span class="course-tag">Circuit Analysis</span>
-        <span class="course-tag">Engineering Mechanics</span>
-        <span class="course-tag">Calculus I-III & DiffEq</span>
-    </div>
+<div class="card-grid">
+  <div data-aos="fade-up" class="glass-card">
+      <div class="card-header">
+          <h3 class="role">B.S. Mechatronics Engineering</h3>
+          <span class="date">2024 - 2028</span>
+      </div>
+      <h4 class="company">Texas A&M University | Minor: Embedded Systems</h4>
+      
+      <div class="coursework-tags">
+          <span class="course-tag">Embedded Systems in C</span>
+          <span class="course-tag">Analog & Digital Electronics</span>
+          <span class="course-tag">Circuit Analysis</span>
+          <span class="course-tag">Engineering Mechanics</span>
+          <span class="course-tag">Calculus I-III & DiffEq</span>
+      </div>
+  </div>
 </div>
 
 <h2 style="margin-top: 50px;">Relevant Experience</h2>
 
-<div data-aos="fade-up" class="glass-card clickable-card">
-  <a href="/portfolio/2024-01-01-dron" class="card-link-wrapper">
-    <div class="card-header">
-        <h3 class="role">R&D Robotics Engineer</h3>
-        <span class="date">Sep 2025 - Present</span>
-    </div>
-    <h4 class="company">T.U.R.T.L.E Robotics, Texas A&M</h4>
-    <p class="description">Collaborating to research and implement ROS 2 Humble, PX4, and MAVROS frameworks in simulation environments for a UAV swarm platform designed to assist first responders.</p>
-  </a>
-</div>
+<div class="card-grid">
+  <div data-aos="fade-up" class="glass-card clickable-card">
+    <a href="/portfolio/2024-01-01-dron" class="card-link-wrapper">
+      <div class="card-header">
+          <h3 class="role">R&D Robotics Engineer</h3>
+          <span class="date">Sep 2025 - Present</span>
+      </div>
+      <h4 class="company">T.U.R.T.L.E Robotics, Texas A&M</h4>
+      <p class="description">Collaborating to research and implement ROS 2 Humble, PX4, and MAVROS frameworks in simulation environments for a UAV swarm platform designed to assist first responders.</p>
+    </a>
+  </div>
 
-<div data-aos="fade-up" class="glass-card clickable-card" data-aos-delay="100">
-  <a href="/portfolio/robomasters" class="card-link-wrapper">
-    <div class="card-header">
-        <h3 class="role">Hardware Team Member</h3>
-        <span class="date">Sep 2025 - Present</span>
-    </div>
-    <h4 class="company">TAMU Robomasters</h4>
-    <p class="description">Designing robust structural components using OnShape CAD and integrating NVIDIA Jetson Orin, LiDAR, and cameras for a fully autonomous Sentry Robot.</p>
-  </a>
-</div>
+  <div data-aos="fade-up" class="glass-card clickable-card" data-aos-delay="100">
+    <a href="/portfolio/robomasters" class="card-link-wrapper">
+      <div class="card-header">
+          <h3 class="role">Hardware Team Member</h3>
+          <span class="date">Sep 2025 - Present</span>
+      </div>
+      <h4 class="company">TAMU Robomasters</h4>
+      <p class="description">Designing robust structural components using OnShape CAD and integrating NVIDIA Jetson Orin, LiDAR, and cameras for a fully autonomous Sentry Robot.</p>
+    </a>
+  </div>
 
-<div data-aos="fade-up" class="glass-card clickable-card" data-aos-delay="150">
-  <a href="/portfolio/aeop-research" class="card-link-wrapper">
-    <div class="card-header">
-        <h3 class="role">Summer Robotics Research Intern</h3>
-        <span class="date">Jun 2025 - Aug 2025</span>
-    </div>
-    <h4 class="company">Center for Autonomy, UT Austin (AEOP)</h4>
-    <p class="description">Architected a 1/16 scale autonomous RC car using a C++/ROS2 software stack, achieving precise Ackerman steering and validating SLAM algorithms for complex drift and jump navigation.</p>
-  </a>
-</div>
+  <div data-aos="fade-up" class="glass-card clickable-card" data-aos-delay="150">
+    <a href="/portfolio/aeop-research" class="card-link-wrapper">
+      <div class="card-header">
+          <h3 class="role">Summer Robotics Research Intern</h3>
+          <span class="date">Jun 2025 - Aug 2025</span>
+      </div>
+      <h4 class="company">Center for Autonomy, UT Austin (AEOP)</h4>
+      <p class="description">Architected a 1/16 scale autonomous RC car using a C++/ROS2 software stack, achieving precise Ackerman steering and validating SLAM algorithms for complex drift and jump navigation.</p>
+    </a>
+  </div>
 
-<div data-aos="fade-up" class="glass-card clickable-card" data-aos-delay="200">
-  <a href="/portfolio/hatchling" class="card-link-wrapper">
-    <div class="card-header">
-        <h3 class="role">Hatchling Team Member</h3>
-        <span class="date">Jan 2025 - Sep 2025</span>
-    </div>
-    <h4 class="company">T.U.R.T.L.E Robotics, Texas A&M</h4>
-    <p class="description">Designed mechanical components including a forklift-style lift in SolidWorks, and programmed an ESP32/Arduino stack for vehicle navigation. Won 2nd Place out of 30+ teams at the 2025 Hatchling Competition.</p>
-  </a>
-</div>
+  <div data-aos="fade-up" class="glass-card clickable-card" data-aos-delay="200">
+    <a href="/portfolio/hatchling" class="card-link-wrapper">
+      <div class="card-header">
+          <h3 class="role">Hatchling Team Member</h3>
+          <span class="date">Jan 2025 - Sep 2025</span>
+      </div>
+      <h4 class="company">T.U.R.T.L.E Robotics, Texas A&M</h4>
+      <p class="description">Designed mechanical components including a forklift-style lift in SolidWorks, and programmed an ESP32/Arduino stack for vehicle navigation. Won 2nd Place out of 30+ teams at the 2025 Hatchling Competition.</p>
+    </a>
+  </div>
 
-<div data-aos="fade-up" class="glass-card clickable-card" data-aos-delay="300">
-  <a href="/portfolio/watonobus" class="card-link-wrapper">
-    <div class="card-header">
-        <h3 class="role">Mechatronics Research Intern</h3>
-        <span class="date">Jun 2021 - Sep 2021</span>
-    </div>
-    <h4 class="company">Mechatronics Vehicle Systems Lab, Univ. of Waterloo</h4>
-    <p class="description">Designed, fabricated, and programmed an LED display module for the WATonoBus autonomous shuttle to communicate vehicle intentions to non-ego agents.</p>
-  </a>
+  <div data-aos="fade-up" class="glass-card clickable-card" data-aos-delay="300">
+    <a href="/portfolio/watonobus" class="card-link-wrapper">
+      <div class="card-header">
+          <h3 class="role">Mechatronics Research Intern</h3>
+          <span class="date">Jun 2021 - Sep 2021</span>
+      </div>
+      <h4 class="company">Mechatronics Vehicle Systems Lab, Univ. of Waterloo</h4>
+      <p class="description">Designed, fabricated, and programmed an LED display module for the WATonoBus autonomous shuttle to communicate vehicle intentions to non-ego agents.</p>
+    </a>
+  </div>
 </div>
 
 <h2 style="margin-top: 50px;">Leadership & Involvement</h2>
 
-<div data-aos="fade-up" class="glass-card">
-    <div class="card-header">
-        <h3 class="role">Design Review Officer</h3>
-        <span class="date">Jan 2026 - Present</span>
-    </div>
-    <h4 class="company">T.U.R.T.L.E Robotics</h4>
-    <p class="description">Providing specialized technical input during design reviews and managing Q/A channels to ensure robust project progression and strict engineering standards.</p>
-</div>
+<div class="card-grid">
+  <div data-aos="fade-up" class="glass-card">
+      <div class="card-header">
+          <h3 class="role">Design Review Officer</h3>
+          <span class="date">Jan 2026 - Present</span>
+      </div>
+      <h4 class="company">T.U.R.T.L.E Robotics</h4>
+      <p class="description">Providing specialized technical input during design reviews and managing Q/A channels to ensure robust project progression and strict engineering standards.</p>
+  </div>
 
-<div data-aos="fade-up" class="glass-card" data-aos-delay="100">
-    <div class="card-header">
-        <h3 class="role">Science and Engineering Fair Judge</h3>
-        <span class="date">Mar 2025 - Present</span>
-    </div>
-    <h4 class="company">Texas Science and Engineering Fair (TXSEF)</h4>
-    <p class="description">Evaluating 20+ student research projects annually in the Energy: Sustainable Materials and Robotics categories, mentoring the next generation of engineers.</p>
+  <div data-aos="fade-up" class="glass-card" data-aos-delay="100">
+      <div class="card-header">
+          <h3 class="role">Science & Engineering Fair Judge</h3>
+          <span class="date">Mar 2025 - Present</span>
+      </div>
+      <h4 class="company">Texas Science and Engineering Fair (TXSEF)</h4>
+      <p class="description">Evaluating 20+ student research projects annually in the Energy: Sustainable Materials and Robotics categories, mentoring the next generation of engineers.</p>
+  </div>
 </div>
 
 <p style="margin-top: 30px; font-size: 1.1em;">Feel free to explore my full <a href="/portfolio/">Portfolio</a>, <a href="/leadership/">Leadership Experience</a>, and <a href="/cv/">CV</a>.</p>
@@ -266,6 +272,26 @@ redirect_from:
   {% endfor %}
 </div>
 
+<h2 style="margin-top: 60px; margin-bottom: 20px;">Work in Motion</h2>
+
+<div class="gallery-marquee-container" data-aos="fade-up">
+  <div class="gallery-marquee-track">
+    <img src="https://picsum.photos/id/0/400/220" alt="Robotics Work 1" class="gallery-img">
+    <img src="https://picsum.photos/id/20/300/220" alt="Robotics Work 2" class="gallery-img">
+    <img src="https://picsum.photos/id/60/350/220" alt="Robotics Work 3" class="gallery-img">
+    <img src="https://picsum.photos/id/119/400/220" alt="Robotics Work 4" class="gallery-img">
+    <img src="https://picsum.photos/id/160/300/220" alt="Robotics Work 5" class="gallery-img">
+    <img src="https://picsum.photos/id/201/450/220" alt="Robotics Work 6" class="gallery-img">
+    
+    <img src="https://picsum.photos/id/0/400/220" alt="Robotics Work 1" class="gallery-img">
+    <img src="https://picsum.photos/id/20/300/220" alt="Robotics Work 2" class="gallery-img">
+    <img src="https://picsum.photos/id/60/350/220" alt="Robotics Work 3" class="gallery-img">
+    <img src="https://picsum.photos/id/119/400/220" alt="Robotics Work 4" class="gallery-img">
+    <img src="https://picsum.photos/id/160/300/220" alt="Robotics Work 5" class="gallery-img">
+    <img src="https://picsum.photos/id/201/450/220" alt="Robotics Work 6" class="gallery-img">
+  </div>
+</div>
+
 <div style="text-align: center; margin-top: 100px; margin-bottom: 50px; padding: 0 20px;">
   <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px;">Get In Touch</h2>
   <p style="font-size: 1.15rem; opacity: 0.8; max-width: 600px; margin: 0 auto; line-height: 1.6;">
@@ -322,6 +348,14 @@ redirect_from:
     box-shadow: 0 0 25px rgba(128, 0, 0, 0.5) !important;
   }
 
+  /* --- NEW: Grid Layout for Cards --- */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+
   /* 1. Levitating Project Cards */
   .hover-card {
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.3s ease;
@@ -347,10 +381,14 @@ redirect_from:
       border: 1px solid rgba(128, 128, 128, 0.15);
       border-left: 4px solid #800000;
       border-radius: 8px;
-      margin-bottom: 20px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
       padding: 25px;
+      /* Remove bottom margin because grid handles gap */
+      margin-bottom: 0; 
+      height: 100%;
+      display: flex;
+      flex-direction: column;
   }
 
   .glass-card:hover {
@@ -365,7 +403,9 @@ redirect_from:
       overflow: hidden;
   }
   .card-link-wrapper {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
       padding: 25px;
       text-decoration: none !important;
       color: inherit !important;
@@ -402,6 +442,7 @@ redirect_from:
       margin: 0;
       line-height: 1.6;
       font-size: 0.95em;
+      flex-grow: 1; /* Pushes content down so heights match */
   }
 
   .coursework-tags {
@@ -533,5 +574,57 @@ redirect_from:
           align-items: flex-start;
           gap: 5px;
       }
+      .card-grid {
+          grid-template-columns: 1fr; /* Stacks to single column on phones */
+      }
+  }
+
+  /* --- Image Marquee CSS --- */
+  .gallery-marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 15px 0;
+    margin-bottom: 40px;
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  }
+
+  .gallery-marquee-track {
+    display: inline-block;
+    animation: marqueeScroll 30s linear infinite;
+  }
+
+  .gallery-marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  .gallery-img {
+    height: 220px;
+    width: auto;   
+    border-radius: 8px;
+    margin-right: 15px;
+    object-fit: cover;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(128,128,128,0.2);
+  }
+
+  .gallery-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(128, 0, 0, 0.4);
+    border-color: #ff4d4d;
+  }
+
+  @keyframes marqueeScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+  }
+  
+  @media (max-width: 768px) {
+    .gallery-img { height: 160px; }
   }
 </style>
