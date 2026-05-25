@@ -18,7 +18,7 @@ redirect_from:
     function startTyping() {
       if (typeof Typed !== 'undefined') {
         new Typed('#typed-text', {
-          strings: ['Engineer.', 'Researcher.', 'Leader.'],
+          strings: ['Engineer.', 'Researcher.', 'Developer.'],
           typeSpeed: 60, backSpeed: 40, backDelay: 2000, loop: true, showCursor: true, cursorChar: '|'
         });
       } else {
@@ -274,6 +274,11 @@ redirect_from:
 </div>
 
 <style>
+  /* --- Hide Auto-Generated Theme Title --- */
+  h1.page__title {
+    display: none !important;
+  }
+
   /* --- Hero Section & Typography --- */
   .hero-section {
     padding-top: 10px;
@@ -292,12 +297,13 @@ redirect_from:
     .intro-header { font-size: 2.5rem !important; }
   }
 
+  /* Force Intro Text to be Larger */
   .intro-text {
-    font-size: 1.2rem;
-    line-height: 1.7;
-    opacity: 0.85;
+    font-size: 1.4rem !important; 
+    line-height: 1.8 !important;
+    opacity: 0.9;
     max-width: 800px; 
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   /* --- Bigger Profile Picture with Tech Ring --- */
