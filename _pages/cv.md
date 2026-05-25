@@ -13,7 +13,7 @@ redirect_from:
   <a href="{{ base_path }}/files/Om_Bhatt_CV.pdf" class="btn btn--primary">Download CV as PDF</a>
 </div>
 
-Cedar Park, TX ⋄ [{{ site.data.cv.basics.email }}](mailto:{{ site.data.cv.basics.email }}) ⋄ {{ site.data.cv.basics.phone }}
+College Station, TX ⋄ [{{ site.data.cv.basics.email }}](mailto:{{ site.data.cv.basics.email }}) ⋄ {{ site.data.cv.basics.phone }}
 
 {% for profile in site.data.cv.basics.profiles %}{% if profile.url %}[{{ profile.network }}]({{ profile.url }}){% else %}{{ profile.network }}{% endif %}{% if forloop.last == false %} ⋄ {% endif %}{% endfor %}
 
