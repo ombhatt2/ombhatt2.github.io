@@ -7,42 +7,40 @@ redirect_from:
   - /about.html
 ---
 
-<h2 style="margin-top: 0; font-size: 1.8em; min-height: 1.2em; color: #333;">
-  A Robotics <span id="typed-text" class="tech-text"></span>
-</h2>
+<div class="hero-section" data-aos="fade-up">
+  <h1 class="intro-header">
+    Hello, I'm Om.<br>
+    <span style="font-size: 0.65em; opacity: 0.9; font-weight: 700;">A Robotics <span id="typed-text" class="tech-text"></span></span>
+  </h1>
 
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
-<script>
-  function startTyping() {
-    if (typeof Typed !== 'undefined') {
-      new Typed('#typed-text', {
-        strings: [
-          'Engineer.', 
-          'Researcher.'
-        ],
-        typeSpeed: 60,
-        backSpeed: 40,
-        backDelay: 2000,
-        loop: true,
-        showCursor: true,
-        cursorChar: '|'
-      });
-    } else {
-      setTimeout(startTyping, 100);
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    function startTyping() {
+      if (typeof Typed !== 'undefined') {
+        new Typed('#typed-text', {
+          strings: ['Engineer.', 'Researcher.', 'Leader.'],
+          typeSpeed: 60, backSpeed: 40, backDelay: 2000, loop: true, showCursor: true, cursorChar: '|'
+        });
+      } else {
+        setTimeout(startTyping, 100);
+      }
     }
-  }
-  startTyping();
-</script>
+    startTyping();
+  </script>
 
-Welcome to my academic portfolio! I am a well-rounded student with strong academics and extracurricular experience. 
+  <p class="intro-text">
+    Welcome to my academic portfolio! I am a well-rounded student with strong academics and extracurricular experience. 
+  </p>
+  
+  <p class="intro-text">
+    I am passionate about robotics, particularly autonomous and intelligent systems. Currently, I am seeking to expand my engineering knowledge and experience to design, develop, and optimize mechatronic and robotic systems that advance automation and contribute to the betterment of society.
+  </p>
 
-I am passionate about robotics, particularly autonomous and intelligent systems. Currently, I am seeking to expand my engineering knowledge and experience to design, develop, and optimize mechatronic and robotic systems that advance automation and contribute to the betterment of society.
-
-<div style="margin-top: 2rem; margin-bottom: 3rem;" class="reveal-target">
-  <a href="/files/Om_Bhatt_Resume.pdf" class="modern-resume-btn" target="_blank">
-    View My Resume <i class="fas fa-arrow-right"></i>
-  </a>
+  <div style="margin-top: 2.5rem; margin-bottom: 4rem;">
+    <a href="/files/Om_Bhatt_Resume.pdf" class="modern-resume-btn" target="_blank">
+      View My Resume <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
 </div>
 
 <h2 style="margin-top: 40px;">Education</h2>
@@ -276,6 +274,48 @@ I am passionate about robotics, particularly autonomous and intelligent systems.
 </div>
 
 <style>
+  /* --- Hero Section & Typography --- */
+  .hero-section {
+    padding-top: 10px;
+  }
+
+  .intro-header {
+    font-size: 3.5rem !important;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+    color: var(--text-default);
+  }
+
+  @media (max-width: 768px) {
+    .intro-header { font-size: 2.5rem !important; }
+  }
+
+  .intro-text {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    opacity: 0.85;
+    max-width: 800px; 
+    margin-bottom: 15px;
+  }
+
+  /* --- Bigger Profile Picture with Tech Ring --- */
+  .author__avatar img {
+    max-width: 170px !important; 
+    width: 100%;
+    border: 3px solid #800000 !important; 
+    padding: 4px; 
+    background-color: transparent;
+    border-radius: 50%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .author__avatar img:hover {
+    transform: scale(1.08) !important;
+    box-shadow: 0 0 25px rgba(128, 0, 0, 0.5) !important;
+  }
+
   /* 1. Levitating Project Cards */
   .hover-card {
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.3s ease;
@@ -285,15 +325,6 @@ I am passionate about robotics, particularly autonomous and intelligent systems.
   .hover-card:hover {
     transform: translateY(-8px) !important;
     box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.1) !important;
-  }
-
-  /* 2. Interactive Profile Picture */
-  .author__avatar img {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-  }
-  .author__avatar img:hover {
-    transform: scale(1.05) !important;
-    box-shadow: 0 0 20px rgba(128, 0, 0, 0.4) !important;
   }
 
   /* 3. Tech Gradient Highlight */
