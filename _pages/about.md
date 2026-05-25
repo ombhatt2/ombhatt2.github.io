@@ -46,19 +46,19 @@ redirect_from:
 ## Featured Projects
 
 {% assign featured_paths = "/portfolio/2024-01-01-dron,/portfolio/robomasters,/portfolio/aeop-research,/portfolio/hatchling,/portfolio/ecotrack,/portfolio/watonobus" | split: "," %}
-<div style="display:flex;flex-wrap:wrap;gap:20px;margin-top:16px;" class="project-grid">
+<div style="display:flex;flex-wrap:wrap;gap:25px;margin-top:16px;" class="project-grid">
   {% for p in featured_paths %}
     {% assign matches = site.portfolio | where: "url", p %}
     {% if matches and matches.size > 0 %}
       {% assign item = matches[0] %}
-      <div class="hover-card" style="flex:1 1 220px;max-width:320px;border:1px solid rgba(128,128,128,0.3);padding:10px;box-shadow:0 1px 0 rgba(0,0,0,0.02);">
+      <div class="hover-card" style="flex:1 1 300px;max-width:400px;border:1px solid rgba(128,128,128,0.3);padding:18px;box-shadow:0 1px 0 rgba(0,0,0,0.02);">
         <a href="{{ item.url }}" style="text-decoration:none;color:inherit;">
           {% if item.header and item.header.teaser %}
-            <img src="{{ item.header.teaser }}" alt="{{ item.title }}" style="width:100%;height:160px;object-fit:cover;border-radius:4px;">
+            <img src="{{ item.header.teaser }}" alt="{{ item.title }}" style="width:100%;height:220px;object-fit:cover;border-radius:6px;">
           {% endif %}
-          <h3 style="margin:10px 0 0 0;font-size:1.05rem;">{{ item.title }}</h3>
+          <h3 style="margin:15px 0 0 0;font-size:1.3rem;">{{ item.title }}</h3>
           {% if item.excerpt %}
-            <p style="margin:6px 0 0;opacity:0.8;font-size:0.95rem;">{{ item.excerpt | strip_html | truncate:120 }}</p>
+            <p style="margin:10px 0 0;opacity:0.85;font-size:1rem;line-height:1.5;">{{ item.excerpt | strip_html | truncate:140 }}</p>
           {% endif %}
         </a>
       </div>
