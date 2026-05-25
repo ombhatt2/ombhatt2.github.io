@@ -43,7 +43,17 @@ redirect_from:
   </div>
 </div>
 
-## Featured Projects
+<nav class="floating-nav">
+  <ul>
+    <li><a href="#featured-projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#skills">Skills</a></li>
+  </ul>
+</nav>
+
+<h2 id="featured-projects">Featured Projects</h2>
 
 {% assign featured_paths = "/portfolio/2024-01-01-dron,/portfolio/robomasters,/portfolio/aeop-research,/portfolio/hatchling,/portfolio/ecotrack,/portfolio/watonobus" | split: "," %}
 <div style="display:flex;flex-wrap:wrap;gap:25px;margin-top:16px;" class="project-grid">
@@ -66,7 +76,7 @@ redirect_from:
   {% endfor %}
 </div>
 
-<h2 style="margin-top: 40px;">Education</h2>
+<h2 id="education">Education</h2>
 
 <div data-aos="fade-up" class="glass-card">
     <div class="card-header">
@@ -84,7 +94,7 @@ redirect_from:
     </div>
 </div>
 
-<h2 style="margin-top: 50px;">Relevant Experience</h2>
+<h2 id="experience">Relevant Experience</h2>
 
 <div data-aos="fade-up" class="glass-card clickable-card">
   <a href="/portfolio/2024-01-01-dron" class="card-link-wrapper">
@@ -165,7 +175,7 @@ redirect_from:
   </a>
 </div>
 
-<h2 style="margin-top: 50px;">Leadership & Involvement</h2>
+<h2 id="leadership">Leadership & Involvement</h2>
 
 <div data-aos="fade-up" class="glass-card">
     <div class="card-header">
@@ -187,7 +197,7 @@ redirect_from:
 
 <p style="margin-top: 30px; font-size: 1.1em;">Feel free to explore my full <a href="/portfolio/">Portfolio</a>, <a href="/leadership/">Leadership Experience</a>, and <a href="/cv/">CV</a>.</p>
 
-<h2 style="margin-top: 2em; margin-bottom: 1em;">Technical Skills</h2>
+<h2 id="skills">Technical Skills</h2>
 
 <h3 style="font-size: 1.1rem; margin-bottom: 0.8rem; color: #800000;">Programming</h3>
 <div class="skill-cloud" data-aos="fade-up">
@@ -298,6 +308,75 @@ redirect_from:
 </div>
 
 <style>
+  /* --- Smooth Scrolling --- */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* --- Floating Right-Side Navigation --- */
+  .floating-nav {
+    position: fixed;
+    top: 50%;
+    right: 30px; /* Pins it to the right side of the window */
+    transform: translateY(-50%); /* Centers it vertically */
+    background: rgba(128, 128, 128, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(128, 128, 128, 0.15);
+    border-radius: 12px;
+    padding: 20px 25px;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .floating-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .floating-nav a {
+    text-decoration: none !important;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #555;
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: block;
+    text-align: right;
+  }
+
+  /* Hover effect: text turns maroon and bumps slightly left */
+  .floating-nav a:hover {
+    color: #800000;
+    transform: translateX(-5px);
+  }
+
+  /* Dark Mode Adjustments */
+  html[data-theme="dark"] .floating-nav,
+  body.dark-theme .floating-nav {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  html[data-theme="dark"] .floating-nav a,
+  body.dark-theme .floating-nav a {
+    color: #aaa;
+  }
+
+  html[data-theme="dark"] .floating-nav a:hover,
+  body.dark-theme .floating-nav a:hover {
+    color: #ff4d4d;
+  }
+
+  /* Hide on smaller screens (tablets/phones) so it doesn't cover text */
+  @media (max-width: 1300px) {
+    .floating-nav {
+      display: none;
+    }
+  }
 
   /* --- Section Spacing & Centered Headings --- */
   h2 {
