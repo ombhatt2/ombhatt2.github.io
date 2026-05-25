@@ -549,7 +549,7 @@ redirect_from:
     background: radial-gradient(circle, rgba(128, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
     border-radius: 50%;
     pointer-events: none; /* Ensures it doesn't block clicks */
-    z-index: -1; /* Keeps it behind your cards and text */
+    z-index: 9999; /* Keeps it behind your cards and text */
     transform: translate3d(-50%, -50%, 0);
     transition: opacity 0.3s ease;
     opacity: 0; /* Hidden until the mouse moves */
