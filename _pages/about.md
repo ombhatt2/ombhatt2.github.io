@@ -298,6 +298,37 @@ redirect_from:
 </div>
 
 <style>
+
+  /* --- Section Spacing & Centered Headings --- */
+  h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-top: 80px !important; /* Huge whitespace above sections */
+    margin-bottom: 40px !important; /* Space between title and content */
+    position: relative;
+    padding-bottom: 15px;
+  }
+
+  /* The maroon accent line under the section titles */
+  h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #800000;
+    border-radius: 2px;
+  }
+
+  /* Brighten the accent line in dark mode */
+  html[data-theme="dark"] h2::after, 
+  body.dark-theme h2::after {
+    background-color: #ff4d4d;
+  }
+
   /* --- Hide Auto-Generated Theme Title --- */
   h1.page__title {
     display: none !important;
