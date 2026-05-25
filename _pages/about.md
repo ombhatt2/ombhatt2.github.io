@@ -535,3 +535,45 @@ redirect_from:
       }
   }
 </style>
+
+<div id="cursor-glow"></div>
+
+<style>
+  #cursor-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    /* Soft maroon/red gradient that fades to transparent */
+    background: radial-gradient(circle, rgba(128, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none; /* Ensures it doesn't block clicks */
+    z-index: -1; /* Keeps it behind your cards and text */
+    transform: translate3d(-50%, -50%, 0);
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Hidden until the mouse moves */
+  }
+
+  /* Make it slightly brighter in dark mode */
+  html[data-theme="dark"] #cursor-glow, 
+  body.dark-theme #cursor-glow {
+    background: radial-gradient(circle, rgba(255, 77, 77, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+  }
+</style>
+
+<script>
+  const glow = document.getElementById('cursor-glow');
+  
+  // Show the glow when the mouse moves
+  document.addEventListener('mousemove', (e) => {
+    glow.style.opacity = '1';
+    // Use translate3d for hardware-accelerated, smooth performance
+    glow.style.transform = `translate3d(${e.clientX - 300}px, ${e.clientY - 300}px, 0)`;
+  });
+
+  // Hide the glow if the mouse leaves the window
+  document.addEventListener('mouseleave', () => {
+    glow.style.opacity = '0';
+  });
+</script>
