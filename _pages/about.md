@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Portfolio"
+title: "Om Bhatt"
 author_profile: true
 redirect_from: 
   - /about/
