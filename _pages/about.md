@@ -65,49 +65,59 @@ I am passionate about robotics, particularly autonomous and intelligent systems.
 
 <h2 style="margin-top: 50px;">Relevant Experience</h2>
 
-<div data-aos="fade-up" class="glass-card">
+<div data-aos="fade-up" class="glass-card clickable-card">
+  <a href="/portfolio/2024-01-01-dron" class="card-link-wrapper">
     <div class="card-header">
         <h3 class="role">R&D Robotics Engineer</h3>
         <span class="date">Sep 2025 - Present</span>
     </div>
     <h4 class="company">T.U.R.T.L.E Robotics, Texas A&M</h4>
     <p class="description">Collaborating to research and implement ROS 2 Humble, PX4, and MAVROS frameworks in simulation environments for a UAV swarm platform designed to assist first responders.</p>
+  </a>
 </div>
 
-<div data-aos="fade-up" class="glass-card" data-aos-delay="100">
+<div data-aos="fade-up" class="glass-card clickable-card" data-aos-delay="100">
+  <a href="/portfolio/robomasters" class="card-link-wrapper">
     <div class="card-header">
         <h3 class="role">Hardware Team Member</h3>
         <span class="date">Sep 2025 - Present</span>
     </div>
     <h4 class="company">TAMU Robomasters</h4>
     <p class="description">Designing robust structural components using OnShape CAD and integrating NVIDIA Jetson Orin, LiDAR, and cameras for a fully autonomous Sentry Robot.</p>
+  </a>
 </div>
 
-<div data-aos="fade-up" class="glass-card" data-aos-delay="150">
+<div data-aos="fade-up" class="glass-card clickable-card" data-aos-delay="150">
+  <a href="/portfolio/aeop-research" class="card-link-wrapper">
     <div class="card-header">
         <h3 class="role">Summer Robotics Research Intern</h3>
         <span class="date">Jun 2025 - Aug 2025</span>
     </div>
     <h4 class="company">Center for Autonomy, UT Austin (AEOP)</h4>
     <p class="description">Architected a 1/16 scale autonomous RC car using a C++/ROS2 software stack, achieving precise Ackerman steering and validating SLAM algorithms for complex drift and jump navigation.</p>
+  </a>
 </div>
 
-<div data-aos="fade-up" class="glass-card" data-aos-delay="200">
+<div data-aos="fade-up" class="glass-card clickable-card" data-aos-delay="200">
+  <a href="/portfolio/hatchling" class="card-link-wrapper">
     <div class="card-header">
         <h3 class="role">Hatchling Team Member</h3>
         <span class="date">Jan 2025 - Sep 2025</span>
     </div>
     <h4 class="company">T.U.R.T.L.E Robotics, Texas A&M</h4>
     <p class="description">Designed mechanical components including a forklift-style lift in SolidWorks, and programmed an ESP32/Arduino stack for vehicle navigation. Won 2nd Place out of 30+ teams at the 2025 Hatchling Competition.</p>
+  </a>
 </div>
 
-<div data-aos="fade-up" class="glass-card" data-aos-delay="300">
+<div data-aos="fade-up" class="glass-card clickable-card" data-aos-delay="300">
+  <a href="/portfolio/watonobus" class="card-link-wrapper">
     <div class="card-header">
         <h3 class="role">Mechatronics Research Intern</h3>
         <span class="date">Jun 2021 - Sep 2021</span>
     </div>
     <h4 class="company">Mechatronics Vehicle Systems Lab, Univ. of Waterloo</h4>
     <p class="description">Designed, fabricated, and programmed an LED display module for the WATonoBus autonomous shuttle to communicate vehicle intentions to non-ego agents.</p>
+  </a>
 </div>
 
 <h2 style="margin-top: 50px;">Leadership & Involvement</h2>
@@ -135,7 +145,7 @@ I am passionate about robotics, particularly autonomous and intelligent systems.
 <h2 style="margin-top: 2em; margin-bottom: 1em;">Technical Skills</h2>
 
 <h3 style="font-size: 1.1rem; margin-bottom: 0.8rem; color: #800000;">Programming</h3>
-<div class="skill-cloud">
+<div class="skill-cloud" data-aos="fade-up">
   <div class="skill-badge"><i class="fas fa-code"></i> C/C++</div>
   <div class="skill-badge"><i class="fab fa-python"></i> Python</div>
   <div class="skill-badge"><i class="fas fa-robot"></i> ROS2</div>
@@ -145,7 +155,7 @@ I am passionate about robotics, particularly autonomous and intelligent systems.
 </div>
 
 <h3 style="font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.8rem; color: #800000;">Hardware & Prototyping</h3>
-<div class="skill-cloud">
+<div class="skill-cloud" data-aos="fade-up">
   <div class="skill-badge"><i class="fas fa-microchip"></i> ESP32 & STM32</div>
   <div class="skill-badge"><i class="fas fa-satellite-dish"></i> Arduino & RPi</div>
   <div class="skill-badge"><i class="fas fa-eye"></i> LiDARs & Cameras</div>
@@ -154,13 +164,86 @@ I am passionate about robotics, particularly autonomous and intelligent systems.
 </div>
 
 <h3 style="font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.8rem; color: #800000;">Simulation & CAD</h3>
-<div class="skill-cloud">
+<div class="skill-cloud" style="margin-bottom: 2rem;" data-aos="fade-up">
   <div class="skill-badge"><i class="fas fa-cube"></i> SolidWorks</div>
   <div class="skill-badge"><i class="fas fa-drafting-compass"></i> Onshape & Inventor</div>
   <div class="skill-badge"><i class="fas fa-print"></i> Bambu Studio</div>
   <div class="skill-badge"><i class="fas fa-microchip"></i> Eagle & Multisim</div>
   <div class="skill-badge"><i class="fas fa-laptop-code"></i> MATLAB</div>
 </div>
+
+<p style="font-size: 0.95rem; opacity: 0.8; margin-bottom: 1rem;" data-aos="fade-up"><em>Prefer the command line? Run <code>ls</code> to view my environment.</em></p>
+<div class="terminal-window" data-aos="fade-up">
+  <div class="terminal-header">
+    <div class="terminal-buttons">
+      <span class="term-btn close"></span>
+      <span class="term-btn minimize"></span>
+      <span class="term-btn maximize"></span>
+    </div>
+    <div class="terminal-title">obhatt@tamu: ~/skills</div>
+  </div>
+  <div class="terminal-body" id="terminal-body" onclick="document.getElementById('term-input').focus()">
+    <div class="term-output" id="term-output">
+      Loading OM_OS kernel... [OK]<br>
+      Accessing skill databases... [OK]<br>
+      Type <span class="term-highlight">'help'</span> to see a list of available commands.<br><br>
+    </div>
+    <div class="term-input-line">
+      <span class="term-prompt">obhatt@tamu:~$</span>
+      <input type="text" id="term-input" autocomplete="off" spellcheck="false">
+    </div>
+  </div>
+</div>
+
+<script>
+  const termInput = document.getElementById('term-input');
+  const termOutput = document.getElementById('term-output');
+  const termBody = document.getElementById('terminal-body');
+
+  const skillsData = {
+    'programming.txt': 'C/C++, Python, ROS2, Linux, Shell (Bash/Zsh), LaTeX',
+    'hardware.txt': 'ESP32 & STM32, Arduino & RPi, LiDARs & Cameras, Soldering, PCB Design',
+    'simulation.txt': 'SolidWorks, Onshape, Inventor, Bambu Studio, Eagle, MATLAB'
+  };
+
+  termInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      const cmd = this.value.trim().toLowerCase();
+      let response = '';
+      
+      if (cmd === 'help') {
+        response = 'Available commands:<br><span class="term-highlight">ls</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- List directory contents<br><span class="term-highlight">cat [file]</span> - View file contents<br><span class="term-highlight">clear</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Clear the terminal screen';
+      } else if (cmd === 'ls') {
+        response = '<span class="term-file">programming.txt</span>&nbsp;&nbsp;<span class="term-file">hardware.txt</span>&nbsp;&nbsp;<span class="term-file">simulation.txt</span>';
+      } else if (cmd.startsWith('cat ')) {
+        const file = cmd.split(' ')[1];
+        if (skillsData[file]) {
+          response = `<span style="color: #f1fa8c;">${skillsData[file]}</span>`;
+        } else {
+          response = `cat: ${file}: No such file or directory`;
+        }
+      } else if (cmd === 'clear') {
+        termOutput.innerHTML = '';
+        this.value = '';
+        return;
+      } else if (cmd === 'sudo') {
+        response = 'Nice try. This incident will be reported.';
+      } else if (cmd === '') {
+        response = '';
+      } else {
+        response = `Command not found: ${cmd}. Type 'help' for available commands.`;
+      }
+
+      const prevLine = `<div><span class="term-prompt">obhatt@tamu:~$</span> ${this.value}</div>`;
+      const resLine = response ? `<div style="margin-bottom: 15px;">${response}</div>` : '';
+      
+      termOutput.innerHTML += prevLine + resLine;
+      this.value = '';
+      
+      termBody.scrollTop = termBody.scrollHeight;
+    }
+  });
+</script>
 
 ## Featured Projects
 
@@ -227,16 +310,28 @@ I am passionate about robotics, particularly autonomous and intelligent systems.
       border: 1px solid rgba(128, 128, 128, 0.15);
       border-left: 4px solid #800000;
       border-radius: 8px;
-      padding: 25px;
       margin-bottom: 20px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      padding: 25px;
   }
 
   .glass-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 30px rgba(128, 0, 0, 0.15);
       border-left: 4px solid #ff4d4d; 
+  }
+
+  /* Make whole card clickable without messing up padding */
+  .clickable-card {
+      padding: 0;
+      overflow: hidden;
+  }
+  .card-link-wrapper {
+      display: block;
+      padding: 25px;
+      text-decoration: none !important;
+      color: inherit !important;
   }
 
   .card-header {
@@ -294,7 +389,82 @@ I am passionate about robotics, particularly autonomous and intelligent systems.
       background: rgba(128, 0, 0, 0.15);
   }
 
-  /* 5. Dark Theme Overrides */
+  /* 5. Terminal CSS */
+  .terminal-window {
+      background-color: #1e1e1e;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      font-family: 'Courier New', Courier, monospace;
+      margin-bottom: 3rem;
+  }
+
+  .terminal-header {
+      background-color: #323233;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #111;
+  }
+
+  .terminal-buttons {
+      display: flex;
+      gap: 8px;
+  }
+
+  .term-btn {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+  }
+
+  .term-btn.close { background-color: #ff5f56; }
+  .term-btn.minimize { background-color: #ffbd2e; }
+  .term-btn.maximize { background-color: #27c93f; }
+
+  .terminal-title {
+      flex-grow: 1;
+      text-align: center;
+      color: #ccc;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      margin-right: 44px; /* Balance the buttons */
+  }
+
+  .terminal-body {
+      padding: 20px;
+      color: #d4d4d4;
+      font-size: 0.95rem;
+      height: 300px;
+      overflow-y: auto;
+      cursor: text;
+  }
+
+  .term-prompt {
+      color: #800000;
+      font-weight: bold;
+      margin-right: 8px;
+  }
+
+  .term-highlight { color: #ff4d4d; font-weight: bold; }
+  .term-file { color: #50fa7b; font-weight: bold; }
+
+  .term-input-line {
+      display: flex;
+      align-items: center;
+  }
+
+  #term-input {
+      background: transparent;
+      border: none;
+      color: #f1fa8c;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.95rem;
+      flex-grow: 1;
+      outline: none;
+  }
+
+  /* 6. Dark Theme Overrides */
   html[data-theme="dark"] .hover-card, 
   body.dark-theme .hover-card { 
     background-color: rgba(255, 255, 255, 0.05) !important;
@@ -313,6 +483,11 @@ I am passionate about robotics, particularly autonomous and intelligent systems.
   html[data-theme="dark"] .course-tag, 
   body.dark-theme .course-tag {
       color: #ff9999;
+      border-color: rgba(255, 153, 153, 0.3);
+  }
+
+  html[data-theme="dark"] .term-prompt {
+      color: #ff4d4d;
   }
 
   @media (max-width: 768px) {
