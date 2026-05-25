@@ -71,6 +71,11 @@ redirect_from:
     </div>
     <h4 class="company">T.U.R.T.L.E Robotics, Texas A&M</h4>
     <p class="description">Collaborating to research and implement ROS 2 Humble, PX4, and MAVROS frameworks in simulation environments for a UAV swarm platform designed to assist first responders.</p>
+    <div class="coursework-tags" style="margin-top: 15px;">
+        <span class="course-tag">ROS 2 Humble</span>
+        <span class="course-tag">PX4</span>
+        <span class="course-tag">MAVROS</span>
+    </div>
   </a>
 </div>
 
@@ -82,6 +87,11 @@ redirect_from:
     </div>
     <h4 class="company">TAMU Robomasters</h4>
     <p class="description">Designing robust structural components using OnShape CAD and integrating NVIDIA Jetson Orin, LiDAR, and cameras for a fully autonomous Sentry Robot.</p>
+    <div class="coursework-tags" style="margin-top: 15px;">
+        <span class="course-tag">OnShape CAD</span>
+        <span class="course-tag">NVIDIA Jetson Orin</span>
+        <span class="course-tag">LiDAR & Vision</span>
+    </div>
   </a>
 </div>
 
@@ -93,6 +103,11 @@ redirect_from:
     </div>
     <h4 class="company">Center for Autonomy, UT Austin (AEOP)</h4>
     <p class="description">Architected a 1/16 scale autonomous RC car using a C++/ROS2 software stack, achieving precise Ackerman steering and validating SLAM algorithms for complex drift and jump navigation.</p>
+    <div class="coursework-tags" style="margin-top: 15px;">
+        <span class="course-tag">C++ / ROS2</span>
+        <span class="course-tag">SLAM Algorithms</span>
+        <span class="course-tag">Low-Level Controls</span>
+    </div>
   </a>
 </div>
 
@@ -104,6 +119,11 @@ redirect_from:
     </div>
     <h4 class="company">T.U.R.T.L.E Robotics, Texas A&M</h4>
     <p class="description">Designed mechanical components including a forklift-style lift in SolidWorks, and programmed an ESP32/Arduino stack for vehicle navigation. Won 2nd Place out of 30+ teams at the 2025 Hatchling Competition.</p>
+    <div class="coursework-tags" style="margin-top: 15px;">
+        <span class="course-tag">SolidWorks</span>
+        <span class="course-tag">ESP32 & Arduino</span>
+        <span class="course-tag">C/C++</span>
+    </div>
   </a>
 </div>
 
@@ -115,6 +135,10 @@ redirect_from:
     </div>
     <h4 class="company">Mechatronics Vehicle Systems Lab, Univ. of Waterloo</h4>
     <p class="description">Designed, fabricated, and programmed an LED display module for the WATonoBus autonomous shuttle to communicate vehicle intentions to non-ego agents.</p>
+    <div class="coursework-tags" style="margin-top: 15px;">
+        <span class="course-tag">Embedded Systems</span>
+        <span class="course-tag">Prototyping</span>
+    </div>
   </a>
 </div>
 
