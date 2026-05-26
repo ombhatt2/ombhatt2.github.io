@@ -61,7 +61,7 @@ Relevant Experience
 
 Publications
 ======
-* I. Wilhite, A. Briggs, C. Ambroziak, R. Kato, D. Wheaton, O. Bhatt, A. Talal, J. Shouba, C. Xu, O. Thomas, S. Ahn, “Disaster Response Observation Network (DRON)”, TURTLE Robotics, Nov 21st, 2025 [Showcase Poster]
+* I. Wilhite, C. Ambroziak, A. Briggs, R. Kato, O. Bhatt, L. Breedlove, V. So, R. Shah, M. Shi, J. Shouba, O. Thomas, C. Weatherspoon, and D. Wheaton, "Disaster Response Observation Network (DRON)," TURTLE Robotics, Spring 2026. [Conference Poster]
 
 Volunteering and Leadership
 ======
