@@ -181,7 +181,6 @@ layout: compress
          MOBILE PROFILE PICTURE & FOLLOW BUTTON OVERRIDE
          ======================================================== */
       @media (max-width: 768px) {
-        /* Stack profile elements vertically */
         .author__profile {
           display: flex !important;
           flex-direction: column !important;
@@ -204,28 +203,42 @@ layout: compress
           border-width: 3px !important;
         }
 
-        /* 1. Completely hide the theme's default "Follow" button */
+        /* 1. Force the Name and Bio to center and take full width */
+        .author__content {
+          display: block !important;
+          width: 100% !important;
+          text-align: center !important;
+          margin-bottom: 15px !important;
+        }
+
+        /* 2. Hide the default Follow button */
         .author__urls-wrapper button {
           display: none !important;
         }
 
-        /* 2. Break the links out of the dropdown box and show them always */
+        /* 3. Force the links wrapper to sit underneath the bio */
+        .author__urls-wrapper {
+          display: block !important;
+          width: 100% !important;
+        }
+
+        /* 4. Center the links neatly in a row */
         .author__urls-wrapper .author__urls {
           display: flex !important;
-          position: static !important; /* Removes the floating dropdown box */
+          position: static !important;
           visibility: visible !important;
           opacity: 1 !important;
           box-shadow: none !important;
           background: transparent !important;
           border: none !important;
           padding: 0 !important;
-          margin-top: 15px !important;
+          margin-top: 5px !important;
           flex-wrap: wrap !important;
           justify-content: center !important;
           gap: 10px !important;
         }
         
-        /* 3. Hide the little dropdown triangle arrows */
+        /* 5. Hide the little dropdown triangle arrows */
         .author__urls-wrapper .author__urls:before,
         .author__urls-wrapper .author__urls:after {
           display: none !important;
