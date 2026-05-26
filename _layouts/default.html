@@ -176,6 +176,47 @@ layout: compress
       @keyframes spin { 100% { transform: rotate(360deg); } }
       @keyframes spin-reverse { 100% { transform: rotate(-360deg); } }
       @keyframes pulse { 0% { opacity: 0.3; } 100% { opacity: 1; } }
+
+      /* ========================================================
+         MOBILE PROFILE PICTURE OVERRIDE
+         ======================================================== */
+      @media (max-width: 768px) {
+        /* Force the sidebar to stack vertically and center on phones */
+        .author__profile {
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+          text-align: center !important;
+        }
+
+        /* Stop the theme from shrinking the image */
+        .author__avatar {
+          display: block !important;
+          margin: 0 auto 15px auto !important;
+          width: 100% !important;
+          text-align: center !important;
+        }
+
+        .author__avatar img {
+          width: 140px !important; /* Forces a good size on phones */
+          height: 140px !important;
+          object-fit: cover !important;
+          margin: 0 auto !important;
+          border-width: 3px !important;
+        }
+
+        /* Center the social links on mobile */
+        .author__urls-wrapper .author__urls {
+          display: flex !important;
+          flex-wrap: wrap !important;
+          justify-content: center !important;
+          gap: 10px !important;
+        }
+        
+        .author__urls-wrapper .author__urls li {
+          margin: 0 !important;
+        }
+      }
     </style>
   </head>
 
