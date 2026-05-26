@@ -1,28 +1,160 @@
 ---
 layout: single
-title: "Publications"
+title: "Publications & Research"
 permalink: /publications/
 author_profile: true
 ---
 
-<div data-aos="fade-up" style="text-align: center; margin-top: 10vh; padding: 50px 20px; border-radius: 16px; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);">
+<p style="font-family: monospace; color: #27c93f; letter-spacing: 2px; font-size: 0.9em; margin-bottom: 30px; display: flex; align-items: center;">
+  [ MODULE: ONLINE ] 
+  <span style="display: inline-block; width: 8px; height: 8px; background-color: #27c93f; border-radius: 50%; box-shadow: 0 0 8px #27c93f; animation: pulse-green 2s infinite; margin-left: 10px;"></span>
+</p>
+
+<div data-aos="fade-up" class="glass-card">
+    <div class="card-header">
+        <h3 class="role">Disaster Response Observation Network (DRON)</h3>
+        <span class="date">Spring 2026</span>
+    </div>
+    <h4 class="company">Conference Poster | TURTLE Robotics</h4>
     
-    <p style="font-family: monospace; color: #ff4d4d; letter-spacing: 2px; font-size: 0.9em; margin-bottom: -10px;">[ MODULE: OFFLINE ]</p>
-    <h1 style="font-size: 3em; margin-bottom: 15px; font-weight: 700;">Coming Soon</h1>
-    <p style="opacity: 0.7; font-size: 1.1em; max-width: 500px; margin: 0 auto;">Stay tuned for data uploads.</p>
+    <p class="description" style="margin-bottom: 25px; line-height: 1.8;">
+        I. Wilhite, C. Ambroziak, A. Briggs, R. Kato, <strong>O. Bhatt</strong>, L. Breedlove, V. So, R. Shah, M. Shi, J. Shouba, O. Thomas, C. Weatherspoon, and D. Wheaton, "Disaster Response Observation Network (DRON)," TURTLE Robotics, Spring 2026. [Conference Poster].
+    </p>
+
+    <a href="/files/DRON_SC_26.pdf" target="_blank" class="pdf-btn">
+        <i class="fas fa-file-pdf"></i> View Poster PDF
+    </a>
+</div>
+
+<div data-aos="fade-up" data-aos-delay="100" class="glass-card">
+    <div class="card-header">
+        <h3 class="role">Disaster Response Observation Network (DRON)</h3>
+        <span class="date">Fall 2025</span>
+    </div>
+    <h4 class="company">Showcase Poster | TURTLE Robotics</h4>
     
-    <div style="width: 12px; height: 12px; background-color: #ff4d4d; border-radius: 50%; margin: 40px auto 10px auto; animation: radar-pulse 2s infinite;"></div>
+    <p class="description" style="margin-bottom: 25px; line-height: 1.8;">
+        I. Wilhite, A. Briggs, C. Ambroziak, R. Kato, D. Wheaton, <strong>O. Bhatt</strong>, A. Talal, J. Shouba, C. Xu, O. Thomas, and S. Ahn, "Disaster Response Observation Network (DRON)," TURTLE Robotics, Nov. 2025. [Showcase Poster].
+    </p>
+
+    <a href="/files/dron-fall-2025-poster.pdf" target="_blank" class="pdf-btn">
+        <i class="fas fa-file-pdf"></i> View Poster PDF
+    </a>
 </div>
 
 <style>
+  /* --- Ensure page fills height --- */
+  #main {
+      min-height: calc(100vh - 80px); 
+  }
 
-#main {
-    min-height: calc(100vh - 80px); 
-}
+  /* --- Green Radar Pulse --- */
+  @keyframes pulse-green {
+      0% { box-shadow: 0 0 0 0 rgba(39, 201, 63, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(39, 201, 63, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(39, 201, 63, 0); }
+  }
 
-@keyframes radar-pulse {
-    0% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.7); }
-    70% { box-shadow: 0 0 0 20px rgba(255, 77, 77, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0); }
-}
+  /* --- Experience-Style Glass Cards --- */
+  .glass-card {
+      background: rgba(128, 128, 128, 0.05);
+      border: 1px solid rgba(128, 128, 128, 0.15);
+      border-left: 4px solid #800000;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      padding: 25px;
+  }
+
+  .glass-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(128, 0, 0, 0.15);
+      border-left: 4px solid #ff4d4d; 
+  }
+
+  .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+  }
+
+  .card-header h3 {
+      margin: 0;
+      font-size: 1.4em;
+      font-weight: 700;
+  }
+
+  .card-header .date {
+      font-family: monospace;
+      color: #ff4d4d;
+      font-size: 0.9em;
+      letter-spacing: 1px;
+  }
+
+  .company {
+      margin: 0 0 15px 0;
+      font-size: 1.1em;
+      opacity: 0.8;
+      font-weight: 500;
+  }
+
+  .description {
+      margin: 0;
+      font-size: 0.95em;
+  }
+
+  /* --- Modern PDF Button --- */
+  .pdf-btn {
+      text-decoration: none !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      background-color: transparent;
+      border: 2px solid #800000;
+      color: var(--text-color, #333) !important;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+  }
+
+  .pdf-btn:hover {
+      background-color: #800000;
+      color: #fff !important;
+      transform: translateX(5px);
+  }
+
+  /* --- Dark Theme Overrides --- */
+  html[data-theme="dark"] .glass-card, 
+  body.dark-theme .glass-card {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #800000;
+  }
+
+  html[data-theme="dark"] .pdf-btn,
+  body.dark-theme .pdf-btn {
+      color: #ddd !important;
+      border-color: #ff4d4d;
+  }
+  
+  html[data-theme="dark"] .pdf-btn:hover,
+  body.dark-theme .pdf-btn:hover {
+      background-color: #ff4d4d;
+      color: #111 !important;
+  }
+
+  /* --- Mobile Adjustments --- */
+  @media (max-width: 768px) {
+      .card-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 5px;
+      }
+  }
 </style>
