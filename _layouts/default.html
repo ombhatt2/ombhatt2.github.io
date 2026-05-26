@@ -178,10 +178,10 @@ layout: compress
       @keyframes pulse { 0% { opacity: 0.3; } 100% { opacity: 1; } }
 
       /* ========================================================
-         MOBILE PROFILE PICTURE OVERRIDE
+         MOBILE PROFILE PICTURE & FOLLOW BUTTON OVERRIDE
          ======================================================== */
       @media (max-width: 768px) {
-        /* Force the sidebar to stack vertically and center on phones */
+        /* Stack profile elements vertically */
         .author__profile {
           display: flex !important;
           flex-direction: column !important;
@@ -189,7 +189,6 @@ layout: compress
           text-align: center !important;
         }
 
-        /* Stop the theme from shrinking the image */
         .author__avatar {
           display: block !important;
           margin: 0 auto 15px auto !important;
@@ -198,21 +197,40 @@ layout: compress
         }
 
         .author__avatar img {
-          width: 140px !important; /* Forces a good size on phones */
+          width: 140px !important; 
           height: 140px !important;
           object-fit: cover !important;
           margin: 0 auto !important;
           border-width: 3px !important;
         }
 
-        /* Center the social links on mobile */
+        /* 1. Completely hide the theme's default "Follow" button */
+        .author__urls-wrapper button {
+          display: none !important;
+        }
+
+        /* 2. Break the links out of the dropdown box and show them always */
         .author__urls-wrapper .author__urls {
           display: flex !important;
+          position: static !important; /* Removes the floating dropdown box */
+          visibility: visible !important;
+          opacity: 1 !important;
+          box-shadow: none !important;
+          background: transparent !important;
+          border: none !important;
+          padding: 0 !important;
+          margin-top: 15px !important;
           flex-wrap: wrap !important;
           justify-content: center !important;
           gap: 10px !important;
         }
         
+        /* 3. Hide the little dropdown triangle arrows */
+        .author__urls-wrapper .author__urls:before,
+        .author__urls-wrapper .author__urls:after {
+          display: none !important;
+        }
+
         .author__urls-wrapper .author__urls li {
           margin: 0 !important;
         }
