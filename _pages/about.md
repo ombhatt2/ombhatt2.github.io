@@ -2,7 +2,7 @@
 permalink: /
 title: "Portfolio"
 author_profile: true
-image: /images/portfolio-preview.jpg
+image: https://ombhatt2.github.io/images/portfolio-preview.jpg
 excerpt: "Welcome to my academic portfolio! I am a well-rounded student with strong academics and extracurricular experience. I am passionate about robotics, particularly autonomous and intelligent systems. Currently, I am seeking to expand my engineering knowledge and experience to design, develop, and optimize mechatronic and robotic systems that advance automation and contribute to the betterment of society."
 redirect_from: 
   - /about/
