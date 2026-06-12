@@ -2,6 +2,8 @@
 title: "Autonomous Perception & LiDAR Visualization"
 excerpt: "Developed a ROS 2 & RViz2 simulation environment to process and visualize high-density LiDAR point clouds from the KITTI dataset."
 collection: portfolio
+header:
+  teaser: /images/lidar-preview.gif
 ---
 
 **Tech Stack:** *ROS 2, RViz2, Linux (Ubuntu), Point Cloud Data, KITTI Dataset*
