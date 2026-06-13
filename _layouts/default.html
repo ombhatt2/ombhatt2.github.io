@@ -252,65 +252,66 @@ layout: compress
           margin: 0 !important;
         }
       }
-      /* --- Modernized Sidebar Profile (CENTERED & LIGHT MODE FIX) --- */
+      /* --- Modernized Sidebar Profile (SIDEBAR-SCALED FIX) --- */
   
-  /* 1. Force the Main Container to Center Everything */
+  /* 1. Scaled-Down Glass Container */
   .author__profile {
     background: rgba(0, 0, 0, 0.02) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
     border: 1px solid rgba(0, 0, 0, 0.08) !important;
-    border-radius: 16px !important;
-    padding: 30px 20px !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    border-radius: 12px !important;
+    padding: 20px 15px !important; /* Reduced padding */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03) !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important; 
     text-align: center !important;
     margin-top: 10px !important;
     width: 100% !important;
+    box-sizing: border-box !important;
   }
 
-  /* 2. Force the Avatar Wrapper and Image to the Dead Center */
+  /* 2. Appropriately Sized Avatar */
   .author__avatar {
     display: block !important;
     width: 100% !important;
   }
 
   .author__avatar img {
-    width: 170px !important; 
-    height: 170px !important;
+    width: 110px !important; /* Scaled down from 170px */
+    height: 110px !important;
     border-radius: 50% !important;
     border: 3px solid #800000 !important;
-    box-shadow: 0 0 20px rgba(128, 0, 0, 0.15) !important;
+    box-shadow: 0 0 15px rgba(128, 0, 0, 0.1) !important;
     display: block !important;
-    margin: 0 auto 20px auto !important; /* This is the magic centering line */
+    margin: 0 auto 15px auto !important; 
     object-fit: cover !important;
   }
 
-  /* 3. Center the Text Content */
+  /* 3. Tighter Text Proportions */
   .author__content {
     width: 100% !important;
   }
 
   .author__name {
-    font-size: 2rem !important;
+    font-size: 1.4rem !important; /* Scaled down */
     font-weight: 800 !important;
     letter-spacing: -0.5px !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 5px !important;
     color: #111111 !important;
     display: block !important;
   }
 
   .author__bio {
-    font-size: 0.95rem !important;
-    line-height: 1.5 !important;
+    font-size: 0.85rem !important; /* Scaled down */
+    line-height: 1.4 !important;
     color: #555555 !important;
-    margin-bottom: 25px !important;
+    margin-bottom: 20px !important;
     font-style: italic;
   }
 
-  /* 4. Center and Stretch the Social Buttons */
+  /* 4. Cleaner Social Buttons */
   .author__urls-wrapper {
     width: 100% !important;
   }
@@ -318,9 +319,9 @@ layout: compress
   .author__urls {
     display: flex !important;
     flex-direction: column !important;
-    align-items: stretch !important; /* Makes all buttons equal width */
-    gap: 12px !important;
-    margin-top: 15px !important;
+    align-items: stretch !important; 
+    gap: 8px !important; /* Tighter gap between buttons */
+    margin-top: 10px !important;
     padding: 0 !important;
     width: 100% !important;
   }
@@ -334,24 +335,24 @@ layout: compress
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 10px !important;
-    background: rgba(0, 0, 0, 0.04) !important;
-    padding: 10px 15px !important;
-    border-radius: 8px !important;
-    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    gap: 8px !important;
+    background: rgba(0, 0, 0, 0.03) !important;
+    padding: 8px 12px !important; /* Sleeker buttons */
+    border-radius: 6px !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
     transition: all 0.2s ease !important;
-    font-size: 0.95rem !important;
+    font-size: 0.85rem !important;
     font-weight: 600 !important;
-    color: #333333 !important;
+    color: #444444 !important;
     text-decoration: none !important;
     box-sizing: border-box !important;
   }
 
   .author__urls a:hover {
-    background: rgba(128, 0, 0, 0.1) !important;
+    background: rgba(128, 0, 0, 0.08) !important;
     border-color: #800000 !important;
     color: #800000 !important;
-    transform: translateY(-2px) !important;
+    transform: translateY(-1px) !important;
   }
   
   .author__urls-wrapper button, 
