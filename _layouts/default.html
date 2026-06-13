@@ -254,27 +254,35 @@ layout: compress
       }
       /* --- Modernized Sidebar Profile (SIDEBAR-SCALED FIX) --- */
   
-  /* 1. Scaled-Down Glass Container with Fixed Spacing */
+  /* 1. Bold Glass Container with Left-Shift */
   .author__profile {
-    background: rgba(0, 0, 0, 0.02) !important;
+    background: rgba(255, 255, 255, 0.9) !important; /* Brighter, bolder card */
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(0, 0, 0, 0.12) !important; /* Crisper border */
     border-radius: 12px !important;
-    padding: 20px 15px !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03) !important;
+    padding: 25px 15px !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08) !important; /* Deeper shadow to stand out */
+    
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important; 
     text-align: center !important;
     
-    /* THE FIX: Spacing and Width Adjustments */
+    /* Spacing and Positioning */
     margin-top: 10px !important;
-    margin-right: 40px !important; /* Forces a wide gap on the right */
-    width: 85% !important;         /* Shrinks the card so it doesn't push the boundary */
-    max-width: 260px !important;   /* Prevents it from ever getting too wide */
+    width: 100% !important;         
+    max-width: 270px !important;   
+    transform: translateX(-40px) !important; /* Physically slides the card to the left */
     
     box-sizing: border-box !important;
+  }
+
+  /* Prevent the card from sliding off the screen on mobile devices */
+  @media (max-width: 1024px) {
+    .author__profile {
+      transform: translateX(0) !important;
+    }
   }
 
   /* 2. Appropriately Sized Avatar */
