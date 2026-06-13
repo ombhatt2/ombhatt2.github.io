@@ -374,6 +374,19 @@ layout: compress
   .author__urls:after {
     display: none !important;
   }
+  
+  /* --- MASTER SIDEBAR WRAPPER OVERRIDE --- */
+  .sidebar {
+    position: relative !important;
+    transform: translateX(-50px) !important; /* Forces the entire column to the left */
+  }
+
+  /* Keep it centered on mobile phones */
+  @media (max-width: 1024px) {
+    .sidebar {
+      transform: translateX(0) !important;
+    }
+  }
     </style>
   </head>
 
