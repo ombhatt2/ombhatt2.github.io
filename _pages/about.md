@@ -931,68 +931,106 @@ redirect_from:
   }
 
   /* ========================================================
-     ROBUST DARK THEME OVERRIDES FOR CONTACT SECTION
+     CYBERPUNK / NEON BACKGROUND & GLOW EFFECTS (DARK MODE)
      ======================================================== */
      
+  /* 1. Add Neon Glow Behind the Contact Section */
+  html[data-theme="dark"] .modern-contact-section,
+  body.dark-theme .modern-contact-section {
+    position: relative;
+    z-index: 1;
+  }
+
+  html[data-theme="dark"] .modern-contact-section::before,
+  body.dark-theme .modern-contact-section::before {
+    content: "";
+    position: absolute;
+    top: -50px; left: -50px; right: -50px; bottom: -50px;
+    z-index: -1;
+    background-image: 
+      radial-gradient(circle at 15% 50%, rgba(255, 77, 77, 0.15), transparent 40%),
+      radial-gradient(circle at 85% 50%, rgba(128, 0, 0, 0.2), transparent 40%),
+      linear-gradient(rgba(255, 77, 77, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 77, 77, 0.05) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+    pointer-events: none;
+    border-radius: 20px;
+  }
+
+  /* 2. Text Brightness Fixes */
   html[data-theme="dark"] .contact-header h2,
   body.dark-theme .contact-header h2,
   html[data-theme="dark"] .contact-header p,
   body.dark-theme .contact-header p {
     color: #e0e0e0 !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
   }
-
-  html[data-theme="dark"] .glass-info-card,
-  body.dark-theme .glass-info-card,
-  html[data-theme="dark"] .glass-social-btn,
-  body.dark-theme .glass-social-btn,
-  html[data-theme="dark"] .glass-form-card,
-  body.dark-theme .glass-form-card {
-    background: rgba(255, 255, 255, 0.08) !important; /* Slightly brighter glass */
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5) !important;
-  }
-
+  
   html[data-theme="dark"] .info-text span,
   body.dark-theme .info-text span {
-    color: #aaaaaa !important; /* Brightens "EMAIL ME" / "LOCATION" */
+    color: #aaaaaa !important;
   }
 
   html[data-theme="dark"] .info-text strong,
   body.dark-theme .info-text strong,
   html[data-theme="dark"] .glass-social-btn,
-  body.dark-theme .glass-social-btn {
-    color: #ffffff !important; /* Brightens the actual email and button text */
-  }
-
+  body.dark-theme .glass-social-btn,
   html[data-theme="dark"] .input-group label,
   body.dark-theme .input-group label {
-    color: #dddddd !important; /* Brightens "Your Name", "Message", etc. */
+    color: #ffffff !important; 
   }
 
+  /* 3. Neon Edge-Glow for the Left Info Cards */
+  html[data-theme="dark"] .glass-info-card,
+  body.dark-theme .glass-info-card,
+  html[data-theme="dark"] .glass-social-btn,
+  body.dark-theme .glass-social-btn {
+    background: rgba(15, 15, 20, 0.7) !important;
+    border: 1px solid rgba(255, 77, 77, 0.3) !important;
+    box-shadow: 0 0 15px rgba(255, 77, 77, 0.1), inset 0 0 10px rgba(255, 77, 77, 0.05) !important;
+  }
+
+  /* Intense Neon Flare on Hover */
+  html[data-theme="dark"] .glass-info-card:hover,
+  body.dark-theme .glass-info-card:hover,
+  html[data-theme="dark"] .glass-social-btn:hover,
+  body.dark-theme .glass-social-btn:hover {
+    border-color: #ff4d4d !important;
+    box-shadow: 0 0 25px rgba(255, 77, 77, 0.5), inset 0 0 15px rgba(255, 77, 77, 0.2) !important;
+  }
+
+  /* 4. Neon Edge-Glow for the Main Form Box */
+  html[data-theme="dark"] .glass-form-card,
+  body.dark-theme .glass-form-card {
+    background: rgba(15, 15, 20, 0.7) !important;
+    border: 1px solid rgba(255, 77, 77, 0.2) !important;
+    box-shadow: 0 0 40px rgba(255, 77, 77, 0.15), inset 0 0 20px rgba(255, 77, 77, 0.05) !important;
+  }
+
+  /* 5. Cyberpunk Input Fields */
   html[data-theme="dark"] .input-group input,
   body.dark-theme .input-group input,
   html[data-theme="dark"] .input-group textarea,
   body.dark-theme .input-group textarea {
-    background: rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
     color: #ffffff !important;
   }
 
-  /* Brightens the placeholder text inside the boxes */
   html[data-theme="dark"] .input-group input::placeholder,
   body.dark-theme .input-group input::placeholder,
   html[data-theme="dark"] .input-group textarea::placeholder,
   body.dark-theme .input-group textarea::placeholder {
-    color: rgba(255, 255, 255, 0.6) !important;
+    color: rgba(255, 255, 255, 0.4) !important;
   }
   
   html[data-theme="dark"] .input-group input:focus,
   body.dark-theme .input-group input:focus,
   html[data-theme="dark"] .input-group textarea:focus,
   body.dark-theme .input-group textarea:focus {
-    background: rgba(0, 0, 0, 0.4) !important;
+    background: rgba(0, 0, 0, 0.8) !important;
     border-color: #ff4d4d !important;
-    box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.2) !important;
+    box-shadow: 0 0 15px rgba(255, 77, 77, 0.4) !important;
   }
-
+  
 </style>
