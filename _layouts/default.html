@@ -252,6 +252,93 @@ layout: compress
           margin: 0 !important;
         }
       }
+      /* --- Modernized Sidebar Profile --- */
+  
+  /* 1. The Glass Card Container */
+  .author__profile {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px !important;
+    padding: 30px 20px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+    text-align: center !important;
+    margin-top: 10px !important;
+  }
+
+  /* 2. Bigger, Glowing Profile Picture */
+  .author__avatar img {
+    width: 170px !important; /* Significantly bigger */
+    height: 170px !important;
+    border-radius: 50% !important;
+    border: 3px solid #800000 !important;
+    box-shadow: 0 0 20px rgba(128, 0, 0, 0.25) !important;
+    margin-bottom: 20px !important;
+    object-fit: cover !important;
+  }
+
+  /* 3. Bold Name and Bio Typography */
+  .author__name {
+    font-size: 2rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.5px !important;
+    margin-bottom: 10px !important;
+    color: #ffffff !important;
+  }
+
+  .author__bio {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    color: #cccccc !important;
+    margin-bottom: 25px !important;
+    font-style: italic;
+  }
+
+  /* 4. Modern Button-Style Links */
+  .author__urls {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    margin-top: 15px !important;
+    padding: 0 !important;
+  }
+
+  .author__urls li {
+    margin: 0 !important;
+    list-style-type: none !important;
+  }
+
+  .author__urls a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    background: rgba(128, 128, 128, 0.1) !important;
+    padding: 10px 15px !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(128, 128, 128, 0.2) !important;
+    transition: all 0.2s ease !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    color: #d4d4d4 !important;
+    text-decoration: none !important;
+  }
+
+  /* Hover effect for links */
+  .author__urls a:hover {
+    background: rgba(128, 0, 0, 0.15) !important;
+    border-color: #800000 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+  }
+  
+  /* Hide the default dropdown arrows in the sidebar */
+  .author__urls-wrapper button, 
+  .author__urls:before, 
+  .author__urls:after {
+    display: none !important;
+  }
     </style>
   </head>
 
