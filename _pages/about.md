@@ -52,6 +52,7 @@ redirect_from:
     <li><a href="#experience">Experience</a></li>
     <li><a href="#leadership">Leadership</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
@@ -302,7 +303,7 @@ redirect_from:
   });
 </script>
 
-<div class="modern-contact-section" data-aos="fade-up">
+<div id="contact" class="modern-contact-section" data-aos="fade-up">
   <div class="contact-header">
     <h2>Get In Touch</h2>
     <p>I'm always open to discussing new projects, creative ideas, or opportunities - whether it's research, robotics, or anything in between. Feel free to reach out.</p>
