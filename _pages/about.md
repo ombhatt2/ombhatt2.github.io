@@ -929,32 +929,69 @@ redirect_from:
     }
   }
 
-  /* Dark Theme Support */
+  /* ========================================================
+     ROBUST DARK THEME OVERRIDES FOR CONTACT SECTION
+     ======================================================== */
+     
+  html[data-theme="dark"] .contact-header h2,
+  body.dark-theme .contact-header h2,
+  html[data-theme="dark"] .contact-header p,
+  body.dark-theme .contact-header p {
+    color: #e0e0e0 !important;
+  }
+
   html[data-theme="dark"] .glass-info-card,
   body.dark-theme .glass-info-card,
   html[data-theme="dark"] .glass-social-btn,
   body.dark-theme .glass-social-btn,
   html[data-theme="dark"] .glass-form-card,
   body.dark-theme .glass-form-card {
-    background: rgba(255, 255, 255, 0.02);
-    border-color: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.08) !important; /* Slightly brighter glass */
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  html[data-theme="dark"] .info-text span,
+  body.dark-theme .info-text span {
+    color: #aaaaaa !important; /* Brightens "EMAIL ME" / "LOCATION" */
+  }
+
+  html[data-theme="dark"] .info-text strong,
+  body.dark-theme .info-text strong,
+  html[data-theme="dark"] .glass-social-btn,
+  body.dark-theme .glass-social-btn {
+    color: #ffffff !important; /* Brightens the actual email and button text */
+  }
+
+  html[data-theme="dark"] .input-group label,
+  body.dark-theme .input-group label {
+    color: #dddddd !important; /* Brightens "Your Name", "Message", etc. */
   }
 
   html[data-theme="dark"] .input-group input,
   body.dark-theme .input-group input,
   html[data-theme="dark"] .input-group textarea,
   body.dark-theme .input-group textarea {
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+  }
+
+  /* Brightens the placeholder text inside the boxes */
+  html[data-theme="dark"] .input-group input::placeholder,
+  body.dark-theme .input-group input::placeholder,
+  html[data-theme="dark"] .input-group textarea::placeholder,
+  body.dark-theme .input-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
   }
   
   html[data-theme="dark"] .input-group input:focus,
   body.dark-theme .input-group input:focus,
   html[data-theme="dark"] .input-group textarea:focus,
   body.dark-theme .input-group textarea:focus {
-    background: rgba(0, 0, 0, 0.2);
-    border-color: #ff4d4d;
-    box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.2);
+    background: rgba(0, 0, 0, 0.4) !important;
+    border-color: #ff4d4d !important;
+    box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.2) !important;
   }
-
+  
 </style>
