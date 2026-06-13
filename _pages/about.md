@@ -327,13 +327,13 @@ redirect_from:
       </div>
 
       <div class="social-buttons-row">
-        <a href="YOUR_LINKEDIN_URL" class="glass-social-btn">LinkedIn</a>
-        <a href="YOUR_GITHUB_URL" class="glass-social-btn">GitHub</a>
+        <a href="https://www.linkedin.com/in/ombhattofficial/" class="glass-social-btn">LinkedIn</a>
+        <a href="https://github.com/ombhatt2" class="glass-social-btn">GitHub</a>
       </div>
     </div>
 
     <div class="glass-form-card">
-      <form action="YOUR_FORMSPREE_LINK" method="POST">
+      <form action="https://formspree.io/f/mzdqypyb" method="POST">
         <div class="form-row">
           <div class="input-group">
             <label>Your Name</label>
@@ -993,5 +993,5 @@ redirect_from:
     border-color: #ff4d4d !important;
     box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.2) !important;
   }
-  
+
 </style>
