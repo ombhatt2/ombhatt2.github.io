@@ -302,11 +302,63 @@ redirect_from:
   });
 </script>
 
-<div style="text-align: center; margin-top: 100px; margin-bottom: 50px; padding: 0 20px;">
-  <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px;">Get In Touch</h2>
-  <p style="font-size: 1.15rem; opacity: 0.8; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-    I'm always open to discussing new projects, creative ideas, or opportunities — whether it's research, robotics, or anything in between. Feel free to reach out.
-  </p>
+<div class="modern-contact-section" data-aos="fade-up">
+  <div class="contact-header">
+    <h2>Get In Touch</h2>
+    <p>I'm always open to discussing new projects, creative ideas, or opportunities to collaborate.</p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-info-column">
+      <div class="glass-info-card">
+        <div class="info-icon">✉</div>
+        <div class="info-text">
+          <span>EMAIL ME</span>
+          <strong>obhatt@tamu.edu</strong>
+        </div>
+      </div>
+
+      <div class="glass-info-card">
+        <div class="info-icon">📍</div>
+        <div class="info-text">
+          <span>LOCATION</span>
+          <strong>College Station, TX</strong>
+        </div>
+      </div>
+
+      <div class="social-buttons-row">
+        <a href="YOUR_LINKEDIN_URL" class="glass-social-btn">LinkedIn</a>
+        <a href="YOUR_GITHUB_URL" class="glass-social-btn">GitHub</a>
+      </div>
+    </div>
+
+    <div class="glass-form-card">
+      <form action="YOUR_FORMSPREE_LINK" method="POST">
+        <div class="form-row">
+          <div class="input-group">
+            <label>Your Name</label>
+            <input type="text" name="name" placeholder="John Doe" required>
+          </div>
+          <div class="input-group">
+            <label>Your Email</label>
+            <input type="email" name="email" placeholder="john@example.com" required>
+          </div>
+        </div>
+        
+        <div class="input-group">
+          <label>Subject</label>
+          <input type="text" name="subject" placeholder="How can I help you?">
+        </div>
+        
+        <div class="input-group">
+          <label>Message</label>
+          <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Send Message ↗</button>
+      </form>
+    </div>
+  </div>
 </div>
 
 <style>
@@ -670,4 +722,239 @@ redirect_from:
           gap: 5px;
       }
   }
+
+/* ========================================================
+     MODERN CONTACT CARD (GLASSMORPHISM + MAROON THEME)
+     ======================================================== */
+  
+  .modern-contact-section {
+    max-width: 900px;
+    margin: 60px auto 100px auto;
+    padding: 0 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  .contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .contact-header h2 {
+    font-size: 3rem !important;
+    font-weight: 800;
+    margin-bottom: 10px !important;
+    margin-top: 0 !important;
+    padding-bottom: 0 !important;
+    letter-spacing: -1px;
+  }
+  
+  .contact-header h2::after {
+    display: none; /* Removes the maroon line just for this header to keep it clean */
+  }
+
+  .contact-header p {
+    font-size: 1.15rem;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  /* --- LEFT COLUMN: INFO CARDS --- */
+  .contact-info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .glass-info-card {
+    background: rgba(128, 128, 128, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(128, 128, 128, 0.15);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .glass-info-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(128, 0, 0, 0.3);
+  }
+
+  .info-icon {
+    font-size: 1.5rem;
+    color: #800000;
+    background: rgba(128, 0, 0, 0.08);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  .info-text span {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #888888;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+
+  .info-text strong {
+    font-size: 1rem;
+    color: var(--text-default);
+  }
+
+  .social-buttons-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 5px;
+  }
+
+  .glass-social-btn {
+    background: rgba(128, 128, 128, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(128, 128, 128, 0.15);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--text-default);
+    text-decoration: none !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+    transition: all 0.2s ease;
+  }
+
+  .glass-social-btn:hover {
+    background: #800000;
+    color: #ffffff !important;
+    transform: translateY(-3px);
+  }
+
+  /* --- RIGHT COLUMN: CONTACT FORM --- */
+  .glass-form-card {
+    background: rgba(128, 128, 128, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(128, 128, 128, 0.15);
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .input-group {
+    margin-bottom: 20px;
+  }
+
+  .input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-default);
+    margin-bottom: 8px;
+  }
+
+  .input-group input, 
+  .input-group textarea {
+    width: 100%;
+    padding: 14px;
+    background: rgba(128, 128, 128, 0.05);
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--text-default);
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+  }
+
+  .input-group input:focus, 
+  .input-group textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    border-color: #800000;
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+  }
+
+  .submit-btn {
+    width: 100%;
+    background: #800000;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .submit-btn:hover {
+    background: #600000;
+    box-shadow: 0 6px 20px rgba(128, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+    .glass-form-card {
+      padding: 25px;
+    }
+  }
+
+  /* Dark Theme Support */
+  html[data-theme="dark"] .glass-info-card,
+  body.dark-theme .glass-info-card,
+  html[data-theme="dark"] .glass-social-btn,
+  body.dark-theme .glass-social-btn,
+  html[data-theme="dark"] .glass-form-card,
+  body.dark-theme .glass-form-card {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  html[data-theme="dark"] .input-group input,
+  body.dark-theme .input-group input,
+  html[data-theme="dark"] .input-group textarea,
+  body.dark-theme .input-group textarea {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+  }
+  
+  html[data-theme="dark"] .input-group input:focus,
+  body.dark-theme .input-group input:focus,
+  html[data-theme="dark"] .input-group textarea:focus,
+  body.dark-theme .input-group textarea:focus {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: #ff4d4d;
+    box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.2);
+  }
+
 </style>
