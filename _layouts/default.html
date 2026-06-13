@@ -252,56 +252,77 @@ layout: compress
           margin: 0 !important;
         }
       }
-      /* --- Modernized Sidebar Profile --- */
+      /* --- Modernized Sidebar Profile (CENTERED & LIGHT MODE FIX) --- */
   
-  /* 1. The Glass Card Container */
+  /* 1. Force the Main Container to Center Everything */
   .author__profile {
-    background: rgba(255, 255, 255, 0.03) !important;
+    background: rgba(0, 0, 0, 0.02) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
     border-radius: 16px !important;
     padding: 30px 20px !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; 
     text-align: center !important;
     margin-top: 10px !important;
+    width: 100% !important;
   }
 
-  /* 2. Bigger, Glowing Profile Picture */
+  /* 2. Force the Avatar Wrapper and Image to the Dead Center */
+  .author__avatar {
+    display: block !important;
+    width: 100% !important;
+  }
+
   .author__avatar img {
-    width: 170px !important; /* Significantly bigger */
+    width: 170px !important; 
     height: 170px !important;
     border-radius: 50% !important;
     border: 3px solid #800000 !important;
-    box-shadow: 0 0 20px rgba(128, 0, 0, 0.25) !important;
-    margin-bottom: 20px !important;
+    box-shadow: 0 0 20px rgba(128, 0, 0, 0.15) !important;
+    display: block !important;
+    margin: 0 auto 20px auto !important; /* This is the magic centering line */
     object-fit: cover !important;
   }
 
-  /* 3. Bold Name and Bio Typography */
+  /* 3. Center the Text Content */
+  .author__content {
+    width: 100% !important;
+  }
+
   .author__name {
     font-size: 2rem !important;
     font-weight: 800 !important;
     letter-spacing: -0.5px !important;
     margin-bottom: 10px !important;
-    color: #ffffff !important;
+    color: #111111 !important;
+    display: block !important;
   }
 
   .author__bio {
     font-size: 0.95rem !important;
     line-height: 1.5 !important;
-    color: #cccccc !important;
+    color: #555555 !important;
     margin-bottom: 25px !important;
     font-style: italic;
   }
 
-  /* 4. Modern Button-Style Links */
+  /* 4. Center and Stretch the Social Buttons */
+  .author__urls-wrapper {
+    width: 100% !important;
+  }
+
   .author__urls {
     display: flex !important;
     flex-direction: column !important;
+    align-items: stretch !important; /* Makes all buttons equal width */
     gap: 12px !important;
     margin-top: 15px !important;
     padding: 0 !important;
+    width: 100% !important;
   }
 
   .author__urls li {
@@ -314,26 +335,25 @@ layout: compress
     align-items: center !important;
     justify-content: center !important;
     gap: 10px !important;
-    background: rgba(128, 128, 128, 0.1) !important;
+    background: rgba(0, 0, 0, 0.04) !important;
     padding: 10px 15px !important;
     border-radius: 8px !important;
-    border: 1px solid rgba(128, 128, 128, 0.2) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
     transition: all 0.2s ease !important;
     font-size: 0.95rem !important;
     font-weight: 600 !important;
-    color: #d4d4d4 !important;
+    color: #333333 !important;
     text-decoration: none !important;
+    box-sizing: border-box !important;
   }
 
-  /* Hover effect for links */
   .author__urls a:hover {
-    background: rgba(128, 0, 0, 0.15) !important;
+    background: rgba(128, 0, 0, 0.1) !important;
     border-color: #800000 !important;
-    color: #ffffff !important;
+    color: #800000 !important;
     transform: translateY(-2px) !important;
   }
   
-  /* Hide the default dropdown arrows in the sidebar */
   .author__urls-wrapper button, 
   .author__urls:before, 
   .author__urls:after {
