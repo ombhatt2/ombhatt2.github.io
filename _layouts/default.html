@@ -254,21 +254,26 @@ layout: compress
       }
       /* --- Modernized Sidebar Profile (SIDEBAR-SCALED FIX) --- */
   
-  /* 1. Scaled-Down Glass Container */
+  /* 1. Scaled-Down Glass Container with Fixed Spacing */
   .author__profile {
     background: rgba(0, 0, 0, 0.02) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
     border: 1px solid rgba(0, 0, 0, 0.08) !important;
     border-radius: 12px !important;
-    padding: 20px 15px !important; /* Reduced padding */
+    padding: 20px 15px !important;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03) !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important; 
     text-align: center !important;
+    
+    /* THE FIX: Spacing and Width Adjustments */
     margin-top: 10px !important;
-    width: 100% !important;
+    margin-right: 40px !important; /* Forces a wide gap on the right */
+    width: 85% !important;         /* Shrinks the card so it doesn't push the boundary */
+    max-width: 260px !important;   /* Prevents it from ever getting too wide */
+    
     box-sizing: border-box !important;
   }
 
