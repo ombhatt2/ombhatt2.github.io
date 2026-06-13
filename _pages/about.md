@@ -305,7 +305,7 @@ redirect_from:
 <div class="modern-contact-section" data-aos="fade-up">
   <div class="contact-header">
     <h2>Get In Touch</h2>
-    <p>I'm always open to discussing new projects, creative ideas, or opportunities to collaborate.</p>
+    <p>I'm always open to discussing new projects, creative ideas, or opportunities - whether it's research, robotics, or anything in between. Feel free to reach out.</p>
   </div>
 
   <div class="contact-grid">
@@ -314,7 +314,7 @@ redirect_from:
         <div class="info-icon">✉</div>
         <div class="info-text">
           <span>EMAIL ME</span>
-          <strong>obhatt@tamu.edu</strong>
+          <strong>ombhatt2@gmail.com</strong>
         </div>
       </div>
 
