@@ -254,34 +254,35 @@ layout: compress
       }
       /* --- Modernized Sidebar Profile (SIDEBAR-SCALED FIX) --- */
   
-  /* 1. Bold Glass Container with Left-Shift */
+  /* 1. Bold Glass Container (Negative Margin Left-Shift) */
   .author__profile {
-    background: rgba(255, 255, 255, 0.9) !important; /* Brighter, bolder card */
+    background: rgba(255, 255, 255, 0.95) !important; 
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(0, 0, 0, 0.12) !important; /* Crisper border */
+    border: 1px solid rgba(0, 0, 0, 0.12) !important; 
     border-radius: 12px !important;
     padding: 25px 15px !important;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08) !important; /* Deeper shadow to stand out */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08) !important; 
     
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important; 
     text-align: center !important;
     
-    /* Spacing and Positioning */
+    /* THE FIX: Pull it left into the white space */
     margin-top: 10px !important;
-    width: 100% !important;         
-    max-width: 270px !important;   
-    transform: translateX(-40px) !important; /* Physically slides the card to the left */
+    margin-left: -60px !important; /* Physically drags the box left */
+    width: 250px !important;        /* Fixed width */
+    max-width: none !important;
     
     box-sizing: border-box !important;
   }
 
-  /* Prevent the card from sliding off the screen on mobile devices */
+  /* Reset the shift on tablets/phones so it centers correctly */
   @media (max-width: 1024px) {
     .author__profile {
-      transform: translateX(0) !important;
+      margin-left: 0 !important;
+      width: 100% !important;
     }
   }
 
