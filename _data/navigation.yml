@@ -14,6 +14,15 @@ main:
   - title: "Publications"
     url: /publications/
 
+  - title: "Projects"
+    url: /#featured-projects
+
+  - title: "Education"
+    url: /#education
+
+  - title: "Experience"
+    url: /#experience
+
   - title: "Leadership"
     url: /leadership/
 
