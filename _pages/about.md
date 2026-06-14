@@ -38,11 +38,13 @@ redirect_from:
     I am passionate about robotics, particularly autonomous and intelligent systems. Currently, I am seeking to expand my engineering knowledge and experience to design, develop, and optimize mechatronic and robotic systems that advance automation and contribute to the betterment of society.
   </p>
 
-  <div style="margin-top: 2.5rem; margin-bottom: 4rem;">
-    <a href="/files/Om_Bhatt_Resume.pdf" class="modern-resume-btn" target="_blank">
-      View My Resume <i class="fas fa-arrow-right"></i>
-    </a>
-  </div>
+  <div class="hero-action-row" style="margin-top: 30px;">
+  <a href="/files/Om_Bhatt_Resume.pdf" class="btn-primary" target="_blank">
+    View My Resume ↗
+  </a>
+  <a href="#beyond-the-work" class="btn-glass">
+    Read Full Biography →
+  </a>
 </div>
 
 <nav class="floating-nav">
@@ -302,6 +304,46 @@ redirect_from:
     }
   });
 </script>
+
+<h2 id="beyond-the-work">Beyond the Work</h2>
+
+<div class="hobby-grid" data-aos="fade-up">
+  <div class="glass-hobby-card">
+    <div class="hobby-icon">🏎️</div>
+    <h3>Kart Racing</h3>
+    <p>I thrive on competition and adrenaline. When I step away from the keyboard, you can frequently find me hitting the apexes and pushing the limits at the local karting tracks.</p>
+  </div>
+
+  <div class="glass-hobby-card">
+    <div class="hobby-icon">⚙️</div>
+    <h3>Automotive & Aviation</h3>
+    <p>I have a deep fascination with how things move. Whether it's the aerodynamics of aircraft or the raw mechanics of high-performance cars, I love exploring the engineering behind them.</p>
+  </div>
+
+  <div class="glass-hobby-card">
+    <div class="hobby-icon">🌍</div>
+    <h3>World Travel</h3>
+    <p>I love stepping out of my comfort zone and exploring new places around the world. Traveling gives me fresh perspectives, exposes me to new cultures, and fuels my sense of adventure.</p>
+  </div>
+
+  <div class="glass-hobby-card">
+    <div class="hobby-icon">⚽</div>
+    <h3>Soccer</h3>
+    <p>A lifelong fan and player. Whether I'm stepping onto the pitch for a quick pickup game or keeping up with the latest matches, soccer is my favorite way to stay active and work as a team.</p>
+  </div>
+
+  <div class="glass-hobby-card">
+    <div class="hobby-icon">🏸</div>
+    <h3>Racquet Sports</h3>
+    <p>I love the fast-paced reflexes required for Badminton and Ping Pong. For me, they are the perfect mix of rapid-fire strategy, agility, and friendly competition.</p>
+  </div>
+
+  <div class="glass-hobby-card">
+    <div class="hobby-icon">✏️</div>
+    <h3>Drawing & Art</h3>
+    <p>When I need to unplug from screens, code, and circuits, I turn to drawing. It's my favorite creative outlet and a quiet way to visually bring ideas to life on paper.</p>
+  </div>
+</div>
 
 <div id="contact" class="modern-contact-section" data-aos="fade-up">
   <div class="contact-header">
@@ -1031,6 +1073,79 @@ redirect_from:
     background: rgba(0, 0, 0, 0.8) !important;
     border-color: #ff4d4d !important;
     box-shadow: 0 0 15px rgba(255, 77, 77, 0.4) !important;
+  }
+
+  /* ========================================================
+     BEYOND THE WORK (BENTO HOBBY GRID)
+     ======================================================== */
+  .hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+
+  .glass-hobby-card {
+    background: rgba(128, 128, 128, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(128, 128, 128, 0.15);
+    border-radius: 12px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .glass-hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-color: rgba(128, 0, 0, 0.3);
+  }
+
+  .hobby-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: rgba(128, 0, 0, 0.05);
+    border-radius: 12px;
+  }
+
+  .glass-hobby-card h3 {
+    font-size: 1.25rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+    color: var(--text-default);
+    font-weight: 700;
+  }
+
+  .glass-hobby-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.85;
+    margin: 0;
+  }
+
+  /* Dark Mode Support */
+  html[data-theme="dark"] .glass-hobby-card,
+  body.dark-theme .glass-hobby-card {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  html[data-theme="dark"] .glass-hobby-card:hover,
+  body.dark-theme .glass-hobby-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 77, 77, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  html[data-theme="dark"] .hobby-icon,
+  body.dark-theme .hobby-icon {
+    background: rgba(255, 255, 255, 0.05);
   }
   
 </style>
