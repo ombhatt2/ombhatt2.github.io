@@ -42,22 +42,37 @@
     "vendor/font-awesome/brands"
 ;
 
-/* ========================================================
+/* =======================================================
    CUSTOM MOBILE SIDEBAR OVERRIDE
-======================================================== 
-*/
+   ======================================================= */
+
+/* Prevents the top header from overflowing horizontally */
+.masthead {
+  max-width: 100vw !important;
+  overflow-x: clip !important;
+}
+
+/* Gives the JS a 15px buffer so it hides links properly */
+.greedy-nav {
+  padding-right: 15px !important; 
+}
+
+/* Forces the hamburger/X icon to NEVER get pushed off-screen */
+.greedy-nav__toggle {
+  flex-shrink: 0 !important; 
+}
 
 /* Targets the mobile dropdown block */
 .greedy-nav .hidden-links {
   position: fixed !important;
-  top: 50px !important; /* Adjust this to match the height of your red header bar */
+  top: 50px !important; /* Adjust this to match your header height */
   right: 0 !important;
   bottom: 0 !important;
-  height: 100vh !important; /* Stretches to the bottom of the screen */
-  width: 250px !important; /* Width of the sidebar */
-  background-color: #1e1e1e !important; /* Dark background to match your theme */
+  /* Deleted height: 100vh here to stop it from spanning past the bottom */
+  width: 250px !important; 
+  background-color: #4a0000 !important; /* Dark red background */
   box-shadow: -5px 0 20px rgba(0, 0, 0, 0.7) !important;
-  overflow-y: auto !important; /* Lets users scroll if they have a small screen */
+  overflow-y: auto !important; 
   padding-top: 20px !important;
   display: flex !important;
   flex-direction: column !important;
@@ -68,16 +83,4 @@
 .greedy-nav .hidden-links li {
   display: block !important;
   width: 100% !important;
-}
-
-.greedy-nav .hidden-links a {
-  padding: 15px 20px !important;
-  display: block !important;
-  font-size: 1.1rem !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-}
-
-/* Hides the sidebar when it's toggled off */
-.greedy-nav .hidden-links.hidden {
-  display: none !important;
 }
