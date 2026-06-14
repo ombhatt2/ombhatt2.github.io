@@ -41,3 +41,43 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+/* ========================================================
+   CUSTOM MOBILE SIDEBAR OVERRIDE
+======================================================== 
+*/
+
+/* Targets the mobile dropdown block */
+.greedy-nav .hidden-links {
+  position: fixed !important;
+  top: 50px !important; /* Adjust this to match the height of your red header bar */
+  right: 0 !important;
+  bottom: 0 !important;
+  height: 100vh !important; /* Stretches to the bottom of the screen */
+  width: 250px !important; /* Width of the sidebar */
+  background-color: #1e1e1e !important; /* Dark background to match your theme */
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.7) !important;
+  overflow-y: auto !important; /* Lets users scroll if they have a small screen */
+  padding-top: 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  z-index: 1000 !important;
+}
+
+/* Spaces out the links nicely inside the new sidebar */
+.greedy-nav .hidden-links li {
+  display: block !important;
+  width: 100% !important;
+}
+
+.greedy-nav .hidden-links a {
+  padding: 15px 20px !important;
+  display: block !important;
+  font-size: 1.1rem !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Hides the sidebar when it's toggled off */
+.greedy-nav .hidden-links.hidden {
+  display: none !important;
+}
