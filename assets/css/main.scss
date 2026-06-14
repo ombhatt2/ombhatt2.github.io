@@ -52,10 +52,22 @@
   flex-shrink: 0 !important; 
 }
 
-/* Forces the top menu to stay anchored to the top when scrolling */
+/* Strictly eliminate any default browser spacing at the top of the page */
+html, body {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Forces the top menu to stay anchored and kills its own spacing */
 .masthead {
   position: sticky !important;
   top: 0 !important;
-  margin-top: 0 !important; /* This explicitly kills the white gap */
+  margin-top: 0 !important;
+  padding-top: 0 !important;
   z-index: 9999 !important;
+}
+
+/* Kills hidden margins on the inner wrapper of the theme's header */
+.masthead__inner-wrap {
+  margin-top: 0 !important;
 }
