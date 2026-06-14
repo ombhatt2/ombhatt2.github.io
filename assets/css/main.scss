@@ -51,3 +51,10 @@
 .greedy-nav__toggle {
   flex-shrink: 0 !important; 
 }
+
+/* Forces the top menu to stay anchored to the top when scrolling */
+.masthead {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+}
