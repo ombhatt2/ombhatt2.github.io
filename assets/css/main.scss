@@ -41,3 +41,13 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+/* Adds a buffer to the right side of the header so icons aren't pushed off-screen */
+.greedy-nav {
+  padding-right: 15px !important; 
+}
+
+/* Forces the hamburger and X button to keep their shape and stay visible */
+.greedy-nav__toggle {
+  flex-shrink: 0 !important; 
+}
