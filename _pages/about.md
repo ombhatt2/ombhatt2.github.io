@@ -38,13 +38,11 @@ redirect_from:
     I am passionate about robotics, particularly autonomous and intelligent systems. Currently, I am seeking to expand my engineering knowledge and experience to design, develop, and optimize mechatronic and robotic systems that advance automation and contribute to the betterment of society.
   </p>
 
-  <div class="hero-action-row" style="margin-top: 30px;">
-  <a href="/files/Om_Bhatt_Resume.pdf" class="btn-primary" target="_blank">
-    View My Resume ↗
-  </a>
-  <a href="#beyond-the-work" class="btn-glass">
-    Read Full Biography →
-  </a>
+  <div style="margin-top: 2.5rem; margin-bottom: 4rem;">
+    <a href="/files/Om_Bhatt_Resume.pdf" class="modern-resume-btn" target="_blank">
+      View My Resume <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
 </div>
 
 <nav class="floating-nav">
