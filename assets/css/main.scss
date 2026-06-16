@@ -59,9 +59,8 @@ html {
 
 body {
   margin: 0 !important;
-  padding: 0 !important;
+  /* Removed padding: 0 !important so it doesn't fight our spacing */
   overflow-x: hidden !important; 
-  /* Deleted the width line from here */
   min-height: 100vh !important;
   display: flex !important;
   flex-direction: column !important; 
@@ -76,18 +75,17 @@ body {
   z-index: 9999 !important;
 }
 
-/* Forces the main container to grow and take up remaining vertical space */
 .initial-content {
-  padding-top: 100px !important; /* Increased padding to clear the header */
   flex: 1 !important; 
   display: flex !important;
   flex-direction: column !important;
-  min-width: 0 !important; /* Fixes the cut-off bug */
+  min-width: 0 !important; 
 }
 
 #main {
+  padding-top: 120px !important; /* MOVED THE PADDING HERE AND INCREASED IT */
   flex: 1 !important;
-  min-width: 0 !important; /* Fixes the cut-off bug */
+  min-width: 0 !important; 
 }
 
 /* The magic bullet: forces the footer to snap to the bottom of the flex container */
