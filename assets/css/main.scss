@@ -78,11 +78,10 @@ body {
 
 /* Forces the main container to grow and take up remaining vertical space */
 .initial-content {
-  padding-top: 100px !important; 
+  padding-top: 55px !important; 
   flex: 1 !important; 
   display: flex !important;
   flex-direction: column !important;
-  min-width: 0 !important;
 }
 
 #main {
