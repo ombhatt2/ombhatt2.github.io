@@ -61,10 +61,10 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   overflow-x: hidden !important; 
-  width: 100% !important;
+  /* Deleted the width line from here */
   min-height: 100vh !important;
   display: flex !important;
-  flex-direction: column !important; /* Turns the page into a flexible vertical column */
+  flex-direction: column !important; 
 }
 
 /* Upgrade the menu to 'fixed' so it is guaranteed to follow you on mobile */
@@ -78,14 +78,16 @@ body {
 
 /* Forces the main container to grow and take up remaining vertical space */
 .initial-content {
-  padding-top: 55px !important; 
+  padding-top: 100px !important; /* Increased padding to clear the header */
   flex: 1 !important; 
   display: flex !important;
   flex-direction: column !important;
+  min-width: 0 !important; /* Fixes the cut-off bug */
 }
 
 #main {
   flex: 1 !important;
+  min-width: 0 !important; /* Fixes the cut-off bug */
 }
 
 /* The magic bullet: forces the footer to snap to the bottom of the flex container */
