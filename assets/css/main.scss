@@ -52,10 +52,14 @@
   flex-shrink: 0 !important; 
 }
 
-/* Strictly eliminate default browser spacing, stop horizontal panning, and stretch background */
-html, body {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
+/* Separate html and body to fix Flexbox math */
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
   overflow-x: hidden !important; 
   width: 100% !important;
   min-height: 100vh !important;
@@ -72,17 +76,21 @@ html, body {
   z-index: 9999 !important;
 }
 
-/* Forces the main container to grow and push the footer to the bottom */
+/* Forces the main container to grow and take up remaining vertical space */
 .initial-content {
   padding-top: 55px !important; 
-  flex: 1 0 auto !important; /* Tells this container to stretch and fill empty space */
+  flex: 1 !important; 
   display: flex !important;
   flex-direction: column !important;
 }
 
-/* Stretches the actual page content to fill the void */
 #main {
-  flex: 1 0 auto !important;
+  flex: 1 !important;
+}
+
+/* The magic bullet: forces the footer to snap to the bottom of the flex container */
+.page__footer {
+  margin-top: auto !important;
 }
 
 /* Kills hidden margins on the inner wrapper of the theme's header */
