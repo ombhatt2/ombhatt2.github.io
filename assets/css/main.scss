@@ -52,19 +52,27 @@
   flex-shrink: 0 !important; 
 }
 
-/* Strictly eliminate any default browser spacing at the top of the page */
+/* Strictly eliminate default browser spacing, stop horizontal panning, and stretch background */
 html, body {
   margin-top: 0 !important;
   padding-top: 0 !important;
+  overflow-x: hidden !important; /* Kills the sideways scrolling and right-side whitespace */
+  width: 100% !important;
+  min-height: 100vh !important; /* Ensures dark background reaches the very bottom of the screen */
 }
 
-/* Forces the top menu to stay anchored and kills its own spacing */
+/* Upgrade the menu to 'fixed' so it is guaranteed to follow you on mobile */
 .masthead {
-  position: sticky !important;
+  position: fixed !important; /* Fixed is much more reliable than sticky on phones */
   top: 0 !important;
+  width: 100% !important;
   margin-top: 0 !important;
-  padding-top: 0 !important;
   z-index: 9999 !important;
+}
+
+/* Prevents the newly fixed header from overlapping the top of your profile picture */
+.initial-content {
+  padding-top: 55px !important; /* Adjust this number slightly if the gap above your picture is too big or too small */
 }
 
 /* Kills hidden margins on the inner wrapper of the theme's header */
