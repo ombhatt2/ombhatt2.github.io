@@ -61,7 +61,6 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   overflow-x: hidden !important; 
-  width: 100% !important;
   min-height: 100vh !important;
   display: flex !important;
   flex-direction: column !important; /* Turns the page into a flexible vertical column */
@@ -78,14 +77,16 @@ body {
 
 /* Forces the main container to grow and take up remaining vertical space */
 .initial-content {
-  padding-top: 55px !important; 
+  padding-top: 100px !important; 
   flex: 1 !important; 
   display: flex !important;
   flex-direction: column !important;
+  min-width: 0 !important;
 }
 
 #main {
   flex: 1 !important;
+  min-width: 0 !important; /* The magic bullet: forces text to wrap and cards to shrink! */
 }
 
 /* The magic bullet: forces the footer to snap to the bottom of the flex container */
