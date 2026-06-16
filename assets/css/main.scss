@@ -75,7 +75,9 @@ body {
   z-index: 9999 !important;
 }
 
+/* THE FIX: Using margin-top to match your original tight layout */
 .initial-content {
+  margin-top: 65px !important; 
   flex: 1 !important; 
   display: flex !important;
   flex-direction: column !important;
@@ -83,9 +85,9 @@ body {
 }
 
 #main {
-  padding-top: 120px !important; /* MOVED THE PADDING HERE AND INCREASED IT */
   flex: 1 !important;
   min-width: 0 !important; 
+  /* Make sure there is NO padding-top in here anymore! */
 }
 
 /* The magic bullet: forces the footer to snap to the bottom of the flex container */
