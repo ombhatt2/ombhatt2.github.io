@@ -56,23 +56,33 @@
 html, body {
   margin-top: 0 !important;
   padding-top: 0 !important;
-  overflow-x: hidden !important; /* Kills the sideways scrolling and right-side whitespace */
+  overflow-x: hidden !important; 
   width: 100% !important;
-  min-height: 100vh !important; /* Ensures dark background reaches the very bottom of the screen */
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important; /* Turns the page into a flexible vertical column */
 }
 
 /* Upgrade the menu to 'fixed' so it is guaranteed to follow you on mobile */
 .masthead {
-  position: fixed !important; /* Fixed is much more reliable than sticky on phones */
+  position: fixed !important; 
   top: 0 !important;
   width: 100% !important;
   margin-top: 0 !important;
   z-index: 9999 !important;
 }
 
-/* Prevents the newly fixed header from overlapping the top of your profile picture */
+/* Forces the main container to grow and push the footer to the bottom */
 .initial-content {
-  padding-top: 55px !important; /* Adjust this number slightly if the gap above your picture is too big or too small */
+  padding-top: 55px !important; 
+  flex: 1 0 auto !important; /* Tells this container to stretch and fill empty space */
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Stretches the actual page content to fill the void */
+#main {
+  flex: 1 0 auto !important;
 }
 
 /* Kills hidden margins on the inner wrapper of the theme's header */
