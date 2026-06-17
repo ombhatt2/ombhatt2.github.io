@@ -79,13 +79,20 @@ body {
   background-color: #500000 !important; /* Forces the Texas A&M Maroon background to stay */
 }
 
-/* THE FIX: Using margin-top to match your original tight layout */
+/* THE FIX: Smart spacing that changes based on screen size */
 .initial-content {
-  margin-top: 90px !important; 
+  margin-top: 75px !important; /* Perfect tight spacing for mobile phones */
   flex: 1 !important; 
   display: flex !important;
   flex-direction: column !important;
   min-width: 0 !important; 
+}
+
+/* When the screen is wider than a tablet (desktop), increase the space! */
+@media (min-width: 768px) {
+  .initial-content {
+    margin-top: 125px !important; /* Drops the content lower to clear the taller desktop header */
+  }
 }
 
 #main {
