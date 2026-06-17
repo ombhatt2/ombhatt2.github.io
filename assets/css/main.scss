@@ -79,9 +79,10 @@ body {
   background-color: #500000 !important; /* Forces the Texas A&M Maroon background to stay */
 }
 
-/* THE FIX: Smart spacing that changes based on screen size */
+/* THE FIX: Smart spacing using padding instead of margin to prevent collapsing */
 .initial-content {
-  margin-top: 75px !important; /* Perfect tight spacing for mobile phones */
+  padding-top: 85px !important; /* Perfect tight spacing for mobile phones */
+  margin-top: 0 !important; /* Kills the margin so the browser doesn't get confused */
   flex: 1 !important; 
   display: flex !important;
   flex-direction: column !important;
@@ -91,7 +92,7 @@ body {
 /* When the screen is wider than a tablet (desktop), increase the space! */
 @media (min-width: 768px) {
   .initial-content {
-    margin-top: 125px !important; /* Drops the content lower to clear the taller desktop header */
+    padding-top: 140px !important; /* A much larger drop to safely clear the desktop header */
   }
 }
 
