@@ -81,36 +81,28 @@ body {
 
 /* Force a clear space from the top and DESTROY the invisible clipping wall */
 .initial-content {
-  display: block !important;
-  width: 100% !important;
-  padding-top: 100px !important; 
-  padding-bottom: 20px !important;
-  margin-top: 0 !important;
-  box-sizing: border-box !important;
-  overflow: visible !important; /* Kills the clipping boundary */
+  flex: 1 !important; 
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important; 
+  padding-top: 120px !important; /* Pushes content safely down past the header */
+  overflow: visible !important; /* Keeps the clipping wall dead */
 }
 
 /* Specific override for desktop screens to ensure enough clearance */
 @media screen and (min-width: 1024px) {
   .initial-content {
-    padding-top: 160px !important; 
+    padding-top: 150px !important; 
   }
 }
 
-/* Stop the theme from pulling the text upwards into the clipping zone */
 #main {
   flex: 1 !important;
   min-width: 0 !important;
-  margin-top: 0 !important; /* Forces the text to stay safely down */
-  overflow: visible !important; /* Double-layer protection against clipping */
+  overflow: visible !important; /* Double protection without pulling the page up */
 }
 
 /* The magic bullet: forces the footer to snap to the bottom of the flex container */
 .page__footer {
   margin-top: auto !important;
-}
-
-/* Kills hidden margins on the inner wrapper of the theme's header */
-.masthead__inner-wrap {
-  margin-top: 0 !important;
 }
