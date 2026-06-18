@@ -69,33 +69,24 @@ body {
   flex-direction: column !important; 
 }
 
-/* Upgrade the menu to 'fixed' so it is guaranteed to follow you on mobile */
+/* Upgrade the menu to 'sticky' so it follows you WITHOUT breaking the layout */
 .masthead {
-  position: fixed !important; 
+  position: sticky !important; 
   top: 0 !important;
   width: 100% !important;
-  margin-top: 0 !important;
   z-index: 9999 !important;
   background-color: #500000 !important; /* Forces the Texas A&M Maroon background to stay */
 }
 
-/* Pushes content down past the header and keeps the clipping wall dead */
+/* Keeps the Light Mode clipping bug dead, but lets the layout flow naturally */
 .initial-content {
-  flex: 1 !important; /* Helps push the footer down */
-  padding-top: 120px !important; 
+  flex: 1 !important; 
   overflow: visible !important; 
-  /* NO MORE display: flex or flex-direction here so your side-by-side layout works again! */
-}
-
-/* Specific override for desktop screens to ensure enough clearance */
-@media screen and (min-width: 1024px) {
-  .initial-content {
-    padding-top: 150px !important; 
-  }
+  /* Notice we deleted the padding-top entirely! */
 }
 
 #main {
-  overflow: visible !important; /* Double protection against clipping */
+  overflow: visible !important; 
 }
 
 /* Forces the footer to snap to the bottom of the flex container */
