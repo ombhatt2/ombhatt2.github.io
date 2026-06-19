@@ -52,25 +52,26 @@
   flex-shrink: 0 !important; 
 }
 
-/* Separate html and body to fix Flexbox math and strictly prevent side-scroll */
+/* Separate html and body to fix Flexbox math */
 html {
   height: 100%;
   max-width: 100vw !important; /* Forces the root to be no wider than the screen */
-  overflow-x: hidden !important; /* Kills the right-side white space */
+  /* NO MORE overflow-x: hidden here! */
 }
 
 body {
   margin: 0 !important;
   padding: 0 !important;
   max-width: 100vw !important; 
-  overflow-x: hidden !important; 
   min-height: 100% !important; /* Changed from 100vh to fix the bottom white gap on mobile */
   display: flex !important;
   flex-direction: column !important; 
+  /* NO MORE overflow-x: hidden here either! */
 }
 
 /* Upgrade the menu to 'sticky' so it follows you WITHOUT breaking the layout */
 .masthead {
+  position: -webkit-sticky !important; /* Required fix for iPhones / Safari */
   position: sticky !important; 
   top: 0 !important;
   width: 100% !important;
@@ -82,7 +83,6 @@ body {
 .initial-content {
   flex: 1 !important; 
   overflow: visible !important; 
-  /* Notice we deleted the padding-top entirely! */
 }
 
 #main {
