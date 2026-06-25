@@ -52,60 +52,6 @@
   flex-shrink: 0 !important; 
 }
 
----
----
-
-/*
- * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
- */
-
-@import
-    "vendor/breakpoint/breakpoint",
-
-    "themes",
-    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
-    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
-
-    "include/mixins",
-    "vendor/susy/susy",
-
-    "layout/reset",
-    "layout/base",
-
-    "include/utilities",
-    "layout/tables",
-    "layout/buttons",
-    "layout/notices",
-    "layout/masthead",
-    "layout/navigation",
-    "layout/footer",
-    "syntax",
-
-    "layout/forms",
-
-    "layout/page",
-    "layout/archive",
-    "layout/sidebar",
-    "layout/json_cv",
-
-    "vendor/font-awesome/fontawesome",
-    "vendor/font-awesome/solid",
-    "vendor/font-awesome/brands"
-;
-
-/* Adds a buffer to the right side of the header so icons aren't pushed off-screen */
-.greedy-nav {
-  padding-right: 15px !important; 
-}
-
-/* Forces the hamburger and X button to keep their shape and stay visible */
-.greedy-nav__toggle {
-  flex-shrink: 0 !important; 
-}
-
 /* --- MOBILE STICKY & OVERFLOW OVERRIDE --- */
 
 /* 1. Prevent Dark Mode from hijacking the root */
