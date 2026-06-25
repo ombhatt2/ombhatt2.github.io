@@ -52,44 +52,109 @@
   flex-shrink: 0 !important; 
 }
 
-/* Separate html and body to fix Flexbox math */
+---
+---
+
+/*
+ * This file controls what is imported from /_sass
+ *
+ * Note that the files are processed in the order they are imported, so they are partly
+   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ */
+
+@import
+    "vendor/breakpoint/breakpoint",
+
+    "themes",
+    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
+    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+
+    "include/mixins",
+    "vendor/susy/susy",
+
+    "layout/reset",
+    "layout/base",
+
+    "include/utilities",
+    "layout/tables",
+    "layout/buttons",
+    "layout/notices",
+    "layout/masthead",
+    "layout/navigation",
+    "layout/footer",
+    "syntax",
+
+    "layout/forms",
+
+    "layout/page",
+    "layout/archive",
+    "layout/sidebar",
+    "layout/json_cv",
+
+    "vendor/font-awesome/fontawesome",
+    "vendor/font-awesome/solid",
+    "vendor/font-awesome/brands"
+;
+
+/* Adds a buffer to the right side of the header so icons aren't pushed off-screen */
+.greedy-nav {
+  padding-right: 15px !important; 
+}
+
+/* Forces the hamburger and X button to keep their shape and stay visible */
+.greedy-nav__toggle {
+  flex-shrink: 0 !important; 
+}
+
+/* --- MOBILE STICKY & OVERFLOW OVERRIDE --- */
+
+/* 1. Prevent Dark Mode from hijacking the root */
 html {
-  min-height: 100%; /* CHANGED from height to min-height to fix bottom white gap */
-  max-width: 100% !important; /* CHANGED from 100vw to 100% to stop side-scrolling */
+  min-height: 100% !important;
+  overflow: visible !important; /* Nukes Dark Mode's hidden overflow rule */
 }
 
 body {
   margin: 0 !important;
   padding: 0 !important;
-  max-width: 100% !important; /* CHANGED from 100vw to 100% */
-  min-height: 100% !important; 
+  min-height: 100vh !important; /* Forces background to reach the absolute bottom */
+  width: 100% !important;
+  max-width: 100% !important; 
   display: flex !important;
   flex-direction: column !important; 
+  overflow: visible !important; /* Guarantees sticky header will work in ANY mode */
 }
 
-/* Upgrade the menu to 'sticky' so it follows you WITHOUT breaking the layout */
+/* 2. Force the header to stick perfectly */
 .masthead {
-  position: -webkit-sticky !important; /* Required fix for iPhones / Safari */
+  position: -webkit-sticky !important; 
   position: sticky !important; 
   top: 0 !important;
   width: 100% !important;
+  max-width: 100% !important;
   z-index: 9999 !important;
-  background-color: #500000 !important; /* Forces the Texas A&M Maroon background to stay */
+  background-color: #500000 !important; 
 }
 
-/* Keeps the Light Mode clipping bug dead, but prevents side-scroll safely */
+/* 3. Safely kill the horizontal white spaces WITHOUT breaking sticky */
 .initial-content {
   flex: 1 !important; 
+  width: 100% !important;
   max-width: 100% !important;
-  overflow-x: hidden !important; /* Moved the side-scroll killer here so it doesn't break the header! */
+  overflow-x: hidden !important; /* Traps all side-scrolling right here */
   overflow-y: visible !important; 
 }
 
 #main {
-  overflow: visible !important; 
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
 }
 
-/* Forces the footer to snap to the bottom of the flex container */
+/* 4. Keeps the footer pinned and prevents it from causing side-scroll */
 .page__footer {
   margin-top: auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
 }
