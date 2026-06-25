@@ -52,55 +52,54 @@
   flex-shrink: 0 !important; 
 }
 
-/* --- MOBILE STICKY & OVERFLOW OVERRIDE --- */
+/* --- RESPONSIVE STICKY & OVERFLOW OVERRIDE --- */
 
-/* 1. Prevent Dark Mode from hijacking the root */
+/* 1. Global fixes for sticky header and flexbox */
 html {
   min-height: 100% !important;
-  overflow: visible !important; /* Nukes Dark Mode's hidden overflow rule */
+  overflow: visible !important; 
 }
 
 body {
   margin: 0 !important;
   padding: 0 !important;
-  min-height: 100vh !important; /* Forces background to reach the absolute bottom */
-  width: 100% !important;
-  max-width: 100% !important; 
+  min-height: 100vh !important; 
   display: flex !important;
   flex-direction: column !important; 
-  overflow: visible !important; /* Guarantees sticky header will work in ANY mode */
+  overflow: visible !important; 
 }
 
-/* 2. Force the header to stick perfectly */
 .masthead {
   position: -webkit-sticky !important; 
   position: sticky !important; 
   top: 0 !important;
   width: 100% !important;
-  max-width: 100% !important;
   z-index: 9999 !important;
   background-color: #500000 !important; 
 }
 
-/* 3. Safely kill the horizontal white spaces WITHOUT breaking sticky */
 .initial-content {
   flex: 1 !important; 
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: hidden !important; /* Traps all side-scrolling right here */
-  overflow-y: visible !important; 
 }
 
-#main {
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-}
-
-/* 4. Keeps the footer pinned and prevents it from causing side-scroll */
 .page__footer {
   margin-top: auto !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: hidden !important;
+}
+
+/* 2. Nuclear option applied ONLY to mobile/tablets! Leaves Desktop completely alone. */
+@media (max-width: 1024px) {
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .initial-content, #main, .page__footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important; 
+  }
+  
+  .initial-content {
+    overflow-y: visible !important; 
+  }
 }
