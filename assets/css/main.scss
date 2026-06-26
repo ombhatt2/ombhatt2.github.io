@@ -54,7 +54,12 @@
 
 /* --- RESPONSIVE STICKY & OVERFLOW OVERRIDE --- */
 
-/* 1. Global fix for sticky header */
+/* 1. Global resets and sticky header */
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .masthead {
   position: -webkit-sticky !important; 
   position: sticky !important; 
@@ -71,8 +76,6 @@
   }
   
   body {
-    margin: 0 !important;
-    padding: 0 !important;
     min-height: 100vh !important; 
     display: flex !important;
     flex-direction: column !important; 
