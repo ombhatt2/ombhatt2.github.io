@@ -20,6 +20,9 @@ DRON is a proof-of-concept initiative at [TURTLE Robotics](https://www.turtlerob
 
 <figure style="border: 1px solid #e0e0e0; padding: 0; margin: 30px 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <img src="/images/DRON-1.gif" alt="DRON in Action" style="width:100%; display:block; margin:0;">
+  <figcaption style="background-color: #f2f3f5; padding: 12px; text-align: center; font-style: italic; font-size: 0.85em; color: #555; border-top: 1px solid #e0e0e0;">
+    Autonomous UAV flight simulation using Gazebo and QGroundControl
+  </figcaption>
 </figure>
 
 <div style="display: flex; justify-content: center; gap: 15px; margin-top: 30px; margin-bottom: 20px;">
@@ -28,7 +31,7 @@ DRON is a proof-of-concept initiative at [TURTLE Robotics](https://www.turtlerob
 </div>
 
 <div id="poster-view" style="display: block;">
-  <figure style="border: 1px solid #e0e0e0; padding: 0; margin: 0 0 30px 0;">
+  <figure style="border: 1px solid #e0e0e0; padding: 0; margin: 0 0 30px 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
     <img src="/images/DRON-Poster-Spring-2026.png" alt="DRON Poster" style="width:100%; display:block; margin:0;">
     <figcaption style="background-color: #f2f3f5; padding: 12px; text-align: center; font-style: italic; font-size: 0.85em; color: #555; border-top: 1px solid #e0e0e0;">
       DRON Spring 2026 Poster Presentation
