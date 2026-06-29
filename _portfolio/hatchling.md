@@ -30,3 +30,28 @@ header:
     Hatchling Robot Demo - 2025 TURTLE Robotics Hatchling Competition
   </div>
 </div>
+
+### Design & Prototyping
+
+<div style="display: flex; flex-direction: column; gap: 30px; margin-bottom: 40px;">
+  <figure style="border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; padding: 0; margin: 0;">
+    <img src="/images/Hatchling-1.jpg" alt="Design Sketch 1" style="width:100%; display:block; margin:0;">
+    <figcaption style="background-color: #f8f9fa; padding: 15px; text-align: center; font-style: italic; font-size: 0.9em; color: #555; border-top: 1px solid #e0e0e0;">
+      Initial mechanism concept and design sketch
+    </figcaption>
+  </figure>
+
+  <figure style="border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; padding: 0; margin: 0;">
+    <img src="/images/Hatchling-2.jpg" alt="Design Sketch 2" style="width:100%; display:block; margin:0;">
+    <figcaption style="background-color: #f8f9fa; padding: 15px; text-align: center; font-style: italic; font-size: 0.9em; color: #555; border-top: 1px solid #e0e0e0;">
+      Detailed breakdown of the elevator and clamp mechanics
+    </figcaption>
+  </figure>
+
+  <figure style="border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; padding: 0; margin: 0;">
+    <img src="/images/Hatchling-3.jpg" alt="SolidWorks CAD Model" style="width:100%; display:block; margin:0;">
+    <figcaption style="background-color: #f8f9fa; padding: 15px; text-align: center; font-style: italic; font-size: 0.9em; color: #555; border-top: 1px solid #e0e0e0;">
+      SolidWorks CAD assembly of the base and elevator structure
+    </figcaption>
+  </figure>
+</div>

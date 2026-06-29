@@ -18,6 +18,10 @@ DRON is a proof-of-concept initiative at [TURTLE Robotics](https://www.turtlerob
 * Supported UAV swarm platform development for real-time visual data, mapping, and first-responder assistance.
 * Focused on reducing human exposure during disaster response missions.
 
+<figure style="border: 1px solid #e0e0e0; padding: 0; margin: 30px 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="/images/DRON-1.gif" alt="DRON in Action" style="width:100%; display:block; margin:0;">
+</figure>
+
 <div style="display: flex; justify-content: center; gap: 15px; margin-top: 30px; margin-bottom: 20px;">
   <button onclick="document.getElementById('poster-view').style.display='block'; document.getElementById('linkedin-view').style.display='none';" style="padding: 10px 20px; background-color: #500000; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.2s;">View Poster</button>
   <button onclick="document.getElementById('poster-view').style.display='none'; document.getElementById('linkedin-view').style.display='block';" style="padding: 10px 20px; background-color: #0077b5; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.2s;">View LinkedIn Post</button>
