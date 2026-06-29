@@ -38,6 +38,7 @@ header:
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
+    margin-top: 30px;
     margin-bottom: 40px;
   }
   .modern-img-card {
