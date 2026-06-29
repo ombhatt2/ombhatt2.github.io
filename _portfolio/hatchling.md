@@ -33,25 +33,40 @@ header:
 
 ### Design & Prototyping
 
-<div style="display: flex; flex-direction: column; gap: 30px; margin-bottom: 40px;">
-  <figure style="border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; padding: 0; margin: 0;">
-    <img src="/images/Hatchling-1.jpg" alt="Design Sketch 1" style="width:100%; display:block; margin:0;">
-    <figcaption style="background-color: #f8f9fa; padding: 15px; text-align: center; font-style: italic; font-size: 0.9em; color: #555; border-top: 1px solid #e0e0e0;">
-      Initial mechanism concept and design sketch
-    </figcaption>
-  </figure>
+<style>
+  .modern-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+  .modern-img-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+  }
+  .modern-img-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+  }
+  .modern-img-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+  }
+</style>
 
-  <figure style="border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; padding: 0; margin: 0;">
-    <img src="/images/Hatchling-2.jpg" alt="Design Sketch 2" style="width:100%; display:block; margin:0;">
-    <figcaption style="background-color: #f8f9fa; padding: 15px; text-align: center; font-style: italic; font-size: 0.9em; color: #555; border-top: 1px solid #e0e0e0;">
-      Detailed breakdown of the elevator and clamp mechanics
-    </figcaption>
-  </figure>
-
-  <figure style="border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; padding: 0; margin: 0;">
-    <img src="/images/Hatchling-3.jpg" alt="SolidWorks CAD Model" style="width:100%; display:block; margin:0;">
-    <figcaption style="background-color: #f8f9fa; padding: 15px; text-align: center; font-style: italic; font-size: 0.9em; color: #555; border-top: 1px solid #e0e0e0;">
-      SolidWorks CAD assembly of the base and elevator structure
-    </figcaption>
-  </figure>
+<div class="modern-gallery">
+  <div class="modern-img-card">
+    <img src="/images/Hatchling-1.jpg" alt="Design Sketch 1">
+  </div>
+  <div class="modern-img-card">
+    <img src="/images/Hatchling-2.jpg" alt="Design Sketch 2">
+  </div>
+  <div class="modern-img-card">
+    <img src="/images/Hatchling-3.jpg" alt="SolidWorks CAD Model">
+  </div>
 </div>
