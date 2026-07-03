@@ -64,7 +64,7 @@ redirect_from:
     {% assign matches = site.portfolio | where: "url", p %}
     {% if matches and matches.size > 0 %}
       {% assign item = matches[0] %}
-      <div class="hover-card" style="flex:1 1 300px;max-width:400px;border:1px solid rgba(128,128,128,0.3);padding:18px;box-shadow:0 1px 0 rgba(0,0,0,0.02);">
+      <div class="hover-card" style="flex:1 1 300px;max-width:400px;border:1px solid rgba(255,255,255,0.1);padding:18px;border-radius:8px;background:rgba(255,255,255,0.03);">
         <a href="{{ item.url }}" style="text-decoration:none;color:inherit;">
           {% if item.header and item.header.teaser %}
             <img src="{{ item.header.teaser }}" alt="{{ item.title }}" style="width:100%;height:220px;object-fit:cover;border-radius:6px;">
@@ -424,18 +424,18 @@ redirect_from:
     top: 50%;
     right: 30px; 
     transform: translateY(-50%);
-    background: rgba(128, 128, 128, 0.05);
+    background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(128, 128, 128, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 20px 25px;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   }
   .floating-nav ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px; }
-  .floating-nav a { text-decoration: none !important; font-weight: 700; font-size: 0.95rem; color: #555; transition: color 0.3s ease, transform 0.2s ease; display: block; text-align: right; }
-  .floating-nav a:hover { color: #800000; transform: translateX(-5px); }
+  .floating-nav a { text-decoration: none !important; font-weight: 700; font-size: 0.95rem; color: #ccc; transition: color 0.3s ease, transform 0.2s ease; display: block; text-align: right; }
+  .floating-nav a:hover { color: #ff4d4d; transform: translateX(-5px); }
   @media (max-width: 1300px) { .floating-nav { display: none; } }
 
   /* --- Section Spacing & Centered Headings --- */
@@ -456,7 +456,7 @@ redirect_from:
     transform: translateX(-50%);
     width: 60px;
     height: 4px;
-    background-color: #800000;
+    background-color: #ff4d4d;
     border-radius: 2px;
   }
   h1.page__title { display: none !important; }
@@ -483,23 +483,44 @@ redirect_from:
     transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
   .author__avatar img:hover { transform: scale(1.08) !important; box-shadow: 0 0 25px rgba(128, 0, 0, 0.5) !important; }
-
-  /* Cards */
-  .hover-card { transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; border-radius: 8px !important; background-color: transparent; }
-  .hover-card:hover { transform: translateY(-8px) !important; box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.1) !important; }
   .tech-text { background: linear-gradient(90deg, #800000, #ff4d4d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
-  .glass-card {
-    background: rgba(128, 128, 128, 0.05);
-    border: 1px solid rgba(128, 128, 128, 0.15);
-    border-left: 4px solid #800000;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+  /* =========================================================================
+     UNIFIED GLASS CARD STYLING (MATCHES EXPERIENCE, HOBBIES, CONTACT & PROJECTS)
+     ========================================================================= */
+  .glass-card,
+  .glass-hobby-card,
+  .glass-info-card,
+  .glass-form-card {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
-  .glass-card:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(128, 0, 0, 0.15); border-left: 4px solid #ff4d4d; }
-  .clickable-card { padding: 0; overflow: hidden; }
+  
+  /* Experience cards have the red accent line */
+  .glass-card { 
+    padding: 25px; 
+    margin-bottom: 20px; 
+    border-left: 4px solid #800000 !important; 
+  }
+  
+  /* Hover state for all uniform cards */
+  .glass-card:hover,
+  .glass-hobby-card:hover,
+  .glass-info-card:hover,
+  .glass-form-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+    border-color: rgba(255, 77, 77, 0.4) !important;
+  }
+  .glass-card:hover { border-left: 4px solid #ff4d4d !important; }
+
+  /* Experience Sub-elements */
+  .clickable-card { padding: 0 !important; overflow: hidden; }
   .card-link-wrapper { display: block; padding: 25px; text-decoration: none !important; color: inherit !important; }
   .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
   .card-header h3 { margin: 0; font-size: 1.4em; font-weight: 700; }
@@ -508,36 +529,45 @@ redirect_from:
   .description { margin: 0; line-height: 1.6; font-size: 0.95em; }
   .coursework-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
   .course-tag {
-    background: rgba(128, 0, 0, 0.08);
-    border: 1px solid rgba(128, 0, 0, 0.3);
-    color: #b30000;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 77, 77, 0.3);
+    color: #ff9999;
     padding: 5px 12px;
     border-radius: 4px;
     font-size: 0.8em;
     font-family: monospace;
     transition: background 0.2s ease;
   }
-  .course-tag:hover { background: rgba(128, 0, 0, 0.15); }
+  .course-tag:hover { background: rgba(255, 77, 77, 0.15); }
 
-  /* --- Skill Categories & Pills --- */
-  .skill-category { color: #800000; margin-bottom: 15px; font-size: 1.15rem; }
+  /* Projects */
+  .hover-card { transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; border-radius: 8px !important; }
+  .hover-card:hover { transform: translateY(-8px) !important; box-shadow: 0 14px 28px rgba(0,0,0,0.2), 0 10px 10px rgba(0,0,0,0.1) !important; border-color: rgba(255, 77, 77, 0.4) !important; }
+
+  /* --- Skill Categories & Pills (Unified) --- */
+  .skill-category { color: #ff4d4d; margin-bottom: 15px; font-size: 1.15rem; }
   .skill-pill {
-    background-color: rgba(128, 128, 128, 0.05);
-    color: var(--text-default);
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #e0e0e0 !important;
     padding: 8px 18px;
     border-radius: 25px;
-    border: 1px solid rgba(128, 128, 128, 0.2);
     font-size: 0.95rem;
     font-weight: 500;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
     cursor: default;
   }
-  .skill-pill i { color: #800000; font-size: 1.05rem; }
-  .skill-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); border-color: rgba(128, 128, 128, 0.4); }
+  .skill-pill i { color: #ff4d4d; font-size: 1.05rem; }
+  .skill-pill:hover { 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2); 
+    border-color: rgba(255, 77, 77, 0.5) !important; 
+    background-color: rgba(255, 255, 255, 0.08) !important; 
+  }
 
   /* --- Terminal --- */
   .terminal-window {
@@ -556,7 +586,7 @@ redirect_from:
   .term-btn.maximize { background-color: #27c93f; }
   .terminal-title { flex-grow: 1; text-align: center; color: #ccc; font-size: 0.85rem; letter-spacing: 1px; margin-right: 44px; }
   .terminal-body { padding: 20px; color: #d4d4d4; font-size: 0.95rem; height: 300px; overflow-y: auto; cursor: text; }
-  .term-prompt { color: #800000; font-weight: bold; margin-right: 8px; }
+  .term-prompt { color: #ff4d4d; font-weight: bold; margin-right: 8px; }
   .term-highlight { color: #ff4d4d; font-weight: bold; }
   .term-file { color: #50fa7b; font-weight: bold; }
   .term-input-line { display: flex; align-items: center; }
@@ -564,21 +594,12 @@ redirect_from:
 
   /* --- Hobbies Grid --- */
   .hobby-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 60px; }
-  .glass-hobby-card {
-    background: rgba(128, 128, 128, 0.03);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(128, 128, 128, 0.15);
-    border-radius: 12px;
-    padding: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  }
-  .glass-hobby-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); border-color: rgba(128, 0, 0, 0.3); }
-  .hobby-icon { font-size: 2rem; margin-bottom: 15px; display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; background: rgba(128, 0, 0, 0.05); border-radius: 12px; }
-  .glass-hobby-card h3 { font-size: 1.25rem !important; margin-top: 0 !important; margin-bottom: 10px !important; color: var(--text-default); font-weight: 700; }
-  .glass-hobby-card p { font-size: 0.95rem; line-height: 1.6; margin: 0; opacity: 0.85; }
+  .glass-hobby-card { padding: 25px; }
+  .hobby-icon { font-size: 2rem; margin-bottom: 15px; display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; background: rgba(255, 77, 77, 0.1); border-radius: 12px; color: #ff4d4d; }
+  .glass-hobby-card h3 { font-size: 1.25rem !important; margin-top: 0 !important; margin-bottom: 10px !important; font-weight: 700; color: #fff;}
+  .glass-hobby-card p { font-size: 0.95rem; line-height: 1.6; margin: 0; opacity: 0.85; color: #ddd; }
 
-  /* --- Contact Section Layout & Glass Styling --- */
+  /* --- Contact Section Layout & Unified Form Styling --- */
   .modern-contact-section { max-width: 900px; margin: 60px auto 100px auto; padding: 0 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
   .contact-header { text-align: center; margin-bottom: 40px; }
   .contact-header h2 { font-size: 3rem !important; font-weight: 800; margin-bottom: 10px !important; margin-top: 0 !important; padding-bottom: 0 !important; letter-spacing: -1px; }
@@ -588,52 +609,48 @@ redirect_from:
   .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 30px; }
   .contact-info-column { display: flex; flex-direction: column; gap: 20px; }
   
-  .glass-info-card,
-  .glass-form-card {
-    background: rgba(128, 128, 128, 0.05);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(128, 128, 128, 0.15);
-    border-radius: 12px;
-    padding: 25px;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  }
   .glass-info-card { display: flex; align-items: center; gap: 15px; padding: 20px; }
-  .glass-info-card:hover, .glass-form-card:hover { border-color: rgba(128, 0, 0, 0.3); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); }
+  .glass-form-card { padding: 25px; }
   
-  .info-icon { font-size: 1.5rem; color: #800000; background: rgba(128, 0, 0, 0.08); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
-  .info-text span { display: block; font-size: 0.75rem; font-weight: 700; color: #888888; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 3px; }
-  .info-text strong { font-size: 1rem; color: var(--text-default); }
+  .info-icon { font-size: 1.5rem; color: #ff4d4d; background: rgba(255, 77, 77, 0.1); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
+  .info-text span { display: block; font-size: 0.75rem; font-weight: 700; color: #aaa; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 3px; }
+  .info-text strong { font-size: 1rem; color: #fff; }
   
   .social-buttons-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 5px; }
   .glass-social-btn {
-    background: rgba(128, 128, 128, 0.05);
-    border: 1px solid rgba(128, 128, 128, 0.15);
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px;
     padding: 15px;
     text-align: center;
     font-weight: 700;
-    color: var(--text-default);
+    color: #e0e0e0 !important;
     text-decoration: none !important;
     transition: all 0.3s ease;
   }
-  .glass-social-btn:hover { background: #800000; color: #ffffff !important; transform: translateY(-3px); }
+  .glass-social-btn:hover { background: #ff4d4d !important; color: #ffffff !important; border-color: #ff4d4d !important; transform: translateY(-3px); }
 
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .input-group { display: flex; flex-direction: column; margin-bottom: 20px; }
-  .input-group label { font-weight: 600; margin-bottom: 8px; font-size: 0.85rem; }
+  .input-group label { font-weight: 600; margin-bottom: 8px; font-size: 0.85rem; color: #ddd; }
   .input-group input, .input-group textarea {
     padding: 14px;
-    border: 1px solid rgba(128, 128, 128, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
     border-radius: 8px;
-    background: rgba(128, 128, 128, 0.05);
+    background: rgba(0, 0, 0, 0.3) !important;
     font-family: inherit;
     font-size: 0.95rem;
-    color: inherit;
+    color: #ffffff !important;
     transition: all 0.3s ease;
   }
-  .input-group input:focus, .input-group textarea:focus { outline: none; background: rgba(255, 255, 255, 0.8); border-color: #800000; box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1); }
-  .submit-btn { width: 100%; background: #800000; color: white; border: none; padding: 16px; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease; }
-  .submit-btn:hover { background: #600000; transform: translateY(-2px); }
+  .input-group input:focus, .input-group textarea:focus { 
+    outline: none; 
+    background: rgba(0, 0, 0, 0.5) !important; 
+    border-color: #ff4d4d !important; 
+    box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.15) !important; 
+  }
+  .submit-btn { width: 100%; background: #ff4d4d; color: white; border: none; padding: 16px; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease; }
+  .submit-btn:hover { background: #ff6666; transform: translateY(-2px); }
 
   /* Mobile Responsiveness */
   @media (max-width: 768px) {
@@ -642,39 +659,4 @@ redirect_from:
     .form-row { grid-template-columns: 1fr; }
     .glass-form-card { padding: 25px; }
   }
-
-  /* ========================================================
-     DARK MODE OVERRIDES (ALL SECTIONS INTEGRATED)
-     ======================================================== */
-  
-  html[data-theme="dark"] .floating-nav, body.dark-theme .floating-nav { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); }
-  html[data-theme="dark"] .floating-nav a, body.dark-theme .floating-nav a { color: #aaa; }
-  html[data-theme="dark"] .floating-nav a:hover, body.dark-theme .floating-nav a:hover { color: #ff4d4d; }
-  html[data-theme="dark"] h2::after, body.dark-theme h2::after { background-color: #ff4d4d; }
-  html[data-theme="dark"] .hover-card, body.dark-theme .hover-card { background-color: rgba(255, 255, 255, 0.05) !important; backdrop-filter: blur(5px); }
-  html[data-theme="dark"] .glass-card, body.dark-theme .glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-left: 4px solid #800000; }
-  html[data-theme="dark"] .course-tag, body.dark-theme .course-tag { color: #ff9999; border-color: rgba(255, 153, 153, 0.3); }
-  html[data-theme="dark"] .glass-hobby-card, body.dark-theme .glass-hobby-card { background: rgba(255, 255, 255, 0.02); border-color: rgba(255, 255, 255, 0.05); }
-  
-  /* Skills Dark Mode */
-  html[data-theme="dark"] .skill-category, body.dark-theme .skill-category { color: #ff4d4d; }
-  html[data-theme="dark"] .skill-pill, body.dark-theme .skill-pill { background-color: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.1); color: #d4d4d4; }
-  html[data-theme="dark"] .skill-pill i, body.dark-theme .skill-pill i { color: #ff4d4d; }
-  html[data-theme="dark"] .skill-pill:hover, body.dark-theme .skill-pill:hover { border-color: rgba(255, 77, 77, 0.4); background-color: rgba(255, 255, 255, 0.08); }
-  html[data-theme="dark"] .term-prompt, body.dark-theme .term-prompt { color: #ff4d4d; }
-
-  /* Contact Form Dark Mode */
-  html[data-theme="dark"] .glass-info-card, html[data-theme="dark"] .glass-form-card, html[data-theme="dark"] .glass-social-btn, body.dark-theme .glass-info-card, body.dark-theme .glass-form-card, body.dark-theme .glass-social-btn {
-    background: rgba(255, 255, 255, 0.02); border-color: rgba(255, 255, 255, 0.05);
-  }
-  html[data-theme="dark"] .info-icon, body.dark-theme .info-icon { color: #ff4d4d; }
-  html[data-theme="dark"] .glass-social-btn:hover, body.dark-theme .glass-social-btn:hover { border-color: rgba(255, 77, 77, 0.4); background-color: rgba(255, 255, 255, 0.05); color: #ff4d4d !important; }
-  html[data-theme="dark"] .input-group input, html[data-theme="dark"] .input-group textarea, body.dark-theme .input-group input, body.dark-theme .input-group textarea {
-    background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.1); color: #fff;
-  }
-  html[data-theme="dark"] .input-group input:focus, html[data-theme="dark"] .input-group textarea:focus, body.dark-theme .input-group input:focus, body.dark-theme .input-group textarea:focus {
-    border-color: #ff4d4d; box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.15); background: rgba(0, 0, 0, 0.4);
-  }
-  html[data-theme="dark"] .submit-btn, body.dark-theme .submit-btn { background: #ff4d4d; color: #ffffff; }
-  html[data-theme="dark"] .submit-btn:hover, body.dark-theme .submit-btn:hover { background: #ff6666; }
 </style>
