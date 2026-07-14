@@ -1,5 +1,5 @@
 ---
-title: "TAMU Robomasters: Autonomous Sentry Robot"
+title: "Texas Aimbots: Autonomous Sentry Robot"
 collection: portfolio
 permalink: /portfolio/robomasters
 excerpt: "Designing robust structural components using OnShape CAD for the fully autonomous, computer-vision-driven Sentry Robot. Integrated the NVIDIA Jetson Orin, LIDAR sensors, and cameras into the system for real-time perception and decision-making."
@@ -39,7 +39,7 @@ Sentry is a fully autonomous ground robot. It can traverse the field, shoot at e
 ### The Team
 
 <figure style="border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 0; margin-bottom: 2rem; overflow: hidden;">
-  <img src="/images/team-photo-1.jpg" alt="Whole TAMU RoboMasters Sentry Team" style="width:100%; display:block; margin:0; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+  <img src="/images/team-photo-1.jpg" alt="Whole Texas Aimbots Sentry Team" style="width:100%; display:block; margin:0; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
 </figure>
 
 <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-bottom: 3rem;">
