@@ -121,7 +121,7 @@ redirect_from:
         <h3 class="role">Hardware Team Member</h3>
         <span class="date">Sep 2025 - Present</span>
     </div>
-    <h4 class="company">TAMU Robomasters</h4>
+    <h4 class="company">Texas Aimbots</h4>
     <p class="description">Designing robust structural components using OnShape CAD and integrating NVIDIA Jetson Orin, LiDAR, and cameras for a fully autonomous Sentry Robot.</p>
     <div class="coursework-tags" style="margin-top: 15px;">
         <span class="course-tag">OnShape CAD</span>
@@ -202,32 +202,67 @@ redirect_from:
 
 <h2 id="skills">Technical Skills</h2>
 
-<h3 style="font-size: 1.1rem; margin-bottom: 0.8rem; color: #800000;">Programming</h3>
+<h3 style="font-size: 1.1rem; margin-bottom: 0.8rem; color: #800000;">Robotics & Autonomy</h3>
 <div class="skill-cloud" data-aos="fade-up">
-  <div class="skill-badge"><i class="fas fa-code"></i> C/C++</div>
-  <div class="skill-badge"><i class="fab fa-python"></i> Python</div>
-  <div class="skill-badge"><i class="fas fa-robot"></i> ROS2</div>
-  <div class="skill-badge"><i class="fab fa-linux"></i> Linux</div>
-  <div class="skill-badge"><i class="fas fa-terminal"></i> Shell (Bash/Zsh)</div>
-  <div class="skill-badge"><i class="fas fa-subscript"></i> LaTeX</div>
+  <div class="skill-badge"><i class="fas fa-robot"></i> ROS 2</div>
+  <div class="skill-badge"><i class="fas fa-plane"></i> PX4</div>
+  <div class="skill-badge"><i class="fas fa-satellite-dish"></i> MAVROS</div>
+  <div class="skill-badge"><i class="fas fa-map-marked-alt"></i> SLAM</div>
+  <div class="skill-badge"><i class="fas fa-eye"></i> OpenCV</div>
+  <div class="skill-badge"><i class="fas fa-wave-square"></i> PWM/PID Control</div>
+  <div class="skill-badge"><i class="fas fa-gamepad"></i> Teleoperation</div>
+  <div class="skill-badge"><i class="fas fa-cubes"></i> Gazebo</div>
+  <div class="skill-badge"><i class="fas fa-vr-cardboard"></i> RViz</div>
+  <div class="skill-badge"><i class="fas fa-braille"></i> Point Clouds</div>
 </div>
 
 <h3 style="font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.8rem; color: #800000;">Hardware & Prototyping</h3>
 <div class="skill-cloud" data-aos="fade-up">
-  <div class="skill-badge"><i class="fas fa-microchip"></i> ESP32 & STM32</div>
-  <div class="skill-badge"><i class="fas fa-satellite-dish"></i> Arduino & RPi</div>
-  <div class="skill-badge"><i class="fas fa-eye"></i> LiDARs & Cameras</div>
-  <div class="skill-badge"><i class="fas fa-bolt"></i> Soldering</div>
+  <div class="skill-badge"><i class="fas fa-microchip"></i> ESP32</div>
+  <div class="skill-badge"><i class="fas fa-microchip"></i> Arduino</div>
+  <div class="skill-badge"><i class="fas fa-raspberry-pi"></i> Raspberry Pi</div>
+  <div class="skill-badge"><i class="fas fa-microchip"></i> STM32</div>
+  <div class="skill-badge"><i class="fas fa-microchip"></i> FPGA</div>
+  <div class="skill-badge"><i class="fas fa-satellite-dish"></i> LiDAR</div>
+  <div class="skill-badge"><i class="fas fa-video"></i> Cameras</div>
   <div class="skill-badge"><i class="fas fa-network-wired"></i> PCB Design</div>
+  <div class="skill-badge"><i class="fas fa-bolt"></i> Soldering</div>
+  <div class="skill-badge"><i class="fas fa-wave-square"></i> Analog Electronics</div>
+  <div class="skill-badge"><i class="fas fa-chart-line"></i> Oscilloscope & DMM Testing</div>
+  <div class="skill-badge"><i class="fas fa-database"></i> Data Acquisition Systems</div>
+</div>
+
+<h3 style="font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.8rem; color: #800000;">Programming Languages</h3>
+<div class="skill-cloud" data-aos="fade-up">
+  <div class="skill-badge"><i class="fab fa-python"></i> Python</div>
+  <div class="skill-badge"><i class="fas fa-code"></i> C/C++</div>
+  <div class="skill-badge"><i class="fas fa-code"></i> Embedded C</div>
+  <div class="skill-badge"><i class="fab fa-linux"></i> Linux</div>
+  <div class="skill-badge"><i class="fas fa-terminal"></i> Shell (Bash/Zsh)</div>
+  <div class="skill-badge"><i class="fas fa-subscript"></i> LaTeX</div>
+  <div class="skill-badge"><i class="fab fa-html5"></i> HTML</div>
+  <div class="skill-badge"><i class="fab fa-css3-alt"></i> CSS</div>
 </div>
 
 <h3 style="font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.8rem; color: #800000;">Simulation & CAD</h3>
-<div class="skill-cloud" style="margin-bottom: 2rem;" data-aos="fade-up">
+<div class="skill-cloud" data-aos="fade-up">
   <div class="skill-badge"><i class="fas fa-cube"></i> SolidWorks</div>
-  <div class="skill-badge"><i class="fas fa-drafting-compass"></i> Onshape & Inventor</div>
+  <div class="skill-badge"><i class="fas fa-cubes"></i> FEA</div>
+  <div class="skill-badge"><i class="fas fa-drafting-compass"></i> Autodesk Inventor</div>
+  <div class="skill-badge"><i class="fas fa-drafting-compass"></i> Onshape</div>
   <div class="skill-badge"><i class="fas fa-print"></i> Bambu Studio</div>
-  <div class="skill-badge"><i class="fas fa-microchip"></i> Eagle & Multisim</div>
-  <div class="skill-badge"><i class="fas fa-laptop-code"></i> MATLAB</div>
+  <div class="skill-badge"><i class="fas fa-microchip"></i> Eagle</div>
+  <div class="skill-badge"><i class="fas fa-microchip"></i> Multisim</div>
+  <div class="skill-badge"><i class="fas fa-laptop-code"></i> MATLAB/Simulink</div>
+</div>
+
+<h3 style="font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.8rem; color: #800000;">AI & Software Tools</h3>
+<div class="skill-cloud" style="margin-bottom: 2rem;" data-aos="fade-up">
+  <div class="skill-badge"><i class="fab fa-github"></i> Git/Github</div>
+  <div class="skill-badge"><i class="fas fa-code"></i> Visual Studio Code</div>
+  <div class="skill-badge"><i class="fas fa-desktop"></i> Workspace</div>
+  <div class="skill-badge"><i class="fab fa-microsoft"></i> Microsoft Office</div>
+  <div class="skill-badge"><i class="fas fa-robot"></i> LLM Integration (ChatGPT, Claude, Gemini)</div>
 </div>
 
 <p style="font-size: 0.95rem; opacity: 0.8; margin-bottom: 1rem;" data-aos="fade-up"><em>Prefer the command line? Run <code>ls</code> to view my environment.</em></p>
@@ -259,10 +294,12 @@ redirect_from:
   const termBody = document.getElementById('terminal-body');
 
   const skillsData = {
-    'programming.txt': 'C/C++, Python, ROS2, Linux, Shell (Bash/Zsh), LaTeX',
-    'hardware.txt': 'ESP32 & STM32, Arduino & RPi, LiDARs & Cameras, Soldering, PCB Design',
-    'simulation.txt': 'SolidWorks, Onshape, Inventor, Bambu Studio, Eagle, MATLAB'
-  };
+  'robotics.txt': 'ROS 2, PX4, MAVROS, SLAM, OpenCV, PWM/PID Control, Teleoperation, Gazebo, RViz, Point Clouds',
+  'hardware.txt': 'ESP32, Arduino, Raspberry Pi, STM32, FPGA, LiDAR, Cameras, PCB Design, Soldering, Analog Electronics, Oscilloscope & DMM Testing, Data Acquisition Systems',
+  'programming.txt': 'Python, C/C++, Embedded C, Linux, Shell (Bash/Zsh), LaTeX, HTML, CSS',
+  'simulation.txt': 'SolidWorks, FEA, Autodesk Inventor, Onshape, Bambu Studio, Eagle, Multisim, MATLAB/Simulink',
+  'tools.txt': 'Git/Github, Visual Studio Code, Workspace, Microsoft Office, LLM Integration'
+};
 
   termInput.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
@@ -272,7 +309,7 @@ redirect_from:
       if (cmd === 'help') {
         response = 'Available commands:<br><span class="term-highlight">ls</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- List directory contents<br><span class="term-highlight">cat [file]</span> - View file contents<br><span class="term-highlight">clear</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Clear the terminal screen';
       } else if (cmd === 'ls') {
-        response = '<span class="term-file">programming.txt</span>&nbsp;&nbsp;<span class="term-file">hardware.txt</span>&nbsp;&nbsp;<span class="term-file">simulation.txt</span>';
+        response = '<span class="term-file">robotics.txt</span>&nbsp;&nbsp;<span class="term-file">hardware.txt</span>&nbsp;&nbsp;<span class="term-file">programming.txt</span>&nbsp;&nbsp;<span class="term-file">simulation.txt</span>&nbsp;&nbsp;<span class="term-file">tools.txt</span>';
       } else if (cmd.startsWith('cat ')) {
         const file = cmd.split(' ')[1];
         if (skillsData[file]) {
