@@ -14,8 +14,14 @@ header:
 
 DRON is a proof-of-concept initiative at [TURTLE Robotics](https://www.turtlerobotics.org/projects/dron) that aims to leverage unmanned aerial vehicles (UAVs) to gather intelligence during structural fires. Collaborating with the software subteam, I research and implement **ROS 2 Humble, PX4, and MAVROS** frameworks within simulation environments to support a UAV swarm platform designed to assist first responders with real-time visual data and autonomous mapping.
 
-* Researched and implemented **ROS 2 Humble**, **PX4**, and **MAVROS** frameworks in simulation environments.
-* Supported UAV swarm platform development for real-time visual data, mapping, and first-responder assistance.
+* Researched and programmed autonomous flight algorithms (offboard control square 2) using PX4/MAVROS
+over ROS 2 Humble, validating autonomous flight via 2-drone simulation and 2-3 outdoor test flights for a
+10-member team’s UAV swarm platform assisting first responders.
+
+* Co-authored and presented the ”Disaster Response Observation Network (DRON)” research poster across two
+university showcases (Nov 2025, Apr 2026), detailing autonomous swarm progress and system architecture to
+an audience of engineering faculty and peers.
+
 * Focused on reducing human exposure during disaster response missions.
 
 <figure style="border: 1px solid #e0e0e0; padding: 0; margin: 30px 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">

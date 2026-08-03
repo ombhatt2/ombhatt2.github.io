@@ -9,7 +9,7 @@ header:
 ---
 
 ### Technical Contributions
-* Designing robust structural components using OnShape CAD for the fully autonomous, computer-vision-driven Sentry Robot.
+* Designed and 3D-printed 4+ ABS structural components in Onshape CAD for Sentry, a fully autonomous ground robot, including a gimbal housing redesigned for a more compact, rigid footprint; installed on the robot.
 * Integrated the NVIDIA Jetson Orin, LIDAR sensors, and cameras into the system for real-time perception and decision-making.
 
 ### About the Sentry Robot

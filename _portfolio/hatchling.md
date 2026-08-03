@@ -12,8 +12,8 @@ header:
 
 ### Technical Contributions
 * Won 2nd place out of 30+ teams at the 2025 TURTLE Robotics Hatchling Competition.
-* Designed mechanical components in SolidWorks, including a forklift-style lift and gripper mechanism for block-stacking operations.
-* Programmed ESP32 and Arduino controllers for precise navigation and multi-stage lift operation.
+* Designed and CADded key mechanical components in SolidWorks, including a forklift-style lift and single-block gripper mechanism, as part of a 4-person team, engineered for rapid sequential block acquisition.
+* Programmed an ESP32 and Arduino to control precise vehicle navigation and operate the multi-stage lift, enabling the robot to retrieve and stack 7 blocks in competition.
 
 <figure style="border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; padding: 0; margin-top: 35px; margin-bottom: 40px;">
   <img src="/images/Hatchling Robot Thumbnail.jpg" alt="Hatchling Robot" style="width:100%; display:block; margin:0;">

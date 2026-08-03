@@ -10,8 +10,8 @@ header:
 
 As a Mechatronics Research Intern at the University of Waterloo's Mechatronics Vehicle Systems Lab:
 
-* Worked under the guidance of [Professor Amir Khajepour](https://uwaterloo.ca/mechanical-mechatronics-engineering/profile/akhajepo) on MVS Lab's autonomous shuttle called WATonoBus
-* Designed, fabricated, and programmed an LED display module that helped inform non-ego agents about the shuttle's intentions
+* Engineered an external HMI (eHMI): an LED matrix display for WATonoBus, [Professor Amir Khajepour](https://uwaterloo.ca/mechanical-mechatronics-engineering/profile/akhajepo)'s autonomous shuttle at MVS Lab, as 1 of 4 team members (2 students, 1 PhD student) on the eHMI subsystem.
+* Developed a ROS node parsing intention-based commands over a rosserial link, validating all icon states and display functions in a live outdoor test on the shuttle's campus loop route.
 * Awarded a scholarship from MVS Lab for demonstrated excellence
 * Completed over 60+ hours of development
 

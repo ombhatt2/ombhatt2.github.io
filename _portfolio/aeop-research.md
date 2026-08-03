@@ -12,10 +12,10 @@ Presentation Slides: [Presentation Slides](/files/Autonomous Systems Group REU 2
 
 Served as an **AEOP Summer Robotics Research Intern** at the **Center for Autonomy at UT Austin**, participating in the **AEOP LLMs for Safe Navigation REU** under the guidance of [Dr. Ufuk Topcu](https://www.ae.utexas.edu/people/faculty/faculty-directory/topcu), [Dr. Christian Ellis](https://oden.utexas.edu/people/directory/Christian-Ellis/), and PhD Student [Rwik Rana](https://rwik2000.com/).
 
-* Architected a low-cost, 1/16 scale autonomous RC car using **ROS2** to create a modular research platform for complex drift and jump navigation studies.
-* Executed the complete electromechanical assembly by designing and soldering custom circuit boards to successfully power and integrate all components, including a **Raspberry Pi 5/Jetson Nano** and motor controllers.
-* Programmed a robust low-level controller in a **C++/ROS2** software stack to achieve precise **Ackerman steering** and throttle control for the vehicle.
-* Successfully established full teleoperation capabilities and utilized the **F1Tenth simulator** to validate **SLAM** and control algorithms, preparing the platform for fully autonomous operation.
+* Researched autonomous off-road navigation and drift/jump control dynamics under Dr. Ufuk Topcu and Dr. Christian Ellis as a $6,000-stipend AEOP REU Scholar to architect a low-cost, 1/16 scale autonomous RC car as a modular research platform for drift and jump navigation studies.
+* Executed the complete electromechanical assembly by designing and soldering a custom circuit board to power and integrate all components, including a Raspberry Pi 5/Jetson Nano and motor controllers, verified via multimeter testing.
+* Programmed a low-level C++/ROS 2 controller for Ackermann steering and throttle control, validating full teleoperation across 5+ test runs, including a successful jump test.
+* Ran a visual SLAM algorithm using camera-based perception in the F1Tenth simulator to validate localization and control, laying the groundwork for planned IMU fusion and post-jump re-localization toward fully autonomous operation.
 
 <details style="margin-top: 25px; margin-bottom: 35px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; background-color: #fcfcfc; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
   <summary style="font-weight: bold; cursor: pointer; color: #0077b5;">🔗 LinkedIn Post</summary>
