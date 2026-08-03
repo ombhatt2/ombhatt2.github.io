@@ -32,36 +32,34 @@ Education
 Relevant Experience
 ======
 * R&D Robotics Engineer — Software Subteam, T.U.R.T.L.E Robotics, Disaster Response Observation Network, Texas A&M University, Sep 2025–Present
-  * Researched and programmed autonomous flight algorithms (offboard_control_square_2) using PX4 and MAVROS over ROS 2 Humble to command UAVs for a 10-member team's autonomous UAV swarm platform assisting first responders during structural fires.
+  * Researched and programmed autonomous flight algorithms (offboard_control_square_2) using PX4/MAVROS over ROS 2 Humble, validating autonomous flight via 2-drone simulation and 2–3 outdoor test flights for a 10-member team's UAV swarm platform assisting first responders.
   * Co-authored and presented the "Disaster Response Observation Network (DRON)" research poster across two university showcases (Nov 2025, Apr 2026), detailing autonomous swarm progress and system architecture to an audience of engineering faculty and peers.
 
 * Hardware Team Member, Texas Aimbots, Texas A&M University, Sep 2025–Present
-  * Contributing to Sentry, a fully autonomous ground robot that traverses the field and engages targets using computer vision.
-  * Designed 4+ structural components, including the gimbal housing, in Onshape CAD.
+  * Designed and 3D-printed 4+ ABS structural components in Onshape CAD for Sentry, a fully autonomous ground robot, including a gimbal housing redesigned for a more compact, rigid footprint; installed on the robot.
   * Integrated the NVIDIA Jetson Orin, LiDAR sensors, and cameras for real-time perception and autonomous decision-making ahead of the 2026 ARC Championship, an international collegiate robotics competition.
 
 * AEOP Summer Robotics Research Intern — LLMs for Safe Navigation REU, Oden Institute, UT Austin, Jun 2025–Aug 2025
-  * Researched autonomous off-road navigation and drift/jump control dynamics under Dr. Ufuk Topcu, Dr. Christian Ellis, and PhD student Rwik Rana to architect a low-cost, 1/16 scale autonomous RC rally car research platform using ROS 2.
-  * Designed and soldered custom PCBs to integrate a Raspberry Pi 5/Jetson Nano, motor controllers, and power systems.
-  * Programmed a low-level controller in C++/ROS 2 for precise Ackerman steering and throttle control.
-  * Established teleoperation capabilities and validated SLAM and control algorithms in the F1Tenth simulator with IMU fusion for post-jump re-localization.
+  * Researched autonomous off-road navigation and drift/jump control dynamics under Dr. Ufuk Topcu, Dr. Christian Ellis, and PhD student Rwik Rana to architect a low-cost, 1/16 scale autonomous RC car as a modular research platform for drift and jump navigation studies.
+  * Executed the complete electromechanical assembly by designing and soldering a custom circuit board to power and integrate all components, including a Raspberry Pi 5/Jetson Nano and motor controllers, verified via multimeter testing.
+  * Programmed a low-level C++/ROS 2 controller for Ackermann steering and throttle control, validating full teleoperation across 5+ test runs, including a successful jump test.
+  * Ran a visual SLAM algorithm using camera-based perception in the F1Tenth simulator to validate localization and control, laying the groundwork for planned IMU fusion and post-jump re-localization toward fully autonomous operation.
 
 * Hatchling Team Member, T.U.R.T.L.E Robotics, Jan 2025–Sep 2025
   * Won 2nd place out of 30+ teams at the 2025 TURTLE Robotics Hatchling Competition.
-  * Designed mechanical components in SolidWorks, including a forklift-style lift and gripper mechanism engineered for rapid block acquisition.
-  * Programmed ESP32 and Arduino controllers for precise navigation and multi-stage lift operation.
+  * Designed and CADded key mechanical components in SolidWorks, including a forklift-style lift and single-block gripper mechanism, as part of a 4-person team, engineered for rapid sequential block acquisition.
+  * Programmed an ESP32 and Arduino to control precise vehicle navigation and operate the multi-stage lift, enabling the robot to retrieve and stack 7 blocks in competition.
 
 * Student Researcher — Engineering Science Fairs, Dual-axis Solar Tracker, Science Fair Club, Vista Ridge High School, Sep 2022–Mar 2024
-  * Developed EcoTrack, a phototropic solar tracker using thermoresponsive polymers and no electrical tracking components.
-  * Demonstrated 87% more net energy than a traditional dual-axis tracker and 119% more than a fixed panel system.
+  * Engineered and developed EcoTrack, a phototropic solar tracker using thermoresponsive polymers to follow a light source, eliminating the need for electrical tracking components.
+  * Demonstrated 87% more net energy than a traditional dual-axis tracker and 119% more than a fixed panel system under identical conditions.
   * Earned first place at the Austin Regional Science Fair and advanced to TXSEF State Fair.
-  * Received the Jacobs Engineering tuition scholarship and RICOH Sustainable Development Award.
+  * Awarded the Jacobs Engineering tuition scholarship ($2,000) and RICOH Sustainable Development Award.
   * Elected officer to mentor other students on their projects and showcase the school's achievements to attract sponsors.
 
 * Mechatronics Research Intern — WATonoBus Autonomous Shuttle, Mechatronics Vehicle Systems Lab, University of Waterloo, Jun 2021–Sep 2021
-  * Designed, fabricated, and programmed an LED display module to communicate shuttle intent to other road users.
-  * Completed over 60 hours of development under the guidance of Professor Amir Khajepour.
-  * Awarded a scholarship from MVS Lab for demonstrated excellence.
+  * Engineered an external HMI (eHMI): an LED matrix display for WATonoBus, Professor Amir Khajepour's autonomous shuttle at MVS Lab, as 1 of 4 team members (2 students, 1 PhD student) on the eHMI subsystem.
+  * Developed a ROS node parsing intention-based commands over a rosserial link, validating all icon states and display functions in a live outdoor test on the shuttle's campus loop route.
 
 Publications
 ======
@@ -75,15 +73,14 @@ Volunteering and Leadership
   * Selected for a competitive ambassador program to represent Autodesk, promoting CAD tools through campus events and workshops.
 
 * Design Review Officer, T.U.R.T.L.E Robotics, Project Branch, Jan 2026–Present
-  * Provide specialized input during design reviews and Q/A discussions to improve project direction.
   * Evaluate system requirements, CAD/electronics documentation, and BOMs across 20+ projects over 3 Design Review sessions.
 
 * Sponsorship Committee Member, T.U.R.T.L.E Robotics, External Branch, Sep 2025–Jan 2026
-  * Secured corporate sponsorships through a new Corporate Sponsor Outreach Initiative.
-  * Developed outreach strategies to support workshops, social events, and advanced technical projects.
+  * Secured corporate sponsorships for TURTLE through a new Corporate Sponsor Outreach Initiative.
+  * Developed and executed outreach strategies to engage companies and fund workshops, social events, and advanced technical projects.
 
 * Texas Science and Engineering Fair Judge, Texas A&M University College of Engineering, Mar 2025–Present
-  * Evaluated 20+ student research projects annually in the Energy: Sustainable Materials & Designs (2025) and Robotics & Intelligent Machines (2026) categories at TXSEF, providing constructive feedback to future engineers.
+  * Evaluate 20+ student research projects annually in the Energy: Sustainable Materials & Designs (2025) and Robotics & Intelligent Machines (2026) categories at TXSEF, providing constructive feedback to future engineers.
   * As part of judge appreciation, toured the Research Integration Center at the George H.W. Bush Combat Development Complex.
 
 * Student Council Member, Vista Ridge High School, Sep 2022–Sep 2024
