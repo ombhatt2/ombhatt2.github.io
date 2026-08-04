@@ -19,7 +19,7 @@ over ROS 2 Humble, validating autonomous flight via 2-drone simulation and 2-3 o
 10-member team’s UAV swarm platform assisting first responders.
 
 * Co-authored and presented the ”Disaster Response Observation Network (DRON)” research poster across two
-university showcases (Nov 2025, Apr 2026), detailing autonomous swarm progress and system architecture to
+university showcases (Nov 2025, Apr 2026), each featuring 21+ advanced projects, detailing autonomous swarm progress and system architecture to
 an audience of engineering faculty and peers.
 
 * Focused on reducing human exposure during disaster response missions.
