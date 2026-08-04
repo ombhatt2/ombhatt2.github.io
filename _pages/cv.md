@@ -33,7 +33,7 @@ Relevant Experience
 ======
 * R&D Robotics Engineer — Software Subteam, T.U.R.T.L.E Robotics, Disaster Response Observation Network, Texas A&M University, Sep 2025–Present
   * Researched and programmed autonomous flight algorithms (offboard_control_square_2) using PX4/MAVROS over ROS 2 Humble, validating autonomous flight via 2-drone simulation and 2–3 outdoor test flights for a 10-member team's UAV swarm platform assisting first responders.
-  * Co-authored and presented the "Disaster Response Observation Network (DRON)" research poster across two university showcases (Nov 2025, Apr 2026), detailing autonomous swarm progress and system architecture to an audience of engineering faculty and peers.
+  * Co-authored and presented the "Disaster Response Observation Network (DRON)" research poster across two university showcases (Nov 2025, Apr 2026), each featuring 21+ advanced projects, detailing autonomous swarm progress and system architecture to an audience of engineering faculty and peers.
 
 * Hardware Team Member, Texas Aimbots, Texas A&M University, Sep 2025–Present
   * Designed and 3D-printed 4+ ABS structural components in Onshape CAD for Sentry, a fully autonomous ground robot, including a gimbal housing redesigned for a more compact, rigid footprint; installed on the robot.
