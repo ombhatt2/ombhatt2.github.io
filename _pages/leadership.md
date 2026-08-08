@@ -8,7 +8,7 @@ author_profile: true
 <div data-aos="fade-up">
   <h3 style="margin-bottom: 0;">Design Review Officer</h3>
   <p style="margin-top: 0; color: #800000; font-weight: 600;">T.U.R.T.L.E Robotics, Project Branch | Texas A&M University</p>
-  <p style="margin-top: -10px; font-size: 0.9em; opacity: 0.8;"><em>Jan 2026 – Present | College Station, TX</em></p>
+  <p style="margin-top: -10px; font-size: 0.9em; opacity: 0.8;"><em>Jan 2026 – Aug 2026 | College Station, TX</em></p>
   <ul>
     <li>Evaluated system requirements, CAD/electronics documentation , and BOMs across 20+ projects over 3 Design Review sessions.</li>
   </ul>
