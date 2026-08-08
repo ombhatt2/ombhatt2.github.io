@@ -10,7 +10,7 @@ author_profile: true
   <p style="margin-top: 0; color: #800000; font-weight: 600;">T.U.R.T.L.E Robotics, Project Branch | Texas A&M University</p>
   <p style="margin-top: -10px; font-size: 0.9em; opacity: 0.8;"><em>Jan 2026 – Present | College Station, TX</em></p>
   <ul>
-    <li>Providing specialized input during design reviews and in the Q/A channel for the purpose of project progression and improvement.</li>
+    <li>Evaluated system requirements, CAD/electronics documentation , and BOMs across 20+ projects over 3 Design Review sessions.</li>
   </ul>
 </div>
 
