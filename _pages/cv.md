@@ -26,7 +26,7 @@ Education
 * Texas A&M University — B.S. Mechatronics Engineering, 2024–2028
   * Minor: Embedded Systems
   * Relevant Coursework: Calculus I–III, Differential Equations, Electricity & Magnetism, Engineering Mechanics, Strength of Materials, Metallic Materials, Fluid Mechanics & Power, Circuit Analysis, Analog Electronics, Digital Electronics, Embedded Systems Development in C, Microcontroller Architecture, Applied Dynamic Systems
-  * Certification: Introduction to Programming using Python
+  * Certification: Simulink Onramp (MathWorks), C++ Programming Foundations, Introduction to Python, FAA Recreational UAS Safety Test (TRUST), Fischer Engineering Design Center (FEDC) Red Badge
   * Organizations: IEEE TAMU, ASME TAMU, TURTLE Robotics, Texas Aimbots, SOMTECH, TAMUHACK, SASE
 
 Relevant Experience
