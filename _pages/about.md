@@ -594,10 +594,11 @@ redirect_from:
     margin-bottom: 20px;
   }
 
-  /* --- Bigger Profile Picture with Tech Ring --- */
-  .author__avatar img {
-    max-width: 280px !important; 
-    width: 100%;
+    /* --- Bigger Profile Picture with Tech Ring --- */
+  .sidebar .author__avatar img {
+    max-width: 220px !important; 
+    width: 220px !important;
+    height: 220px !important;
     border: 3px solid #800000 !important; 
     padding: 4px; 
     background-color: transparent;
@@ -605,7 +606,7 @@ redirect_from:
     transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
 
-  .author__avatar img:hover {
+    .sidebar .author__avatar img:hover {
     transform: scale(1.08) !important;
     box-shadow: 0 0 25px rgba(128, 0, 0, 0.5) !important;
   }
