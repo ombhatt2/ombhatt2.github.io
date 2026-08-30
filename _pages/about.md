@@ -601,32 +601,32 @@ redirect_from:
     height: auto !important;
     aspect-ratio: 1 / 1 !important;
     margin: 0 auto !important;
-    
-    /* 1. The Squircle: Modern rounded corners instead of a circle */
     border-radius: 32px; 
-    
-    /* 2. Gradient Border Wrapper: Creates a modern glowing edge */
     background: linear-gradient(135deg, #800000 0%, #ff4d4d 100%);
-    padding: 4px; /* This padding acts as your new border thickness */
-    
-    /* 3. Ambient Baseline Glow */
+    padding: 4px; 
     box-shadow: 0 10px 30px rgba(128, 0, 0, 0.15);
-    
-    /* 4. Smooth, tactile physics for the hover effect */
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
     overflow: hidden;
+    
+    /* FIX: Forces browsers to respect the rounded corners during clicks/animations */
+    -webkit-mask-image: -webkit-radial-gradient(white, black); 
   }
 
-  /* --- The Image Inside --- */
-  .sidebar .author__avatar img {
+/* --- The Image Inside --- */
+  .sidebar .author__avatar img,
+  .sidebar .author__avatar img:focus,
+  .sidebar .author__avatar img:active {
     width: 100% !important;
     height: 100% !important;
     max-width: 100% !important;
     object-fit: cover;
-    border-radius: 28px !important; /* Added !important here to override the theme */
+    border-radius: 28px !important; 
     border: none !important; 
     padding: 0;
     box-sizing: border-box !important;
+    
+    /* FIX: Removes default blue/black browser outlines when clicked */
+    outline: none !important; 
   }
 
   /* --- Modern Floating Hover State --- */
