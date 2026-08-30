@@ -597,32 +597,31 @@ redirect_from:
     /* --- Modern Tech "Squircle" Avatar Container --- */
   .sidebar .author__avatar {
     display: block !important;
-    width: 240px !important; /* Safe max size for the sidebar */
+    width: 240px !important; 
     max-width: 100% !important;
-    height: auto !important;
     aspect-ratio: 1 / 1 !important;
     
-    /* FIX: Prevents the Jekyll theme from forcibly stretching it vertically */
-    flex-shrink: 0 !important;
-    align-self: center !important; 
+    /* FIX 1: Stops the tall photo from forcing the container to stretch */
+    min-height: 0 !important; 
     
-    margin: 0 auto !important;
+    margin: 0 auto 20px auto !important;
     border-radius: 32px !important; 
-    background: linear-gradient(135deg, #800000 0%, #ff4d4d 100%);
-    padding: 4px; 
-    box-shadow: 0 10px 30px rgba(128, 0, 0, 0.15);
+    background: linear-gradient(135deg, #800000 0%, #ff4d4d 100%) !important;
+    padding: 4px !important; 
+    box-shadow: 0 10px 30px rgba(128, 0, 0, 0.15) !important;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-    overflow: hidden;
+    box-sizing: border-box !important;
     -webkit-transform: translateZ(0); 
   }
 
-/* --- The Image Inside --- */
+/* FIX 2: Target BOTH the image AND the hidden link wrapper your theme uses */
+  .sidebar .author__avatar a,
   .sidebar .author__avatar img,
   .sidebar .author__avatar img:focus,
   .sidebar .author__avatar img:active {
     display: block !important; 
     width: 100% !important;
-    height: 100% !important; /* Forces image to strictly match the container's square */
+    height: 100% !important; 
     max-width: 100% !important;
     object-fit: cover !important;
     border-radius: 28px !important; 
@@ -633,11 +632,9 @@ redirect_from:
     outline: none !important; 
   }
 
-  /* --- Modern Floating Hover State --- */
+/* --- Modern Floating Hover State --- */
   .sidebar .author__avatar:hover {
-    /* Lifts the image up slightly while scaling, creating 3D depth */
     transform: translateY(-8px) scale(1.03) !important;
-    /* Intensifies the neon maroon/red glow underneath */
     box-shadow: 0 20px 40px rgba(255, 77, 77, 0.3) !important;
   }
 
