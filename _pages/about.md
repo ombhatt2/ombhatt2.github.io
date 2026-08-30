@@ -593,6 +593,13 @@ redirect_from:
     max-width: 800px; 
     margin-bottom: 20px;
   }
+  
+  .sidebar .author__avatar {
+    width: 220px !important;
+    height: 220px !important;
+    overflow: hidden;
+    border-radius: 50%;
+  }
 
     /* --- Bigger Profile Picture with Tech Ring --- */
   .sidebar .author__avatar img {
