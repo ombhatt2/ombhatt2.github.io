@@ -596,10 +596,11 @@ redirect_from:
 
     /* --- Modern Tech "Squircle" Avatar Container --- */
   .sidebar .author__avatar {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
     width: 260px !important;
-    max-width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important;
+    height: 260px !important; /* Explicit height stops aspect-ratio padding bugs */
     margin: 0 auto !important;
     border-radius: 32px; 
     background: linear-gradient(135deg, #800000 0%, #ff4d4d 100%);
@@ -608,14 +609,15 @@ redirect_from:
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
     overflow: hidden;
     
-    /* FIX: Forces browsers to respect the rounded corners during clicks/animations */
-    -webkit-mask-image: -webkit-radial-gradient(white, black); 
-  }
+    /* FIX: Forces browsers to respect clipping without cutting the squircle shape */
+    -webkit-transform: translateZ(0); 
+}
 
 /* --- The Image Inside --- */
   .sidebar .author__avatar img,
   .sidebar .author__avatar img:focus,
   .sidebar .author__avatar img:active {
+    display: block !important; /* Removes the invisible inline bottom-gap */
     width: 100% !important;
     height: 100% !important;
     max-width: 100% !important;
@@ -624,8 +626,6 @@ redirect_from:
     border: none !important; 
     padding: 0;
     box-sizing: border-box !important;
-    
-    /* FIX: Removes default blue/black browser outlines when clicked */
     outline: none !important; 
   }
 
