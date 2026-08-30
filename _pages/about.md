@@ -182,6 +182,21 @@ redirect_from:
   </a>
 </div>
 
+<div data-aos="fade-up" class="glass-card clickable-card" data-aos-delay="350">
+  <a href="/portfolio/autonomy-lab-research" class="card-link-wrapper">
+    <div class="card-header">
+        <h3 class="role">Undergraduate Research Assistant</h3>
+        <span class="date">Aug 2026 - Present</span>
+    </div>
+    <h4 class="company">Autonomous Systems Laboratory, J. Mike Walker '66 Dept. of Mechanical Engineering, Texas A&M</h4>
+    <p class="description">Assigned to research and implement algorithms for autonomous ground robot navigation under Dr. Sivakumar Rathinam.</p>
+    <div class="coursework-tags" style="margin-top: 15px;">
+        <span class="course-tag">ROS 2</span>
+        <span class="course-tag">Autonomous Navigation</span>
+    </div>
+  </a>
+</div>
+
 <h2 id="leadership">Leadership & Involvement</h2>
 
 <div data-aos="fade-up" class="glass-card">
