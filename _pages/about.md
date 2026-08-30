@@ -38,6 +38,10 @@ redirect_from:
     I am passionate about robotics, particularly autonomous and intelligent systems. Currently, I am seeking to expand my engineering knowledge and experience to design, develop, and optimize mechatronic and robotic systems that advance automation and contribute to the betterment of society.
   </p>
 
+  <p class="intro-text">
+    I am actively seeking <strong style="color: var(--text-default); font-weight: 800; border-bottom: 2px solid #ff4d4d; padding-bottom: 1px;">Summer 2027 internship opportunities</strong> in robotics, aerospace, embedded systems, and R&D.
+  </p>
+
   <div style="background-color: rgba(128, 0, 0, 0.07); border-left: 4px solid #800000; padding: 14px 20px; border-radius: 8px; margin-bottom: 30px; font-size: 1rem; max-width: 800px;">
   🆕 <strong>August 2026:</strong> Joined the Autonomous Systems Laboratory as an Undergraduate Research Assistant, researching autonomous ground robot navigation under Dr. Sivakumar Rathinam.
 </div>
