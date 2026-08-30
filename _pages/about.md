@@ -593,34 +593,52 @@ redirect_from:
     max-width: 800px; 
     margin-bottom: 20px;
   }
-  
+
+    /* --- Modern Tech "Squircle" Avatar Container --- */
   .sidebar .author__avatar {
-    width: 220px !important;          /* Bumped back up for a larger size */
-    max-width: 100% !important;       /* Still prevents horizontal scrollbars */
-    height: auto !important;          /* Removes the rigid height causing the oval */
-    aspect-ratio: 1 / 1 !important;   /* Forces a mathematically perfect square/circle */
+    width: 260px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
     margin: 0 auto !important;
+    
+    /* 1. The Squircle: Modern rounded corners instead of a circle */
+    border-radius: 32px; 
+    
+    /* 2. Gradient Border Wrapper: Creates a modern glowing edge */
+    background: linear-gradient(135deg, #800000 0%, #ff4d4d 100%);
+    padding: 4px; /* This padding acts as your new border thickness */
+    
+    /* 3. Ambient Baseline Glow */
+    box-shadow: 0 10px 30px rgba(128, 0, 0, 0.15);
+    
+    /* 4. Smooth, tactile physics for the hover effect */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
     overflow: hidden;
-    border-radius: 50%;
   }
 
-  /* --- Bigger Profile Picture with Tech Ring --- */
+  /* --- The Image Inside --- */
   .sidebar .author__avatar img {
     width: 100% !important;
     height: 100% !important;
     max-width: 100% !important;
     object-fit: cover;
-    border: 3px solid #800000 !important;
-    padding: 4px;
-    background-color: transparent;
-    border-radius: 50%;
+    
+    /* Matches the parent radius but slightly smaller to fit cleanly inside the padding */
+    border-radius: 28px; 
+    
+    /* Kills the old solid border so the modern gradient parent shows through */
+    border: none !important; 
+    padding: 0;
     box-sizing: border-box !important;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-  }   
+  }
 
-  .sidebar .author__avatar img:hover {
-    transform: scale(1.08) !important;
-    box-shadow: 0 0 25px rgba(128, 0, 0, 0.5) !important;
+  /* --- Modern Floating Hover State --- */
+  .sidebar .author__avatar:hover {
+    /* Lifts the image up slightly while scaling, creating 3D depth */
+    transform: translateY(-8px) scale(1.03) !important;
+    /* Intensifies the neon maroon/red glow underneath */
+    box-shadow: 0 20px 40px rgba(255, 77, 77, 0.3) !important;
   }
 
   /* Prevent horizontal scrollbar on the sidebar */
