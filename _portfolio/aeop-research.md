@@ -8,7 +8,7 @@ header:
   teaser: "/images/UT Austin Summer 2026 Internship Photo Collage.jpg"
 ---
 
-Presentation Slides: [Presentation Slides](/files/Autonomous Systems Group REU 2025 - Final Presentation - Autonomous RC Rally Car for Jump and Drift Racing - Om Bhatt.pdf) | Project Abstract: [Project Abstract](/files/AEOP Booklet Abstract - Om Bhatt_ Autonomous RC Rally Car for Jump and Drift Racing .pdf)
+Presentation Slides: [Presentation Slides](/files/Autonomous Systems Group REU 2025 - Final Presentation - Autonomous RC Rally Car for Jump and Drift Racing - Om Bhatt.pdf) | Project Abstract: [Project Abstract](/files/AEOP Booklet Abstract - Om Bhatt_ Autonomous RC Rally Car for Jump and Drift Racing .pdf) | Setup Instructions: [Setup Instructions](/files/REU_Autonomous_Drifting_RC_Rally_Car_Project_Instructions.pdf)
 
 Served as an **AEOP Summer Robotics Research Intern** at the **Center for Autonomy at UT Austin**, participating in the **AEOP LLMs for Safe Navigation REU** under the guidance of [Dr. Ufuk Topcu](https://www.ae.utexas.edu/people/faculty/faculty-directory/topcu), [Dr. Christian Ellis](https://oden.utexas.edu/people/directory/Christian-Ellis/), and PhD Student [Rwik Rana](https://rwik2000.com/).
 
@@ -54,3 +54,10 @@ Served as an **AEOP Summer Robotics Research Intern** at the **Center for Autono
     <img src="/images/5.jpg" alt="Autonomous RC Car Image 5" style="width:100%; height:100%; object-fit:cover; display:block; margin:0;">
   </figure>
 </div>
+
+<figure style="border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; padding: 0; margin-bottom: 40px;">
+  <img src="/images/Wiring_Schematic-Diagram_RC_Rally_Car.png" alt="RC Rally Car Wiring Schematic" style="width:100%; display:block; margin:0;">
+  <figcaption style="background-color: #f8f9fa; padding: 15px; text-align: center; font-style: italic; font-size: 0.9em; color: #555; border-top: 1px solid #e0e0e0;">
+    Custom wiring schematic for powering and integrating the Raspberry Pi 5, PCA9685 servo driver, and Traxxas Link receiver
+  </figcaption>
+</figure>
