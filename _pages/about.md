@@ -595,28 +595,36 @@ redirect_from:
   }
   
   .sidebar .author__avatar {
-    width: 220px !important;
-    height: 220px !important;
+    width: 200px !important;
+    height: 200px !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
     overflow: hidden;
     border-radius: 50%;
   }
 
-    /* --- Bigger Profile Picture with Tech Ring --- */
+  /* --- Bigger Profile Picture with Tech Ring --- */
   .sidebar .author__avatar img {
-    max-width: 220px !important; 
-    width: 220px !important;
-    height: 220px !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
     object-fit: cover;
-    border: 3px solid #800000 !important; 
-    padding: 4px; 
+    border: 3px solid #800000 !important;
+    padding: 4px;
     background-color: transparent;
     border-radius: 50%;
+    box-sizing: border-box !important;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
   }   
 
   .sidebar .author__avatar img:hover {
     transform: scale(1.08) !important;
     box-shadow: 0 0 25px rgba(128, 0, 0, 0.5) !important;
+  }
+
+  /* Prevent horizontal scrollbar on the sidebar */
+  .sidebar, .author__profile {
+    overflow-x: hidden !important;
   }
 
   /* 1. Levitating Project Cards */
