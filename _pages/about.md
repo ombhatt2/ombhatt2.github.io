@@ -596,16 +596,11 @@ redirect_from:
 
     /* --- Modern Tech "Squircle" Avatar Container --- */
   .sidebar .author__avatar {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
+    display: block !important;
     width: 260px !important;
     max-width: 100% !important;
-    
-    /* FIX: Bring back auto-height and aspect ratio to prevent vertical stretching */
-    height: auto !important; 
-    aspect-ratio: 1 / 1 !important; 
-    
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
     margin: 0 auto !important;
     border-radius: 32px; 
     background: linear-gradient(135deg, #800000 0%, #ff4d4d 100%);
@@ -620,14 +615,16 @@ redirect_from:
   .sidebar .author__avatar img,
   .sidebar .author__avatar img:focus,
   .sidebar .author__avatar img:active {
-    display: block !important; /* Removes the invisible inline bottom-gap */
+    display: block !important; 
     width: 100% !important;
-    height: 100% !important;
+    height: auto !important; /* Let the aspect ratio control the height */
+    aspect-ratio: 1 / 1 !important; /* Forces the image itself to be perfectly square */
     max-width: 100% !important;
     object-fit: cover;
     border-radius: 28px !important; 
     border: none !important; 
     padding: 0;
+    margin: 0 !important;
     box-sizing: border-box !important;
     outline: none !important; 
   }
