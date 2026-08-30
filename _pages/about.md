@@ -619,14 +619,14 @@ redirect_from:
 
   /* --- The Image Inside --- */
   .sidebar .author__avatar img {
-      width: 100% !important;
-      height: 100% !important;
-      max-width: 100% !important;
-      object-fit: cover;
-      border-radius: 28px !important; /* Added !important here to override the theme */
-      border: none !important; 
-      padding: 0;
-      box-sizing: border-box !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    object-fit: cover;
+    border-radius: 28px !important; /* Added !important here to override the theme */
+    border: none !important; 
+    padding: 0;
+    box-sizing: border-box !important;
   }
 
   /* --- Modern Floating Hover State --- */
