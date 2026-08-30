@@ -597,16 +597,21 @@ redirect_from:
     /* --- Modern Tech "Squircle" Avatar Container --- */
   .sidebar .author__avatar {
     display: block !important;
-    width: 260px !important;
+    width: 240px !important; /* Safe max size for the sidebar */
     max-width: 100% !important;
     height: auto !important;
     aspect-ratio: 1 / 1 !important;
+    
+    /* FIX: Prevents the Jekyll theme from forcibly stretching it vertically */
+    flex-shrink: 0 !important;
+    align-self: center !important; 
+    
     margin: 0 auto !important;
-    border-radius: 32px; 
+    border-radius: 32px !important; 
     background: linear-gradient(135deg, #800000 0%, #ff4d4d 100%);
     padding: 4px; 
     box-shadow: 0 10px 30px rgba(128, 0, 0, 0.15);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     overflow: hidden;
     -webkit-transform: translateZ(0); 
   }
@@ -617,13 +622,12 @@ redirect_from:
   .sidebar .author__avatar img:active {
     display: block !important; 
     width: 100% !important;
-    height: auto !important; /* Let the aspect ratio control the height */
-    aspect-ratio: 1 / 1 !important; /* Forces the image itself to be perfectly square */
+    height: 100% !important; /* Forces image to strictly match the container's square */
     max-width: 100% !important;
-    object-fit: cover;
+    object-fit: cover !important;
     border-radius: 28px !important; 
     border: none !important; 
-    padding: 0;
+    padding: 0 !important;
     margin: 0 !important;
     box-sizing: border-box !important;
     outline: none !important; 
