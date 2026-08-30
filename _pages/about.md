@@ -98,6 +98,9 @@ redirect_from:
         <span class="course-tag">Circuit Analysis</span>
         <span class="course-tag">Engineering Mechanics</span>
         <span class="course-tag">Calculus I-III & DiffEq</span>
+        <span class="course-tag">Microcontroller Architecture</span>
+        <span class="course-tag">Strength of Materials</span>
+        <span class="course-tag">Applied Dynamic Systems</span>
     </div>
 </div>
 
