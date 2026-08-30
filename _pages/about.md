@@ -38,6 +38,10 @@ redirect_from:
     I am passionate about robotics, particularly autonomous and intelligent systems. Currently, I am seeking to expand my engineering knowledge and experience to design, develop, and optimize mechatronic and robotic systems that advance automation and contribute to the betterment of society.
   </p>
 
+  <div style="background-color: rgba(128, 0, 0, 0.07); border-left: 4px solid #800000; padding: 14px 20px; border-radius: 8px; margin-bottom: 30px; font-size: 1rem; max-width: 800px;">
+  🆕 <strong>August 2026:</strong> Joined the Autonomous Systems Laboratory as an Undergraduate Research Assistant, researching autonomous ground robot navigation under Dr. Sivakumar Rathinam.
+</div>
+
   <div style="margin-top: 2.5rem; margin-bottom: 4rem;">
     <a href="/files/Om_Bhatt_Resume.pdf" class="modern-resume-btn" target="_blank">
       View My Resume <i class="fas fa-arrow-right"></i>
