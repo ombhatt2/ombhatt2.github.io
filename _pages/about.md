@@ -595,9 +595,10 @@ redirect_from:
   }
   
   .sidebar .author__avatar {
-    width: 200px !important;
-    height: 200px !important;
-    max-width: 100% !important;
+    width: 220px !important;          /* Bumped back up for a larger size */
+    max-width: 100% !important;       /* Still prevents horizontal scrollbars */
+    height: auto !important;          /* Removes the rigid height causing the oval */
+    aspect-ratio: 1 / 1 !important;   /* Forces a mathematically perfect square/circle */
     margin: 0 auto !important;
     overflow: hidden;
     border-radius: 50%;
