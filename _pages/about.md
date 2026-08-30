@@ -596,7 +596,7 @@ redirect_from:
 
   /* --- Bigger Profile Picture with Tech Ring --- */
   .author__avatar img {
-    max-width: 170px !important; 
+    max-width: 220px !important; 
     width: 100%;
     border: 3px solid #800000 !important; 
     padding: 4px; 
