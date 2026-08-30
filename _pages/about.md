@@ -606,7 +606,7 @@ redirect_from:
     transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
 
-    .sidebar .author__avatar img:hover {
+  .sidebar .author__avatar img:hover {
     transform: scale(1.08) !important;
     box-shadow: 0 0 25px rgba(128, 0, 0, 0.5) !important;
   }
