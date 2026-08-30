@@ -56,8 +56,10 @@ Served as an **AEOP Summer Robotics Research Intern** at the **Center for Autono
 </div>
 
 <figure style="border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; padding: 0; margin-bottom: 40px;">
-  <img src="/images/Wiring Schematic-Diagram RC Rally Car.png" alt="RC Rally Car Wiring Schematic" style="width:100%; display:block; margin:0;">
+  <a href="/images/Wiring Schematic-Diagram RC Rally Car.png" target="_blank">
+    <img src="/images/Wiring Schematic-Diagram RC Rally Car.png" alt="RC Rally Car Wiring Schematic" style="width:100%; display:block; margin:0; cursor: zoom-in;">
+  </a>
   <figcaption style="background-color: #f8f9fa; padding: 15px; text-align: center; font-style: italic; font-size: 0.9em; color: #555; border-top: 1px solid #e0e0e0;">
-    Custom wiring schematic for powering and integrating the Raspberry Pi 5, PCA9685 servo driver, and Traxxas Link receiver
+    Custom wiring schematic for powering and integrating the Raspberry Pi 5, PCA9685 servo driver, and Traxxas Link receiver (click to enlarge)
   </figcaption>
 </figure>
