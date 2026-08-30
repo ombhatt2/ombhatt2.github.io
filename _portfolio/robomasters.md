@@ -36,6 +36,13 @@ Sentry is a fully autonomous ground robot. It can traverse the field, shoot at e
   </figcaption>
 </figure>
 
+<figure style="border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 0; margin-bottom: 30px; overflow: hidden;">
+  <img src="/images/sentry_spin.gif" alt="Sentry Robot Gimbal Spin" style="width:100%; display:block; margin:0;">
+  <figcaption style="background-color: #f8f9fa; padding: 15px; text-align: center; font-style: italic; font-size: 0.9em; color: #555; border-top: 1px solid #e0e0e0;">
+    Sentry robot's redesigned gimbal housing in motion
+  </figcaption>
+</figure>
+
 ### The Team
 
 <figure style="border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 0; margin-bottom: 2rem; overflow: hidden;">
