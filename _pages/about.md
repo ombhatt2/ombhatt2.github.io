@@ -107,7 +107,7 @@ redirect_from:
 <h2 id="experience">Relevant Experience</h2>
 
 <div data-aos="fade-up" class="glass-card clickable-card" data-aos-delay="0">
-  <a href="/portfolio/autonomy-lab-research" class="card-link-wrapper">
+  <a href="https://autonomy.engr.tamu.edu/" target="_blank" rel="noopener noreferrer" class="card-link-wrapper">
     <div class="card-header">
         <h3 class="role">Undergraduate Research Assistant</h3>
         <span class="date">Aug 2026 - Present</span>
