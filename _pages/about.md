@@ -600,7 +600,12 @@ redirect_from:
     align-items: center;
     justify-content: center;
     width: 260px !important;
-    height: 260px !important; /* Explicit height stops aspect-ratio padding bugs */
+    max-width: 100% !important;
+    
+    /* FIX: Bring back auto-height and aspect ratio to prevent vertical stretching */
+    height: auto !important; 
+    aspect-ratio: 1 / 1 !important; 
+    
     margin: 0 auto !important;
     border-radius: 32px; 
     background: linear-gradient(135deg, #800000 0%, #ff4d4d 100%);
@@ -608,10 +613,8 @@ redirect_from:
     box-shadow: 0 10px 30px rgba(128, 0, 0, 0.15);
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
     overflow: hidden;
-    
-    /* FIX: Forces browsers to respect clipping without cutting the squircle shape */
     -webkit-transform: translateZ(0); 
-}
+  }
 
 /* --- The Image Inside --- */
   .sidebar .author__avatar img,
