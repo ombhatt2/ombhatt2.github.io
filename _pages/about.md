@@ -39,7 +39,7 @@ redirect_from:
   </p>
 
   <p class="intro-text">
-    I am actively seeking <strong style="font-weight: 800; border-bottom: 2px solid #ff4d4d; padding-bottom: 1px;">Summer 2027 internship opportunities</strong> in robotics, aerospace, embedded systems, and R&D.
+    I am actively seeking <strong style="font-weight: 800; border-bottom: 2px solid #ff4d4d; padding-bottom: 1px;">Summer 2027 internship opportunities</strong> in robotics, autonomous systems, aerospace, embedded/controls engineering, and research and development.
   </p>
 
   <div style="background-color: rgba(128, 0, 0, 0.07); border-left: 4px solid #800000; padding: 14px 20px; border-radius: 8px; margin-bottom: 30px; font-size: 1rem; max-width: 800px;">
