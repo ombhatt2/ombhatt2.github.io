@@ -599,12 +599,13 @@ redirect_from:
     max-width: 220px !important; 
     width: 220px !important;
     height: 220px !important;
+    object-fit: cover;
     border: 3px solid #800000 !important; 
     padding: 4px; 
     background-color: transparent;
     border-radius: 50%;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-  }
+  }   
 
   .sidebar .author__avatar img:hover {
     transform: scale(1.08) !important;
