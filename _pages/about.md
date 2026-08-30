@@ -608,9 +608,14 @@ redirect_from:
     padding: 4px !important; 
     box-sizing: border-box !important;
     box-shadow: 0 10px 30px rgba(128, 0, 0, 0.15) !important;
-    transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease !important;
     overflow: hidden !important; 
-    -webkit-transform: translateZ(0) !important;
+    
+    /* FIX: Prevents sub-pixel corner bleeding during animations */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
   }
 
 /* --- The Link Wrapper Inside --- */
@@ -620,6 +625,7 @@ redirect_from:
     height: 100% !important;
     border-radius: 28px !important;
     overflow: hidden !important;
+    backface-visibility: hidden;
   }
 
 /* --- The Image Inside --- */
@@ -637,11 +643,12 @@ redirect_from:
     padding: 0 !important;
     margin: 0 !important;
     outline: none !important; 
+    backface-visibility: hidden;
   }
 
 /* --- Modern Floating Hover State --- */
   .sidebar .author__avatar:hover {
-    transform: translateY(-8px) scale(1.03) !important;
+    transform: translateY(-8px) scale(1.03) translateZ(0) !important;
     box-shadow: 0 20px 40px rgba(255, 77, 77, 0.3) !important;
   }
 
