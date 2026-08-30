@@ -596,41 +596,42 @@ redirect_from:
 
     /* --- Modern Tech "Squircle" Avatar Container --- */
   .sidebar .author__avatar {
-    position: relative !important; /* REQUIRED: Acts as the anchor for the image */
+    position: relative !important;
     display: block !important;
     width: 240px !important; 
     max-width: 100% !important;
+    height: auto !important;
     aspect-ratio: 1 / 1 !important;
-    
     margin: 0 auto 20px auto !important;
     border-radius: 32px !important; 
     background: linear-gradient(135deg, #800000 0%, #ff4d4d 100%) !important;
-    
-    /* We removed padding here and will create the 4px border mathematically below */
+    padding: 4px !important; 
+    box-sizing: border-box !important;
     box-shadow: 0 10px 30px rgba(128, 0, 0, 0.15) !important;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    -webkit-transform: translateZ(0); 
+    transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+    overflow: hidden !important; 
+    -webkit-transform: translateZ(0) !important;
   }
 
-/* --- Forces the direct child (Link or Image) to fit inside a 4px inset --- */
-  .sidebar .author__avatar > * {
-    position: absolute !important; /* REMOVES it from the document flow */
-    top: 4px !important;
-    bottom: 4px !important;
-    left: 4px !important;
-    right: 4px !important;
-    width: auto !important;
-    height: auto !important;
+/* --- The Link Wrapper Inside --- */
+  .sidebar .author__avatar a {
     display: block !important;
-    border-radius: 28px !important; 
-  }
-
-/* --- The Image Itself --- */
-  .sidebar .author__avatar img {
     width: 100% !important;
     height: 100% !important;
-    max-width: none !important;
+    border-radius: 28px !important;
+    overflow: hidden !important;
+  }
+
+/* --- The Image Inside --- */
+  .sidebar .author__avatar img,
+  .sidebar .author__avatar img:focus,
+  .sidebar .author__avatar img:active {
+    display: block !important; 
+    width: 100% !important;
+    height: 100% !important; 
+    max-width: 100% !important;
     object-fit: cover !important;
+    object-position: center !important;
     border-radius: 28px !important; 
     border: none !important; 
     padding: 0 !important;
