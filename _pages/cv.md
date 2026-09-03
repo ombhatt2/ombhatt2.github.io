@@ -31,11 +31,15 @@ Education
 
 Relevant Experience
 ======
-* R&D Robotics Engineer — Software Subteam, T.U.R.T.L.E Robotics, Disaster Response Observation Network, Texas A&M University, Sep 2025–Present
+* Undergraduate Research Assistant, Autonomous Systems Laboratory, J. Mike Walker '66 Department of Mechanical Engineering, Texas A&M University, Aug 2026–Present
+  * Assigned to research and implement algorithms for autonomous ground robot navigation under Dr. Sivakumar Rathinam at the Autonomous Systems Laboratory, J. Mike Walker '66 Department of Mechanical Engineering.
+
+
+* R&D Robotics Engineer — Software Subteam, T.U.R.T.L.E Robotics, Disaster Response Observation Network, Texas A&M University, Sep 2025–Sep 2026
   * Researched and programmed autonomous flight algorithms (offboard_control_square_2) using PX4/MAVROS over ROS 2 Humble, validating autonomous flight via 2-drone simulation and 2–3 outdoor test flights for a 10-member team's UAV swarm platform assisting first responders.
   * Co-authored and presented the "Disaster Response Observation Network (DRON)" research poster across two university showcases (Nov 2025, Apr 2026), each featuring 21+ advanced projects, detailing autonomous swarm progress and system architecture to an audience of engineering faculty and peers.
 
-* Hardware Team Member, Texas Aimbots, Texas A&M University, Sep 2025–Present
+* Hardware Team Member, Texas Aimbots, Texas A&M University, Sep 2025–Sep 2026
   * Designed and 3D-printed 4+ ABS structural components in Onshape CAD for Sentry, a fully autonomous ground robot, including a gimbal housing redesigned for a more compact, rigid footprint; installed on the robot.
   * Integrated the NVIDIA Jetson Orin, LiDAR sensors, and cameras for real-time perception and autonomous decision-making ahead of the 2026 ARC Championship, an international collegiate robotics competition.
 
@@ -72,7 +76,7 @@ Volunteering and Leadership
 * Autodesk Ambassador Program, Autodesk, Texas A&M University, Jan 2026–Present
   * Selected for a competitive ambassador program to represent Autodesk, promoting CAD tools through campus events and workshops.
 
-* Design Review Officer, T.U.R.T.L.E Robotics, Project Branch, Jan 2026–Present
+* Design Review Officer, T.U.R.T.L.E Robotics, Project Branch, Jan 2026–Aug 2026
   * Evaluate system requirements, CAD/electronics documentation, and BOMs across 20+ projects over 3 Design Review sessions.
 
 * Sponsorship Committee Member, T.U.R.T.L.E Robotics, External Branch, Sep 2025–Jan 2026
