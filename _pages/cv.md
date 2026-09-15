@@ -32,7 +32,7 @@ Education
 Relevant Experience
 ======
 * Undergraduate Research Assistant, Autonomous Systems Laboratory, J. Mike Walker '66 Department of Mechanical Engineering, Texas A&M University, Aug 2026–Present
-  * Assigned to research and implement algorithms for autonomous ground robot navigation under Dr. Sivakumar Rathinam at the Autonomous Systems Laboratory, J. Mike Walker '66 Department of Mechanical Engineering.
+  * Researching and implementing algorithms for autonomous ground robot navigation under Dr. Sivakumar Rathinam at the Autonomous Systems Laboratory, J. Mike Walker '66 Department of Mechanical Engineering.
 
 
 * R&D Robotics Engineer — Software Subteam, T.U.R.T.L.E Robotics, Disaster Response Observation Network, Texas A&M University, Sep 2025–Sep 2026
